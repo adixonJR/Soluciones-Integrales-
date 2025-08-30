@@ -1,25 +1,16 @@
 
 import './App.css'
 import './index.css' 
-
 function App() {
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center text-center p-6">
-      <header className="mb-10">
-        <h1 className="text-4xl font-bold text-blue-600 mb-4">
-          Soluciones Integrales
-        </h1>
-        <p className="text-gray-700 text-lg max-w-xl">
-          Desarrollamos soluciones tecnológicas a medida para tu empresa.
-        </p>
-      </header>
-
-      <a
-        href="#contacto"
-        className="px-6 py-3 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition duration-300"
-      >
-        Contáctanos
-      </a>
+    <div className="h-screen bg-black text-white flex flex-col items-center justify-center gap-4">
+      <h1 className="text-4xl font-bold text-green-400">✅ Tailwind CARGADO</h1>
+      <p className="text-lg text-gray-300">
+        Si ves este texto centrado con fondo negro, Tailwind está funcionando.
+      </p>
+      <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded">
+        Todo OK
+      </button>
     </div>
   );
 }
