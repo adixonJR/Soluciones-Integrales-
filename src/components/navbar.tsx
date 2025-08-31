@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   FaFacebookF,
   FaEnvelope,
@@ -8,6 +9,7 @@ import {
   FaTiktok
 } from 'react-icons/fa';
 import logo from '../assets/logo.svg';
+
 
 function Navbar() {
   return (
@@ -19,7 +21,7 @@ function Navbar() {
 
       {/* Menú principal */}
       <ul className="hidden md:flex gap-8 text-sm font-semibold select-none">
-        <li><a href="#inicio" className="hover:text-cyan-400 transition-colors duration-200">INICIO</a></li>
+        <li><a href="/" className="hover:text-cyan-400 transition-colors duration-200">INICIO</a></li>
 
         {/* Dropdown Nosotros */}
         <li className="relative group cursor-pointer">
@@ -91,7 +93,14 @@ function Navbar() {
           </div>
         </li>
 
-        <li><a href="#contacto" className="hover:text-cyan-400 transition-colors duration-200">CONTACTO</a></li>
+        <li>
+  <Link
+    to="/contacto"
+    className="hover:text-cyan-400 transition-colors duration-200"
+  >
+    CONTACTO
+  </Link>
+</li>
       </ul>
 
       {/* Redes sociales */}
