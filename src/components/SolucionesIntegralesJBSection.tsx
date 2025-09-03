@@ -286,8 +286,8 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
 </div>
 
 
-
-{/* Features */}
+{/* ///////////////////////////////////////////////////////////////////////////////////////////// */}
+{/* Features con imagen centrada */}
 <div className="mx-auto max-w-6xl px-4 py-10">
   <motion.p
     initial={{ opacity: 0, y: 30 }}
@@ -309,46 +309,73 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
     Características de Soluciones Integrales JB
   </motion.h2>
 
-  {/* Bloques con stagger */}
-  <motion.div
-    initial="hidden"
-    whileInView="visible"
-    variants={{
-      hidden: { opacity: 0, y: 30 },
-      visible: {
-        opacity: 1,
-        y: 0,
-        transition: { staggerChildren: 0.2 },
-      },
-    }}
-    viewport={{ once: true }}
-    className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
-  >
-    {features.map((f, idx) => (
-      <motion.div
-        key={`${f.title}-${idx}`}
-        variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-        transition={{ duration: 0.6 }}
-      >
-        <FeatureBlock feature={f} />
-      </motion.div>
-    ))}
-  </motion.div>
+  {/* Contenedor general */}
+  <div className="mt-10 grid lg:grid-cols-3 gap-6 items-center">
+    {/* Columna izquierda con 3 características */}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { staggerChildren: 0.2 },
+        },
+      }}
+      viewport={{ once: true }}
+      className="space-y-6"
+    >
+      {features.slice(0, 3).map((f, idx) => (
+        <motion.div
+          key={`${f.title}-${idx}`}
+          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          transition={{ duration: 0.6 }}
+        >
+          <FeatureBlock feature={f} />
+        </motion.div>
+      ))}
+    </motion.div>
 
-  {/* Imágenes con animación */}
-  <div className="mt-8 grid md:grid-cols-2 gap-6 items-center">
+    {/* Imagen en el centro más pequeña */}
     <motion.img
       src={uiImage}
       alt="Diseño web profesional"
-      className="w-full rounded-xl"
-      initial={{ opacity: 0, x: -50 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      className="w-64 mx-auto rounded-xl shadow-lg"
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.7 }}
       viewport={{ once: true }}
     />
-   
+
+    {/* Columna derecha con 3 características */}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { staggerChildren: 0.2 },
+        },
+      }}
+      viewport={{ once: true }}
+      className="space-y-6"
+    >
+      {features.slice(3, 6).map((f, idx) => (
+        <motion.div
+          key={`${f.title}-${idx}`}
+          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          transition={{ duration: 0.6 }}
+        >
+          <FeatureBlock feature={f} />
+        </motion.div>
+      ))}
+    </motion.div>
   </div>
 </div>
+{/* ///////////////////////////////////////////////////////////////////////////////////////////// */}
 
       {/* Video + Texto duplicado */}
 <div className="bg-black w-full">
@@ -375,7 +402,7 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
     />
   </div>
 </div>
-
+{/* ///////////////////////////////////////////////////////////////////////////////////////////// */}
       {/* Testimonials */}
       <div className="mx-auto max-w-6xl px-4 py-10">
         <h2 className="text-3xl font-bold">Que dicen de nosotros</h2>
@@ -386,7 +413,7 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
           ))}
         </div>
       </div>
-
+{/* ///////////////////////////////////////////////////////////////////////////////////////////// */}
       {/* Clients */}
       <div className="mx-auto max-w-6xl px-4 py-10">
         <h2 className="text-3xl font-bold">Nuestros clientes</h2>

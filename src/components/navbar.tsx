@@ -83,33 +83,33 @@ function Navbar() {
               <div>
                 <p className="text-xs uppercase font-bold text-gray-400 mb-2">Tecnología de Información</p>
                 <ul className="space-y-1 text-gray-300 text-sm">
-                  <li><a href="#desarrollo-software" className="hover:text-cyan-400">Desarrollo de Software</a></li>
-                  <li><a href="#facturacion-electronica" className="hover:text-cyan-400">Facturación Electrónica</a></li>
-                  <li><a href="#seguridad-tecnologia" className="hover:text-cyan-400">Tecnología en Seguridad</a></li>
-                  <li><a href="#redes" className="hover:text-cyan-400">Redes e Infraestructura</a></li>
-                  <li><a href="#hosting" className="hover:text-cyan-400">Hosting y Dominio</a></li>
-                  <li><a href="#soporte" className="hover:text-cyan-400">Soporte Técnico</a></li>
+                  <li><a href="/DesarrolloDeSoftware" className="hover:text-cyan-400">Desarrollo de Software</a></li>
+                  <li><a href="/FacturacionElectronica" className="hover:text-cyan-400">Facturación Electrónica</a></li>
+                  <li><a href="/SeguridadTecnologia" className="hover:text-cyan-400">Tecnología en Seguridad</a></li>
+                  <li><a href="/RedesEInfraestructura" className="hover:text-cyan-400">Redes e Infraestructura</a></li>
+                  <li><a href="/HostingYDominio" className="hover:text-cyan-400">Hosting y Dominio</a></li>
+                  <li><a href="/SoporteTecnico" className="hover:text-cyan-400">Soporte Técnico</a></li>
                 </ul>
               </div>
               <div>
                 <p className="text-xs uppercase font-bold text-gray-400 mb-2">CONSULTORÍA</p>
                 <ul className="space-y-1 text-gray-300 text-sm">
-                  <li><a href="#consultoria-ti" className="hover:text-cyan-400">Consultoría TI</a></li>
-                  <li><a href="#consultoria-empresarial" className="hover:text-cyan-400">Consultoría Empresarial</a></li>
-                  <li><a href="#consultoria-educativa" className="hover:text-cyan-400">Consultoría Educativa</a></li>
-                  <li><a href="#auditorias" className="hover:text-cyan-400">Auditorías</a></li>
-                  <li><a href="#seguridad-informatica" className="hover:text-cyan-400">Seguridad Informática</a></li>
-                  <li><a href="#marketing-digital" className="hover:text-cyan-400">Marketing Digital</a></li>
-                  <li><a href="#sitios-web" className="hover:text-cyan-400">Desarrollo de sitio Web</a></li>
-                  <li><a href="#seo" className="hover:text-cyan-400">Posicionamiento SEO</a></li>
+                  <li><a href="/ConsultoriaTI" className="hover:text-cyan-400">Consultoría TI</a></li>
+                  <li><a href="/ConsultoriaEmpresarial" className="hover:text-cyan-400">Consultoría Empresarial</a></li>
+                  <li><a href="/ConsultoriaEducativa" className="hover:text-cyan-400">Consultoría Educativa</a></li>
+                  <li><a href="/Auditorias" className="hover:text-cyan-400">Auditorías</a></li>
+                  <li><a href="/SeguridadInformatica" className="hover:text-cyan-400">Seguridad Informática</a></li>
+                  <li><a href="/MarketingDigital" className="hover:text-cyan-400">Marketing Digital</a></li>
+                  <li><a href="/DesarrolloDeSitiosWeb" className="hover:text-cyan-400">Desarrollo de sitio Web</a></li>
+                  <li><a href="/PosicionamientoSEO" className="hover:text-cyan-400">Posicionamiento SEO</a></li>
                 </ul>
               </div>
               <div>
                 <p className="text-xs uppercase font-bold text-gray-400 mb-2">ING. ELÉCTRICA</p>
                 <ul className="space-y-1 text-gray-300 text-sm">
-                  <li><a href="#mantenimiento-electrico" className="hover:text-cyan-400">Mantenimiento Eléctrico</a></li>
-                  <li><a href="#refrigeracion" className="hover:text-cyan-400">Refrigeración Industrial</a></li>
-                  <li><a href="#instalaciones-electricas" className="hover:text-cyan-400">Instalaciones Eléctricas</a></li>
+                  <li><a href="/MantenimientoElectrico" className="hover:text-cyan-400">Mantenimiento Eléctrico</a></li>
+                  <li><a href="/RefrigeracionIndustrial" className="hover:text-cyan-400">Refrigeración Industrial</a></li>
+                  <li><a href="/InstalacionesElectricas" className="hover:text-cyan-400">Instalaciones Eléctricas</a></li>
                 </ul>
               </div>
             </div>

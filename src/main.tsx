@@ -15,7 +15,21 @@ import ConsultoriaEmpresarial from './pages/ConsultoriaEmpresarial';
 import ComunidadActiva from './pages/ComunidadActiva';
 import Convenios from './pages/Convevios';
 import Organigrama from './pages/Organigrama';
-
+import Auditorias from './pages/Auditorias'
+import DesarrolloDeSitiosWeb from './pages/DesarrolloDeSitiosWeb';
+import DesarrolloDeSoftware from './pages/DesarrolloDeSoftware';
+import FacturacionElectronica from './pages/FacturacionElectronica';
+import HostingYDominio from './pages/HostingYDominio';
+import InstalacionesElectricas from './pages/InstalacionesElectricas';
+import MantenimientoElectrico from './pages/MantenimientoElectrico';
+import MarketingDigital from './pages/MarketingDigital';
+import SoporteTecnico from './pages/SoporteTecnico';
+import PosicionamientoSEO from './pages/PosicionamientoSEO';
+import RedesEInfroestructura from './pages/RedesEInfrostructura';
+import RefrigeracionIndustrial from './pages/RefrigeracionIndustrial';
+import SeguridadInformatica from './pages/SeguridadInfromatica';
+import TecnologiaEnSeguridad from './pages/TecnologiaEnSeguridad';
+import ConsultoriaEducativa from './pages/ConsultoriaEducativa';
 
 
 
@@ -115,14 +129,146 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           }
         />
         <Route
-          path="/Orgamigrama"
+          path="/Organigrama"
           element={
             <Layout>
               <Organigrama />
             </Layout>
           }
         />
-       
+
+        <Route
+          path="/Auditorias"
+          element={
+            <Layout>
+              <Auditorias />
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/ConsultoriaEducativa"
+          element={
+            <Layout>
+              <ConsultoriaEducativa />
+            </Layout>
+          }
+        />
+        <Route
+          path="/RedesEInfroestructura"
+          element={
+            <Layout>
+              <RedesEInfroestructura />
+            </Layout>
+          }
+        />
+        <Route
+          path="/DesarrolloDeSitiosWeb"
+          element={
+            <Layout>
+              <DesarrolloDeSitiosWeb />
+            </Layout>
+          }
+        />
+        <Route
+          path="/DesarrolloDeSoftware"
+          element={
+            <Layout>
+              <DesarrolloDeSoftware />
+            </Layout>
+          }
+        />
+        <Route
+          path="/FacturacionElectronica"
+          element={
+            <Layout>
+              <FacturacionElectronica/>
+            </Layout>
+          }
+        />
+         <Route
+          path="/FacturacionElectronica"
+          element={
+            <Layout>
+              <FacturacionElectronica/>
+            </Layout>
+          }
+        />
+         <Route
+          path="/HostingYDominio"
+          element={
+            <Layout>
+              <HostingYDominio/>
+            </Layout>
+          }
+        />
+         <Route
+          path="/InstalacionesElectricas"
+          element={
+            <Layout>
+              <InstalacionesElectricas/>
+            </Layout>
+          }
+        />
+         <Route
+          path="/MantenimientoElectrico"
+          element={
+            <Layout>
+              <MantenimientoElectrico/>
+            </Layout>
+          }
+        />
+        <Route
+          path="/MarketingDigital"
+          element={
+            <Layout>
+              <MarketingDigital/>
+            </Layout>
+          }
+        />
+        <Route
+          path="/PosicionamientoSEO"
+          element={
+            <Layout>
+              <PosicionamientoSEO/>
+            </Layout>
+          }
+        />
+        <Route
+          path="/RefrigeracionIndustrial"
+          element={
+            <Layout>
+              <RefrigeracionIndustrial/>
+            </Layout>
+          }
+        />
+        <Route
+          path="/SeguridadInformatica"
+          element={
+            <Layout>
+              <SeguridadInformatica/>
+            </Layout>
+          }
+        />
+        <Route
+          path="/SoporteTecnico"
+          element={
+            <Layout>
+              <SoporteTecnico/>
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/TecnologiaEnSeguridad"
+          element={
+            <Layout>
+              <TecnologiaEnSeguridad/>
+            </Layout>
+          }
+        />
+        
+        
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

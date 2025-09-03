@@ -28,8 +28,8 @@ const badges = [
   { label: "Soporte", icon: "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/icons8-done-1-1.svg" },
   { label: "Personalizado", icon: "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/icons8-done-1-1.svg" },
 ];
-
-
+const hero3 = "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/Frame-911-1.png"
+const hero2 = "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-926.png"
 const heroImage = "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/Frame-907-1.png";
 const heroImageAlt = "Soluciones Integrales JB para impulsar tu negocio";
 const uiImage = "https://solucionesintegralesjb.com/wp-content/uploads/elementor/thumbs/Frame-932-qqow7tfd3r2zohqj4jx9yf23tmjv30p5niiolmvipc.png";
@@ -118,30 +118,42 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
       </div>
 
       {/* Quienes somos */}
-      <div className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <img
-            src={heroImage}
-            alt={heroImageAlt}
-            className="w-full max-w-md mx-auto md:mx-0"
-          />
-        </div>
-        <div className="space-y-4">
-          <p className="text-sm uppercase tracking-wider text-gray-500">Quienes somos</p>
-          <h2 className="text-3xl font-bold">Somos tus aliados Digitales.</h2>
-          <p>
-            Somos una empresa dedicada a ofrecer servicios digitales personalizados, desde el desarrollo de software y sitios web con diseño gráfico. entre mas servicios. Transformamos sus ideas en soluciones que impulsan su negocio hacia el éxito corporativo con Soluciones Integrales.
-          </p>
-          <div>
-            <p className="font-semibold mb-2">Características de Nuestros Servicios:</p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2">
-              {badges.map((b) => (
-                <Badge key={b.label} label={b.label} icon={b.icon} />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+<div className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
+  {/* Columna de imágenes */}
+  <div className="grid grid-cols-2 gap-4">
+    <img
+      src={hero2}
+      alt="Imagen 1"
+      className="w-full h-72 object-cover rounded-lg shadow-md"
+    />
+    <img
+      src={hero3}
+      alt="Imagen 2"
+      className="w-full h-72 object-cover rounded-lg shadow-md"
+    />
+  </div>
+
+  {/* Columna de texto */}
+  <div className="space-y-4">
+    <p className="text-sm uppercase tracking-wider text-gray-500">
+      Innovación y tecnología para tu crecimiento
+    </p>
+    <h2 className="text-3xl font-bold">Quiénes Somos</h2>
+    <p className="text-gray-700 leading-relaxed">
+      Somos una empresa de tecnología especializada en automatizar procesos de 
+      negocio para mejorar la eficiencia y resultados en diversas áreas de 
+      producción. Nos enfocamos en la Gestión de Servicios de TI, ofreciendo 
+      soluciones basadas en ITSM e ITIL. 
+    </p>
+    <p className="text-gray-700 leading-relaxed">
+      Contamos con un equipo de profesionales que optimizan tanto el tiempo 
+      como los recursos económicos de nuestros clientes, garantizando un 
+      servicio de alta calidad.
+    </p>
+  </div>
+</div>
+
+      
 {/* Misión y Visión */}
       <div className="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-2 gap-8">
         {/* Card Misión */}
@@ -342,28 +354,30 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
       `}</style>
     </section>
 
-      <div>
-          <section className="mx-auto max-w-6xl px-4 py-16">
-    <h2 className="text-3xl font-bold text-center mb-12">Nuestros Valores</h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {valores.map((valor, index) => (
-        <div key={index} className="group perspective w-full h-64">
-          <div className="relative preserve-3d group-hover:rotate-y-180 w-full h-full duration-500 shadow-xl rounded-lg">
-            {/* Frente */}
-            <div className="absolute inset-0 bg-[#1c1c1c] text-white flex flex-col items-center justify-center p-6 backface-hidden rounded-lg">
-              {valor.icon}
-              <h3 className="mt-4 font-bold text-lg">{valor.titulo}</h3>
-            </div>
-            {/* Reverso */}
-            <div className="absolute inset-0 bg-black text-white flex flex-col items-center justify-center p-6 rotate-y-180 backface-hidden rounded-lg">
-              <p className="text-sm text-center">{valor.descripcion}</p>
-            </div>
+      <section className="mx-auto max-w-6xl px-4 py-16">
+  <h2 className="text-3xl font-bold text-center mb-12">Nuestros Valores</h2>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {valores.map((valor, index) => (
+      <div key={index} className="group w-full h-64 [perspective:1000px]">
+        <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+          
+          {/* Frente */}
+          <div className="absolute inset-0 bg-[#1c1c1c] text-white flex flex-col items-center justify-center p-6 rounded-lg [backface-visibility:hidden]">
+            <div className="text-5xl">{valor.icon}</div>
+            <h3 className="mt-4 font-bold text-lg">{valor.titulo}</h3>
+          </div>
+          
+          {/* Reverso */}
+          <div className="absolute inset-0 bg-black text-white flex flex-col items-center justify-center p-6 rounded-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
+            <p className="text-sm text-center">{valor.descripcion}</p>
           </div>
         </div>
-      ))}
-    </div>
-  </section>
       </div>
+    ))}
+  </div>
+</section>
+
+    
 
       {/* Estilos personalizados */}
       <style>{`
@@ -556,7 +570,28 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
           background-color: #fff;
         }
       `}</style>
+
+      {/* Quienes somos */}
+      <div className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <img
+            src={heroImage}
+            alt={heroImageAlt}
+            className="w-full max-w-md mx-auto md:mx-0"
+          />
+        </div>
+        <div className="space-y-4">
+          <p className="text-sm uppercase tracking-wider text-gray-500">Quienes somos</p>
+          <h2 className="text-3xl font-bold">Somos tus aliados Digitales.</h2>
+          <p>
+            Somos una empresa dedicada a ofrecer servicios digitales personalizados, desde el desarrollo de software y sitios web con diseño gráfico. entre mas servicios. Transformamos sus ideas en soluciones que impulsan su negocio hacia el éxito corporativo con Soluciones Integrales.
+          </p>
+          
+        </div>
+      </div>
     </section>
+
+
   );
 };
 
