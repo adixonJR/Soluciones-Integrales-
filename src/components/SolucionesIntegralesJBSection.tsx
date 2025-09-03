@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 // ---- Types ----
 interface Service {
   title: string;
@@ -219,36 +219,187 @@ const TestimonialCard: React.FC<{ t: Testimonial }>
 const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
   return (
     <section className={"w-full " + (className || "")}>      
-      {/* Quienes somos */}
+      {/* CARRUSEL */}
       <div className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <img
-            src={heroImage}
-            alt={heroImageAlt}
-            className="w-full max-w-md mx-auto md:mx-0"
-          />
-        </div>
-        <div className="space-y-4">
-          <p className="text-sm uppercase tracking-wider text-gray-500">Quienes somos</p>
-          <h2 className="text-3xl font-bold">Somos tus aliados Digitales.</h2>
-          <p>
-            Somos una empresa dedicada a ofrecer servicios digitales personalizados, desde el desarrollo de software y sitios web con diseño gráfico. entre mas servicios. Transformamos sus ideas en soluciones que impulsan su negocio hacia el éxito corporativo con Soluciones Integrales.
-          </p>
-          <div>
-            <p className="font-semibold mb-2">Características de Nuestros Servicios:</p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-2">
-              {badges.map((b) => (
-                <Badge key={b.label} label={b.label} icon={b.icon} />
-              ))}
-            </div>
+        
+      </div>
+
+   {/* Soluciones Estratégicas para Crecer */}
+<div className="bg-black w-full px-6 py-10">
+  <p className="text-sm uppercase tracking-wider text-cyan-400 font-semibold">
+    Soluciones Integrales para Impulsa tu Negocio
+  </p>
+  <h2 className="text-3xl font-bold text-white">
+    Soluciones Estratégicas para Crecer
+  </h2>
+
+  {/* Contenedor con paginación */}
+  <div className="mt-6">
+    {(() => {
+      const [index, setIndex] = React.useState(0);
+      const itemsPerPage = 2;
+
+      const handleNext = () => {
+        if (index + itemsPerPage < servicesTop.length) {
+          setIndex(index + itemsPerPage);
+        }
+      };
+
+      const handlePrev = () => {
+        if (index - itemsPerPage >= 0) {
+          setIndex(index - itemsPerPage);
+        }
+      };
+
+      const visibleItems = servicesTop.slice(index, index + itemsPerPage);
+
+      return (
+        <>
+          {/* Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {visibleItems.map((s) => (
+              <ServiceCard key={s.title} item={s} />
+            ))}
           </div>
+
+          {/* Botones navegación */}
+          <div className="flex justify-center gap-4 mt-6">
+            <button
+              onClick={handlePrev}
+              disabled={index === 0}
+              className="px-4 py-2 bg-cyan-600 text-white rounded-lg disabled:opacity-40"
+            >
+              Anterior
+            </button>
+            <button
+              onClick={handleNext}
+              disabled={index + itemsPerPage >= servicesTop.length}
+              className="px-4 py-2 bg-cyan-600 text-white rounded-lg disabled:opacity-40"
+            >
+              Siguiente
+            </button>
+          </div>
+        </>
+      );
+    })()}
+  </div>
+</div>
+
+
+
+{/* Features */}
+<div className="mx-auto max-w-6xl px-4 py-10">
+  <motion.p
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true }}
+    className="italic font-semibold text-center"
+  >
+    Lo que te ofrecemos para potenciar tu éxito digital
+  </motion.p>
+
+  <motion.h2
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7, delay: 0.2 }}
+    viewport={{ once: true }}
+    className="text-3xl font-bold text-center"
+  >
+    Características de Soluciones Integrales JB
+  </motion.h2>
+
+  {/* Bloques con stagger */}
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    variants={{
+      hidden: { opacity: 0, y: 30 },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: { staggerChildren: 0.2 },
+      },
+    }}
+    viewport={{ once: true }}
+    className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6"
+  >
+    {features.map((f, idx) => (
+      <motion.div
+        key={`${f.title}-${idx}`}
+        variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+        transition={{ duration: 0.6 }}
+      >
+        <FeatureBlock feature={f} />
+      </motion.div>
+    ))}
+  </motion.div>
+
+  {/* Imágenes con animación */}
+  <div className="mt-8 grid md:grid-cols-2 gap-6 items-center">
+    <motion.img
+      src={uiImage}
+      alt="Diseño web profesional"
+      className="w-full rounded-xl"
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true }}
+    />
+   
+  </div>
+</div>
+
+      {/* Video + Texto duplicado */}
+<div className="bg-black w-full">
+  <div className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
+    <div className="space-y-4">
+      <p className="text-sm uppercase tracking-wider text-cyan-400 font-semibold">
+        Transformando Ideas en Soluciones Integrales
+      </p>
+      <h2 className="text-3xl font-bold text-white">
+        Soluciones Digitales Personalizadas
+      </h2>
+      <p className="text-gray-300">
+        Sumérgete en nuestro enfoque colaborativo para desarrollar soluciones
+        digitales únicas. Desde la concepción hasta la implementación, estamos
+        aquí para hacer realidad tus visiones digitales y mejorar tu estrategia
+        empresarial con nosotros <span className="text-cyan-400">Soluciones Integrales JB</span>.
+      </p>
+    </div>
+    <video
+      className="w-full rounded-2xl shadow-lg"
+      src={videoUrl}
+      controls
+      preload="metadata"
+    />
+  </div>
+</div>
+
+      {/* Testimonials */}
+      <div className="mx-auto max-w-6xl px-4 py-10">
+        <h2 className="text-3xl font-bold">Que dicen de nosotros</h2>
+        <p className="text-gray-700">Opiniones Auténticas que Avalan la Calidad y Rendimiento de Nuestros servicios.</p>
+        <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials.map((t) => (
+            <TestimonialCard key={t.name} t={t} />
+          ))}
         </div>
       </div>
 
+      {/* Clients */}
+      <div className="mx-auto max-w-6xl px-4 py-10">
+        <h2 className="text-3xl font-bold">Nuestros clientes</h2>
+        <p className="text-gray-700">Las marcas que confían en Soluciones Integrales JB</p>
 
-      
-
-      
+        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center">
+          {clients.map((c, idx) => (
+            <div key={idx} className="p-4 rounded-xl border bg-white flex items-center justify-center">
+              <img src={c.src} alt={c.alt} className="max-h-12 w-auto" />
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
