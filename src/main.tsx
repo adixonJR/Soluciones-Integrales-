@@ -30,7 +30,9 @@ import RefrigeracionIndustrial from './pages/RefrigeracionIndustrial';
 import SeguridadInformatica from './pages/SeguridadInfromatica';
 import TecnologiaEnSeguridad from './pages/TecnologiaEnSeguridad';
 import ConsultoriaEducativa from './pages/ConsultoriaEducativa';
-
+import SocialMedia from './pages/SocialMedia';
+import Merchandising from './pages/Merchandising';
+import GraficaPublicitaria from './pages/GraficaPublicitaria';
 
 
 // Layout para que Navbar y Footer estén siempre
@@ -264,6 +266,31 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           element={
             <Layout>
               <TecnologiaEnSeguridad/>
+            </Layout>
+          }
+        />
+
+        <Route
+          path="/Merchandising"
+          element={
+            <Layout>
+              <Merchandising/>
+            </Layout>
+          }
+        />
+        <Route
+          path="/GraficaPublicitaria"
+          element={
+            <Layout>
+              <GraficaPublicitaria/>
+            </Layout>
+          }
+        />
+        <Route
+          path="/SocialMedia"
+          element={
+            <Layout>
+              <SocialMedia/>
             </Layout>
           }
         />

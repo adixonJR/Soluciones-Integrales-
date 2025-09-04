@@ -83,7 +83,7 @@ const Convenios = () => {
           />
         </figure>
       </section>
-
+         
       {/* Repite la misma estructura para otras instituciones como Huando, Chancay, UNJFSC, etc. */}
     </div>
   );

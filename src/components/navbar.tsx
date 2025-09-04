@@ -61,7 +61,7 @@ function Navbar() {
                 <ul className="space-y-1 text-gray-300 text-sm">
                   <li><a href="/ConsultoriaTI" className="hover:text-cyan-400">Consultoría TI</a></li>
                   <li><a href="/ConsultoriaEmpresarial" className="hover:text-cyan-400">Consultoría Empresarial</a></li>
-                  <li><a href="/NuestraOrganizacion" className="hover:text-cyan-400">Nuestra Organización</a></li>
+                 <p className="text-xs uppercase font-bold text-gray-400 mb-2">Nuestra Organizacion</p>
                   <li><a href="/Organigrama" className="hover:text-cyan-400">Organigrama</a></li>
                   <li><a href="/NuestroEquipo" className="hover:text-cyan-400">Nuestro Equipo</a></li>
                 </ul>
@@ -99,9 +99,15 @@ function Navbar() {
                   <li><a href="/ConsultoriaEducativa" className="hover:text-cyan-400">Consultoría Educativa</a></li>
                   <li><a href="/Auditorias" className="hover:text-cyan-400">Auditorías</a></li>
                   <li><a href="/SeguridadInformatica" className="hover:text-cyan-400">Seguridad Informática</a></li>
-                  <li><a href="/MarketingDigital" className="hover:text-cyan-400">Marketing Digital</a></li>
+                  
+                <p className="text-xs uppercase font-bold text-gray-400 mb-2">Marketing Digital</p>
+                <ul className="space-y-1 text-gray-300 text-sm"></ul>
                   <li><a href="/DesarrolloDeSitiosWeb" className="hover:text-cyan-400">Desarrollo de sitio Web</a></li>
                   <li><a href="/PosicionamientoSEO" className="hover:text-cyan-400">Posicionamiento SEO</a></li>
+                  <li><a href="/GraficaPublicitaria" className="hover:text-cyan-400">Grafica Publicitaria</a></li>
+                  <li><a href="/Merchandising" className="hover:text-cyan-400">Merchandising</a></li>
+                  <li><a href="/SocialMedia" className="hover:text-cyan-400">Social Media</a></li>
+
                 </ul>
               </div>
               <div>

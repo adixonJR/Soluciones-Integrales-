@@ -2,7 +2,14 @@ import React from "react";
 import quienes from '../assets/quienes.jpg';
 import { FaChartLine, FaEye } from "react-icons/fa";
 import { FaShieldAlt, FaClock, FaKey, FaLightbulb, FaUsers, FaHeart } from "react-icons/fa";
-
+import {
+  FaLock,
+  FaCheckCircle,
+  FaRocket,
+  FaShieldVirus,
+  FaHandsHelping,
+  FaUserTie,
+} from "react-icons/fa";
 
 
 interface Feature {
@@ -28,6 +35,8 @@ const badges = [
   { label: "Soporte", icon: "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/icons8-done-1-1.svg" },
   { label: "Personalizado", icon: "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/icons8-done-1-1.svg" },
 ];
+
+
 const hero3 = "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/Frame-911-1.png"
 const hero2 = "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-926.png"
 const heroImage = "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/Frame-907-1.png";
@@ -84,6 +93,47 @@ const valores = [
   },
 ];
 
+
+
+
+const caracteristicas = [
+  {
+    icon: <FaLock className="fa-3x text-cyan-500" />,
+    titulo: "CONFIANZA",
+    descripcion:
+      "Nuestro objetivo es la protección de la información porque es un activo importante dentro de la organización, y se requiere de una protección adecuada; implementando un conjunto de políticas y controles de seguridad para la preservación de su confidencialidad, integridad y disponibilidad.",
+  },
+  {
+    icon: <FaCheckCircle className="fa-3x text-green-500" />,
+    titulo: "CALIDAD",
+    descripcion:
+      "La calidad de nuestros servicios y soluciones garantizan experiencias basadas en la responsabilidad, el trabajo en equipo y la comunicación con nuestros clientes para lograr los objetivos establecidos.",
+  },
+  {
+    icon: <FaRocket className="fa-3x text-yellow-500" />,
+    titulo: "VELOCIDAD",
+    descripcion:
+      "Utilizamos la tecnología como socio estratégico, aplicándola como solución de negocio para mantener y aumentar la competitividad de nuestros clientes.",
+  },
+  {
+    icon: <FaShieldVirus className="fa-3x text-orange-500" />,
+    titulo: "SEGURIDAD",
+    descripcion:
+      "Nuestros equipos están en la continua búsqueda de nuevas soluciones tecnológicas, para integrarlas en los procesos de una organización.",
+  },
+  {
+    icon: <FaHandsHelping className="fa-3x text-purple-500" />,
+    titulo: "SOPORTE",
+    descripcion:
+      "Somos ágiles, sabemos escuchar, trabajamos de forma rigurosa y transparente con un alto sentido del servicio, buscando siempre satisfacer las expectativas de nuestros clientes.",
+  },
+  {
+    icon: <FaUserTie className="fa-3x text-red-500" />,
+    titulo: "PERSONALIZADO",
+    descripcion:
+      "Nuestra principal motivación es conocer y satisfacer las necesidades, dando respuestas rápidas y eficaces a los desafíos tecnológicos de nuestros clientes.",
+  },
+];
 
 
 
@@ -589,7 +639,33 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
           
         </div>
       </div>
+{/*/////////////////////////////////////////////////////////////////////////////////////////////*/ }
+       <section className="mx-auto max-w-6xl px-4 py-16">
+      <h2 className="text-3xl font-bold text-center mb-12">
+        Características de Nuestros Servicios:
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {caracteristicas.map((valor, index) => (
+          <div key={index} className="group w-full h-64 [perspective:1000px]">
+            <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+              
+              {/* Frente */}
+              <div className="absolute inset-0 bg-[#1c1c1c] text-white flex flex-col items-center justify-center p-6 rounded-lg [backface-visibility:hidden]">
+                <div className="text-5xl">{valor.icon}</div>
+                <h3 className="mt-4 font-bold text-lg">{valor.titulo}</h3>
+              </div>
+              
+              {/* Reverso */}
+              <div className="absolute inset-0 bg-black text-white flex flex-col items-center justify-center p-6 rounded-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                <p className="text-sm text-center">{valor.descripcion}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
+    </section>
+    
 
 
   );
