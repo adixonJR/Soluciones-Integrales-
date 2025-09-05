@@ -1,41 +1,65 @@
-import React from 'react';
+import React from "react";
+import fondoN from "../assets/fondoN.jpg"; // 👈 asegúrate de que la ruta sea correcta
 
-const SocialMedia: React.FC = () => {
+const Merchandising = () => {
   return (
-    <div>
-      {/* Banner con imagen de fondo y texto */}
-      <div className="relative w-full h-64 md:h-80 bg-black text-white flex flex-col items-center justify-center overflow-hidden">
-        
-        {/* 1. Imagen de fondo */}
-        <img 
-          src="https://i.postimg.cc/90dGrGQD/fondoN.jpg" 
-          alt="Fondo de ladrillos oscuros" 
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        />
+    <div className="font-sans">
+      {/* Hero con fondoN */}
+      <div
+  className="w-full h-[300px] bg-center bg-no-repeat flex items-center justify-center relative"
+  style={{
+    backgroundImage: `url(${fondoN})`,
+    backgroundSize: '120%' // Puedes ajustar este valor: 100% = normal, <100% = alejar
+  }}
+>
+  {/* Overlay oscuro */}
+  <div className="absolute inset-0 bg-black/50"></div>
 
-        {/* 2. Capa oscura semitransparente */}
-        <div className="absolute inset-0 bg-black bg-opacity-70 z-10"></div>
+  {/* Texto centrado encima del fondo */}
+  <h1 className="relative text-4xl md:text-5xl font-bold text-white text-center z-10">
+    Social Media
+  </h1>
+</div>
 
-        {/* 3. Contenido del banner */}
-        <div className="relative z-20 flex flex-col items-center justify-center text-center px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-sky-400">
-            Social Media
-          </h1>
-          <span className="mt-2 text-sm font-semibold tracking-wider text-gray-300">
-            Inicio / Social Media
-          </span>
+
+
+      {/* Contenido principal */}
+      <div className="px-4 py-12 max-w-7xl mx-auto">
+        <div className="flex items-center flex-wrap mt-8">
+          {/* Imagen a la izquierda */}
+          <div className="flex-1 pr-12 min-w-[300px]">
+            <img
+              src="https://solucionesintegralesjb.com/wp-content/uploads/2024/09/gestionar-redes-sociales-desde-computadora-o-celular.png"
+              alt="Social Media"
+              className="w-full max-w-[3000px] h-auto rounded-lg shadow-lg"
+            />
+          
+          </div>
+         
+
+          {/* Información a la derecha */}
+          <div className="flex-1 min-w-[300px]">
+            <div className="text-center p-6 bg-[#f4f9ff] rounded-lg shadow-md">
+              <h2 className="text-2xl font-semibold mb-5 text-[#2c3e50]">
+                <span className="text-[#3498db]">Potencia Tu Presencia en Redes Sociales</span>
+              </h2>
+
+              <p className="text-[#34495e] text-base leading-relaxed mb-5">
+                Potencia tu presencia en redes sociales con nuestro servicio de gestión eficaz. Creamos y publicamos contenido estratégico en plataformas clave como Facebook, Instagram y LinkedIn, optimizando cada publicación para aumentar el engagement y las conversiones. Monitorizamos el rendimiento en tiempo real y gestionamos interacciones con tu audiencia para asegurar una comunicación efectiva. Confía en nosotros para fortalecer tu marca digital y alcanzar tus objetivos de negocio a través de redes sociales.
+              </p>
+
+              <a
+                href="#contacto"
+                className="bg-[#3498db] text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-[#2980b9] transition duration-300"
+              >
+                ¡Hablemos!
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Sección inferior (contenido principal) */}
-      <div className="px-4 py-8 max-w-7xl mx-auto font-sans">
-        <h2 className="text-3xl font-bold mb-6 text-center">Gestión de Redes Sociales</h2>
-        <p className="text-center text-gray-700 max-w-2xl mx-auto">
-          Ofrecemos estrategias de social media marketing para impulsar tu marca, aumentar tu engagement y mejorar tu presencia digital.
-        </p>
       </div>
     </div>
   );
 };
 
-export default SocialMedia;
+export default Merchandising;

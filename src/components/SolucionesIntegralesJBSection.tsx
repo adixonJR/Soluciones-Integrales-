@@ -1,5 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
+
 // ---- Types ----
 interface Service {
   title: string;
@@ -40,6 +44,12 @@ const badges = [
   { label: "Soporte", icon: "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/icons8-done-1-1.svg" },
   { label: "Personalizado", icon: "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/icons8-done-1-1.svg" },
 ];
+
+const responsive = {
+  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3, slidesToSlide: 2 },
+  tablet: { breakpoint: { max: 1024, min: 640 }, items: 2, slidesToSlide: 2 },
+  mobile: { breakpoint: { max: 640, min: 0 }, items: 1, slidesToSlide: 1 },
+};
 
 const servicesTop: Service[] = [
   {
@@ -94,6 +104,8 @@ const servicesBottom: Service[] = [
     cta: "Información",
   },
 ];
+
+
 
 const features: Feature[] = [
   { title: "Soluciones a Medida", text: "Desarrollamos software a la medida de tus necesidades. Adaptado específicamente para ti.", as: "h3" },
@@ -289,22 +301,24 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
 {/* ///////////////////////////////////////////////////////////////////////////////////////////// */}
 {/* Features con imagen centrada */}
 <div className="mx-auto max-w-6xl px-4 py-10">
+  {/* Subtítulo con color cyan y centrado */}
   <motion.p
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6 }}
     viewport={{ once: true }}
-    className="italic font-semibold text-center"
+    className="italic font-semibold text-center text-cyan-400"
   >
     Lo que te ofrecemos para potenciar tu éxito digital
   </motion.p>
 
+  {/* Título principal también con color cyan */}
   <motion.h2
     initial={{ opacity: 0, y: 40 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.7, delay: 0.2 }}
     viewport={{ once: true }}
-    className="text-3xl font-bold text-center"
+    className="text-3xl font-bold text-center text-cyan-400"
   >
     Características de Soluciones Integrales JB
   </motion.h2>
@@ -337,7 +351,7 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
       ))}
     </motion.div>
 
-    {/* Imagen en el centro más pequeña */}
+    {/* Imagen en el centro */}
     <motion.img
       src={uiImage}
       alt="Diseño web profesional"
@@ -375,6 +389,7 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
     </motion.div>
   </div>
 </div>
+
 {/* ///////////////////////////////////////////////////////////////////////////////////////////// */}
 
       {/* Video + Texto duplicado */}
@@ -403,30 +418,55 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
   </div>
 </div>
 {/* ///////////////////////////////////////////////////////////////////////////////////////////// */}
-      {/* Testimonials */}
       <div className="mx-auto max-w-6xl px-4 py-10">
-        <h2 className="text-3xl font-bold">Que dicen de nosotros</h2>
-        <p className="text-gray-700">Opiniones Auténticas que Avalan la Calidad y Rendimiento de Nuestros servicios.</p>
-        <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
-            <TestimonialCard key={t.name} t={t} />
-          ))}
-        </div>
-      </div>
+    <h2 className="text-3xl font-bold">Qué dicen de nosotros</h2>
+    <p className="text-gray-700 mb-6">
+      Opiniones auténticas que avalan la calidad y rendimiento de nuestros servicios.
+    </p>
+
+    <Carousel
+      responsive={responsive}
+      infinite={false}
+      autoPlay={false}
+      keyBoardControl={true}
+      showDots={false}
+      arrows={true}
+      partialVisible={false}
+      containerClass="carousel-container"
+      itemClass="px-2"
+    >
+      {testimonials.map((t) => (
+        <TestimonialCard key={t.name} t={t} />
+      ))}
+    </Carousel>
+  </div>
 {/* ///////////////////////////////////////////////////////////////////////////////////////////// */}
       {/* Clients */}
-      <div className="mx-auto max-w-6xl px-4 py-10">
-        <h2 className="text-3xl font-bold">Nuestros clientes</h2>
-        <p className="text-gray-700">Las marcas que confían en Soluciones Integrales JB</p>
+      <div className="w-full bg-black py-14 px-6">
+  <div className="max-w-7xl mx-auto text-center">
+    <h2 className="text-3xl font-bold text-white mb-2">Nuestros clientes</h2>
+    <p className="text-gray-400 text-lg">
+      Las marcas que confían en Soluciones Integrales JB
+    </p>
 
-        <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 items-center">
-          {clients.map((c, idx) => (
-            <div key={idx} className="p-4 rounded-xl border bg-white flex items-center justify-center">
-              <img src={c.src} alt={c.alt} className="max-h-12 w-auto" />
-            </div>
-          ))}
+    <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 place-items-center">
+      {clients.map((c, idx) => (
+        <div
+          key={idx}
+          className="p-3 bg-black flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300"
+        >
+          <img
+            src={c.src}
+            alt={c.alt}
+            className="max-h-12 w-auto object-contain"
+          />
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+
     </section>
   );
 };
