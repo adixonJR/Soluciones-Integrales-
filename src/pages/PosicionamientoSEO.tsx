@@ -1,158 +1,201 @@
-import React from "react";
-<body>
-    <p>
-    ‎‎‎‎‎‎‎‎‎‎‎
-    </p>
-</body>
-const AboutSection = () => {
+import React from 'react';
+import fondoN from '../assets/fondoN.jpg'; // tu banner superior
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination , Autoplay} from 'swiper/modules';
+import 'swiper/css/autoplay'; 
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+const testimonios = [
+  {
+    nombre: 'Maria Torres',
+    imagen: 'https://randomuser.me/api/portraits/women/44.jpg',
+    opinion: 'Muy profesionalismo y rapidez nos impresionaron. El nuevo diseño ha atraído más clientes.',
+  },
+  {
+    nombre: 'Carlos Gómez',
+    imagen: 'https://randomuser.me/api/portraits/men/32.jpg',
+    opinion: 'La integración fue muy sencilla. En pocos días ya estábamos facturando sin problemas.',
+  },
+  {
+    nombre: 'Laura Ramírez',
+    imagen: 'https://randomuser.me/api/portraits/women/55.jpg',
+    opinion: 'El soporte técnico es excelente. Siempre disponibles para ayudarnos cuando lo necesitamos.',
+  },
+];
+
+const PosicionamientoSEO: React.FC = () => {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
-      {/* Imagen principal */}
-      <div className="text-center">
-        <img
-          src="https://solucionesintegralesjb.com/wp-content/uploads/2024/06/Frame-907-1.png"
-          alt="Soluciones Integrales JB para impulsar tu negocio"
-          className="w-[300px] md:w-[500px] mx-auto"
-        />
-        <h2 className="text-2xl font-bold mt-4">Somos tus aliados Digitales</h2>
-        <p className="mt-2 text-gray-700">
-          Somos una empresa dedicada a ofrecer servicios digitales
-          personalizados, desde el desarrollo de software y sitios web con
-          diseño gráfico. Transformamos tus ideas en soluciones que impulsan tu
-          negocio hacia el éxito corporativo con Soluciones Integrales.
-        </p>
+    <div className="px-0 py-0 max-w-full font-sans">
+
+      {/* Banner Superior */}
+      <div
+        className="relative w-full h-[300px] flex items-center justify-center bg-cover bg-center"
+        style={{ backgroundImage: `url(${fondoN})` }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <h1 className="relative text-4xl md:text-5xl font-bold text-white text-center z-10">
+          Posicionamiento SEO
+        </h1>
       </div>
 
-      {/* Características */}
-      <div className="mt-8">
-        <h3 className="text-xl font-semibold">Características de Nuestros Servicios:</h3>
-        <div className="grid grid-cols-2 gap-4 mt-4">
-          {[
-            "Confianza",
-            "Velocidad",
-            "Calidad",
-            "Seguridad",
-            "Soporte",
-            "Personalizado",
-          ].map((item, idx) => (
-            <div key={idx} className="flex items-center space-x-2">
-              <img
-                src="https://solucionesintegralesjb.com/wp-content/uploads/2024/06/icons8-done-1-1.svg"
-                alt="check"
-                className="w-6 h-6"
-              />
-              <span>{item}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Sección de Hosting y Dominio */}
+      <section className="bg-white py-20 px-6 md:px-16">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          
+          {/* Texto */}
+          <div className="md:w-1/2 text-gray-800">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">   
+              Optimización SEO Fundamental
+            </h2>
+            <p className="mb-4 leading-relaxed text-justify">
+             En Soluciones Integrales JB, ofrecemos servicios de SEO básico diseñados para mejorar la visibilidad orgánica de tu sitio web. Implementamos prácticas clave de optimización, como la investigación de palabras clave estratégicas para tu sector y la optimización de meta tags y descripciones. Nos aseguramos de que tu sitio siga las directrices más recientes de los motores de búsqueda, facilitando una indexación efectiva y un mejor posicionamiento en los resultados de búsqueda.
+            </p>
 
-      {/* Servicios */}
-      <div className="mt-12">
-        <h2 className="text-2xl font-bold">Soluciones Estratégicas para Crecer</h2>
+          </div>
 
-        <div className="grid md:grid-cols-2 gap-6 mt-6">
-          {[
-            {
-              title: "Desarrollo de Software",
-              img: "https://solucionesintegralesjb.com/wp-content/uploads/2024/09/mejores-herramientas-desarrollo-software-1-400x267.png",
-            },
-            {
-              title: "Facturación Electrónica",
-              img: "https://solucionesintegralesjb.com/wp-content/uploads/2024/09/s3-blog-facturacion-electronica-min-400x256.png",
-            },
-            {
-              title: "Soporte Técnico",
-              img: "https://solucionesintegralesjb.com/wp-content/uploads/2024/09/Soporte-en-Sitio-¿Que-es-eso-copia-400x267.webp",
-            },
-            {
-              title: "Tecnología en Seguridad",
-              img: "https://solucionesintegralesjb.com/wp-content/uploads/2024/10/tecnologia-seguridad-1-768x512.jpg",
-            },
-          ].map((service, idx) => (
-            <div key={idx} className="text-center shadow-md rounded-lg p-4">
-              <img
-                src={service.img}
-                alt={service.title}
-                className="w-full h-48 object-cover rounded-md"
-              />
-              <h3 className="text-lg font-semibold mt-2">{service.title}</h3>
-              <button className="mt-2 text-blue-600 hover:underline">
-                Información
-              </button>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Testimonios */}
-      <div className="mt-12">
-        <h2 className="text-2xl font-bold">Qué dicen de nosotros</h2>
-        <p className="text-gray-600">
-          Opiniones auténticas que avalan la calidad y rendimiento de nuestros
-          servicios.
-        </p>
-
-        <div className="grid md:grid-cols-2 gap-6 mt-6">
-          {[
-            {
-              name: "Italo Romero",
-              comment: "Buen servicio de sitios web, excelente diseño y experiencia.",
-              img: "https://solucionesintegralesjb.com/wp-content/uploads/2024/10/unnamed-1.png",
-            },
-            {
-              name: "William Moises",
-              comment:
-                "Buen lugar donde te ofrecen de todo en tecnología informática y ciber vigilancia.",
-              img: "https://solucionesintegralesjb.com/wp-content/uploads/2024/10/unnamed-2.png",
-            },
-            {
-              name: "Fritzl Yacomin",
-              comment:
-                "Excelente atención, realmente muy profesionales en su trato y servicio.",
-              img: "https://solucionesintegralesjb.com/wp-content/uploads/2024/10/unnamed.png",
-            },
-            {
-              name: "Ana Montes",
-              comment:
-                "Muy buen servicio de parte de los empleados, atentos y serviciales.",
-              img: "https://solucionesintegralesjb.com/wp-content/uploads/2024/10/unnamed-4.png",
-            },
-          ].map((t, idx) => (
-            <div key={idx} className="flex items-center space-x-4 bg-gray-100 p-4 rounded-lg">
-              <img src={t.img} alt={t.name} className="w-16 h-16 rounded-full" />
-              <div>
-                <h4 className="font-semibold">{t.name}</h4>
-                <p className="text-sm text-gray-600">{t.comment}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Clientes */}
-      <div className="mt-12">
-        <h2 className="text-2xl font-bold">Nuestros Clientes</h2>
-        <p className="text-gray-600">Las marcas que confían en Soluciones Integrales JB</p>
-        <div className="flex flex-wrap gap-6 mt-6 justify-center">
-          {[
-            "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-5.svg",
-            "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-4.svg",
-            "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-1-1.svg",
-            "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-7.svg",
-            "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-10.svg",
-          ].map((logo, idx) => (
+          {/* Imagen */}
+          <div className="md:w-1/2">
             <img
-              key={idx}
-              src={logo}
-              alt={`Cliente ${idx + 1}`}
-              className="h-16 object-contain"
+              src="https://solucionesintegralesjb.com/wp-content/uploads/2024/07/seo.94e1f354aed0.svg"
+              alt="Descripción de la imagen"
+              className="w-full max-w-[3000px] h-auto"
             />
-          ))}
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section className="bg-black py-20 px-6 md:px-16">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    
+    {/* Imágenes a la izquierda */}
+    <div className="md:w-1/2 flex flex-col gap-6">
+      <img
+        src="https://solucionesintegralesjb.com/wp-content/uploads/2024/07/disenadora-web-femenina-papeles-notas-oficina_23-2149749879.jpg"
+        alt="Imagen 1"
+        className="rounded-lg shadow-md w-full"
+      />
+
     </div>
+
+
+    {/* Texto a la derecha */}
+    <div className="md:w-1/2 text-white">
+      <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+        Mejora de la Estructura del Sitio
+      </h2>
+      <p className="mb-4 leading-relaxed text-justify">
+        Nuestro enfoque también se centra en optimizar la estructura del sitio, asegurando una navegación intuitiva y accesible tanto para los usuarios como para los motores de búsqueda. Mejoramos la arquitectura de enlaces internos para garantizar una distribución eficaz de la autoridad y facilitar el acceso al contenido. Esto no solo mejora la experiencia del usuario al hacer más fácil la exploración del sitio, sino que también ayuda a los motores de búsqueda a comprender mejor la relevancia y la jerarquía de las páginas, lo que contribuye a un mejor posicionamiento.
+      </p>
+      <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
+        CONTÁCTANOS
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+ <section className="bg-white py-20 px-6 md:px-16">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          
+          {/* Texto */}
+          <div className="md:w-1/2 text-gray-800">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+              Contenido Optimizado
+            </h2>
+            <p className="mb-4 leading-relaxed text-justify">
+              Desarrollamos estrategias de contenido optimizado que conectan de manera efectiva con tu audiencia objetivo y mejoran tu posicionamiento SEO. Cada pieza de contenido se optimiza con palabras clave específicas, al mismo tiempo que ofrece información valiosa y relevante para los usuarios. Esto no solo incrementa la visibilidad en los motores de búsqueda, sino que también fortalece la autoridad de tu marca dentro de la industria, generando mayor confianza y fomentando el compromiso de los visitantes.
+            </p>
+          </div>
+
+          {/* Imagen */}
+          <div className="md:w-1/2">
+            <img
+              src="https://solucionesintegralesjb.com/wp-content/uploads/2024/09/medium.avif"
+              alt="Descripción de la imagen"
+              className="w-full max-w-[3000px] h-auto"
+            />
+          </div>
+        </div>
+      </section>
+
+
+      <section className="bg-white py-20 px-6 md:px-16">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    
+    {/* Imágenes a la izquierda */}
+    <div className="md:w-1/2 flex flex-col gap-6">
+      <img
+        src="https://solucionesintegralesjb.com/wp-content/uploads/2024/09/optimizacion-motores-busqueda-seo-concepto-digital-internet_53876-138498.avif"
+        alt="Imagen 1"
+        className="rounded-lg shadow-md w-full"
+      />
+
+    </div>
+
+    {/* Texto a la derecha */}
+    <div className="md:w-1/2 text-gray-800">
+      <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+          Reportes y Seguimiento de Resultados
+      </h2>
+      <p className="mb-4 leading-relaxed text-justify">
+       Ofrecemos reportes detallados y un seguimiento exhaustivo de los resultados para que puedas evaluar el impacto de nuestras estrategias de SEO. Monitoreamos métricas clave como el tráfico orgánico, las posiciones de palabras clave y la tasa de conversión, proporcionándote insights valiosos que te permiten ajustar y optimizar continuamente tu estrategia. Nuestro enfoque orientado a resultados garantiza que cada acción esté alineada con tus objetivos comerciales, maximizando así el retorno de inversión en marketing digital.
+
+
+      </p>
+
+      <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
+        CONTACTAR
+      </button>
+    </div>
+      </div>
+</section>
+<section className="py-20 px-4 sm:px-10 bg-gradient-to-b from-[#1e1e1e] to-[#2e1015] text-white rounded-tl-3xl rounded-tr-3xl">
+  <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+    
+    {/* Título a la izquierda */}
+    <div className="md:w-1/2 text-center md:text-left">
+      <h2 className="text-3xl md:text-4xl font-semibold text-blue-400">
+        Opiniones de Nuestros <br /> Servicio digital
+      </h2>
+    </div>
+
+    {/* Carrusel a la derecha */}
+<div className="md:w-1/2">
+  <Swiper
+    modules={[Pagination, Autoplay]}
+    pagination={{ clickable: true }}
+    spaceBetween={30}
+    slidesPerView={1}
+    loop={true} // loop infinito
+    autoplay={{
+      delay: 3000, // tiempo en ms entre slides (3 segundos)
+      disableOnInteraction: false, // que no se detenga al interactuar
+    }}
+  >
+    {testimonios.map((testimonio, index) => (
+      <SwiperSlide key={index}>
+        <div className="bg-black bg-opacity-90 text-white rounded-xl p-6 shadow-lg">
+          <p className="mb-4 text-base md:text-lg">"{testimonio.opinion}"</p>
+          <div className="flex items-center gap-3 mt-4">
+            <img
+              src={testimonio.imagen}
+              alt={testimonio.nombre}
+              className="w-10 h-10 rounded-full border-2 border-blue-400"
+            />
+            <span className="font-semibold text-sm">{testimonio.nombre}</span>
+          </div>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
+  </div>
+</section>
+
+</div>
   );
 };
 
-export default AboutSection;
+export default PosicionamientoSEO;
