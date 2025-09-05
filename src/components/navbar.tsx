@@ -85,8 +85,8 @@ function Navbar() {
                 <ul className="space-y-1 text-gray-300 text-sm">
                   <li><a href="/DesarrolloDeSoftware" className="hover:text-cyan-400">Desarrollo de Software</a></li>
                   <li><a href="/FacturacionElectronica" className="hover:text-cyan-400">Facturación Electrónica</a></li>
-                  <li><a href="/SeguridadTecnologia" className="hover:text-cyan-400">Tecnología en Seguridad</a></li>
-                  <li><a href="/RedesEInfraestructura" className="hover:text-cyan-400">Redes e Infraestructura</a></li>
+                  <li><a href="/TecnologiaEnSeguridad" className="hover:text-cyan-400">Tecnología en Seguridad</a></li>
+                  <li><a href="/RedesEInfrostructura" className="hover:text-cyan-400">Redes e Infraestructura</a></li>
                   <li><a href="/HostingYDominio" className="hover:text-cyan-400">Hosting y Dominio</a></li>
                   <li><a href="/SoporteTecnico" className="hover:text-cyan-400">Soporte Técnico</a></li>
                 </ul>

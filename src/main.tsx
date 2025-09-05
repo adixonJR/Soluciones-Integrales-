@@ -25,7 +25,7 @@ import MantenimientoElectrico from './pages/MantenimientoElectrico';
 import MarketingDigital from './pages/MarketingDigital';
 import SoporteTecnico from './pages/SoporteTecnico';
 import PosicionamientoSEO from './pages/PosicionamientoSEO';
-import RedesEInfroestructura from './pages/RedesEInfrostructura';
+import RedesEInfrostructura from './pages/RedesEInfrostructura';
 import RefrigeracionIndustrial from './pages/RefrigeracionIndustrial';
 import SeguridadInformatica from './pages/SeguridadInfromatica';
 import TecnologiaEnSeguridad from './pages/TecnologiaEnSeguridad';
@@ -157,10 +157,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           }
         />
         <Route
-          path="/RedesEInfroestructura"
+          path="/RedesEInfrostructura"
           element={
             <Layout>
-              <RedesEInfroestructura />
+              <RedesEInfrostructura/>
             </Layout>
           }
         />
