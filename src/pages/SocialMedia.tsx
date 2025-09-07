@@ -48,17 +48,38 @@ const Merchandising = () => {
                 Potencia tu presencia en redes sociales con nuestro servicio de gestión eficaz. Creamos y publicamos contenido estratégico en plataformas clave como Facebook, Instagram y LinkedIn, optimizando cada publicación para aumentar el engagement y las conversiones. Monitorizamos el rendimiento en tiempo real y gestionamos interacciones con tu audiencia para asegurar una comunicación efectiva. Confía en nosotros para fortalecer tu marca digital y alcanzar tus objetivos de negocio a través de redes sociales.
               </p>
 
-              <a
-                href="#contacto"
-                className="bg-[#3498db] text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-[#2980b9] transition duration-300"
-              >
-                ¡Hablemos!
-              </a>
+              {/* Botón de Contacto */}
+        <div className="text-center">
+          <a
+            href="/Contacto"
+            className="inline-block px-6 py-3 bg-sky-400 text-white font-semibold rounded-lg hover:bg-sky-500 transition duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="inline-block mr-2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M16 12H8m0 0l4-4m-4 4l4 4"
+              />
+            </svg>
+            CONTACTAR
+          </a>
+        </div>
+      </div>
+
             </div>
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 
