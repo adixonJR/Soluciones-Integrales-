@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import ScrollButton from "../components/ScrollButton";
 
 const DesarrolloWebBanner: React.FC = () => {
   // Datos para el carrusel de testimonios (ahora con 4 comentarios)
@@ -60,10 +61,10 @@ const DesarrolloWebBanner: React.FC = () => {
         {/* Contenido del banner */}
         <div className="relative z-20 flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-3xl md:text-5xl font-bold text-sky-400">
-            Desarrollo de Sitio Web
+            Desarrollo de Software
           </h1>
           <span className="mt-2 text-sm md:text-base font-semibold tracking-wider text-gray-300">
-            Inicio / Desarrollo de Sitio Web
+            Inicio / Desarrollo de Software
           </span>
         </div>
       </header>
@@ -397,6 +398,7 @@ const DesarrolloWebBanner: React.FC = () => {
               ))}
             </div>
           </motion.div>
+          <ScrollButton />
         </div>
       </section>
     </div>

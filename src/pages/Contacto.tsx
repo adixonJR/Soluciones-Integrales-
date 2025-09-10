@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ScrollButton from "../components/ScrollButton";
 
 
 const Contacto = () => {
@@ -211,6 +212,7 @@ const Contacto = () => {
             </details>
           ))}
         </div>
+        <ScrollButton />
       </div>
     </div>
   );

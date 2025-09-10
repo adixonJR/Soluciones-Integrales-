@@ -1,6 +1,7 @@
 import React from "react";
 import '../comunidad.css';
 import '../boton.css'
+import ScrollButton from "../components/ScrollButton";
 
 import Reactt, { Suspense } from "react"
 import { Canvas } from "@react-three/fiber"
@@ -230,6 +231,7 @@ const ComunidadActiva = () => {
     </div>
   </div>
 </section>
+<ScrollButton />
 
 
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ScrollButton from "../components/ScrollButton";
 
 
 // ---- Types ----
@@ -463,6 +464,7 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
         </div>
       ))}
     </div>
+    <ScrollButton />
   </div>
 </div>
 

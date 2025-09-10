@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import '../components/animacion'
+import TextType from "../components/animacion";
+import ScrollButton from "../components/ScrollButton";
 
 const DesarrolloWebBanner: React.FC = () => {
   // Datos para el carrusel de testimonios (ahora con 4 comentarios)
@@ -56,16 +59,28 @@ const DesarrolloWebBanner: React.FC = () => {
 
         {/* Overlay oscuro */}
         <div className="absolute inset-0 bg-black bg-opacity-70 z-10"></div>
+{/* Contenido del banner */}
+<div className="rrelative z-20 flex flex-col items-center justify-center text-center px-4">
 
-        {/* Contenido del banner */}
-        <div className="relative z-20 flex flex-col items-center justify-center text-center px-4">
-          <h1 className="text-3xl md:text-5xl font-bold text-sky-400">
-            Desarrollo de Sitio Web
-          </h1>
-          <span className="mt-2 text-sm md:text-base font-semibold tracking-wider text-gray-300">
-            Inicio / Desarrollo de Sitio Web
+  <h1 className="text-4xl md:text-6xl font-bold text-sky-400">
+  <TextType
+    text={['Desarrollo de Sitio Web']}
+    typingSpeed={70}
+    pauseDuration={2000}
+    loop={false}
+    showCursor={false}
+    textColors={['#38bdf8']}
+  />
+  </h1>
+
+
+ <span className="mt-2 text-sm md:text-base font-semibold tracking-wider text-gray-300">
+            Inicio / Desarrollo de Sitios Web
           </span>
-        </div>
+</div>
+
+
+
       </header>
 
       {/* ====================== SECCIÓN DE CONTENIDO - DESARROLLO WEB ====================== */}
@@ -397,6 +412,7 @@ const DesarrolloWebBanner: React.FC = () => {
               ))}
             </div>
           </motion.div>
+          <ScrollButton />
         </div>
       </section>
     </div>

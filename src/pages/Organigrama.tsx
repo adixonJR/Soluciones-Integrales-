@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollButton from "../components/ScrollButton";
 
 const Organigrama = () => {
   return (
@@ -88,6 +89,7 @@ const Organigrama = () => {
             ambiental.
           </p>
         </div>
+         <ScrollButton />
       </div>
     </div>
   );

@@ -8,7 +8,6 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 import QuienesSomos from './pages/QuienesSomos';
 import NuestraHistoria from './pages/NuestraHistoria';
-import NuestraOrganizacion from './pages/NuestraOrganizacion';
 import NuestroEquipo from './pages/NuestroEquipo';
 import ConsultoriaTI from './pages/ConsultoriaTI';
 import ConsultoriaEmpresarial from './pages/ConsultoriaEmpresarial';
@@ -22,7 +21,6 @@ import FacturacionElectronica from './pages/FacturacionElectronica';
 import HostingYDominio from './pages/HostingYDominio';
 import InstalacionesElectricas from './pages/InstalacionesElectricas';
 import MantenimientoElectrico from './pages/MantenimientoElectrico';
-import MarketingDigital from './pages/MarketingDigital';
 import SoporteTecnico from './pages/SoporteTecnico';
 import PosicionamientoSEO from './pages/PosicionamientoSEO';
 import RedesEInfrostructura from './pages/RedesEInfrostructura';
@@ -111,14 +109,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           element={
             <Layout>
               <Convenios />
-            </Layout>
-          }
-        />
-        <Route
-          path="/NuestraOrganizacion"
-          element={
-            <Layout>
-              <NuestraOrganizacion />
             </Layout>
           }
         />
@@ -217,14 +207,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           element={
             <Layout>
               <MantenimientoElectrico/>
-            </Layout>
-          }
-        />
-        <Route
-          path="/MarketingDigital"
-          element={
-            <Layout>
-              <MarketingDigital/>
             </Layout>
           }
         />

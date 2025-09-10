@@ -1,4 +1,5 @@
 import React from "react";
+import ScrollButton from "../components/ScrollButton";
 
 const Convenios = () => {
   return (
@@ -82,6 +83,7 @@ const Convenios = () => {
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShEt8LsudDua5jNDpRGb-rquvA14EMMUFIYgnO--wvcicRxcX86LX5wQVZNyVJCZ_4Gmg&usqp=CAU"
           />
         </figure>
+        <ScrollButton />
       </section>
          
       {/* Repite la misma estructura para otras instituciones como Huando, Chancay, UNJFSC, etc. */}

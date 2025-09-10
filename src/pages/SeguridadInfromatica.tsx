@@ -1,5 +1,6 @@
 import React from "react";
-import fondoN from "../assets/fondoN.jpg"; // 👈 ajusta la ruta según tu proyecto
+import fondoN from "../assets/fondoN.jpg"; // 
+import ScrollButton from "../components/ScrollButton";
 
 const SeguridadInformatica = () => {
   return (
@@ -77,6 +78,7 @@ const SeguridadInformatica = () => {
             </div>
           </div>
         </div>
+         <ScrollButton />
       </div>
     </div>
   );

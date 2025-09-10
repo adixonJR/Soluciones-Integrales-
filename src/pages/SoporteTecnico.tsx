@@ -5,6 +5,7 @@ import { Pagination , Autoplay} from 'swiper/modules';
 import 'swiper/css/autoplay'; 
 import 'swiper/css';
 import 'swiper/css/pagination';
+import ScrollButton from "../components/ScrollButton";
 
 const testimonios = [
   {
@@ -196,6 +197,7 @@ const Soporte: React.FC = () => {
     ))}
   </Swiper>
 </div>
+ <ScrollButton />
   </div>
 </section>
 

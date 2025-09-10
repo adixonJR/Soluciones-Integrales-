@@ -1,5 +1,6 @@
 import React from "react";
 import fondoN from "../assets/fondoN.jpg"; // 👈 asegúrate de que la ruta sea correcta
+import ScrollButton from "../components/ScrollButton";
 
 const Auditorias = () => {
   return (
@@ -75,6 +76,7 @@ const Auditorias = () => {
             </div>
           </div>
         </div>
+        <ScrollButton />
       </div>
     </div>
   );

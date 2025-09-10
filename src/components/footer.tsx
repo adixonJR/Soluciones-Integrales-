@@ -1,5 +1,8 @@
 import React from 'react';
 
+
+
+
 const Footer = () => {
   return (
     <footer className="bg-[#111] text-white px-6 py-12">
@@ -51,14 +54,7 @@ const Footer = () => {
       {/* Línea inferior */}
       <div className="border-t border-gray-700 mt-10 pt-6 flex flex-wrap items-center justify-between gap-4">
 
-        {/* Botón subir */}
-        <a
-          href="#"
-          className="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-gray-600 to-gray-900 hover:scale-105 transition text-white"
-          title="Subir"
-        >
-          ↑
-        </a>
+      
 
         {/* Copyright */}
         <p className="text-sm text-center flex-1">

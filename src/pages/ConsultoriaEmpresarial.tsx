@@ -1,5 +1,11 @@
 import React from "react";
-import fondoN from "../assets/fondoN.jpg"; // Asegúrate de que el archivo esté en /assets
+import fondoN from "../assets/fondoN.jpg"; 
+import { motion } from "framer-motion";
+import TextType from "../components/animacion"; // asegúrate que sea default export
+
+import ScrollButton from "../components/ScrollButton";
+
+
 
 const ConsultoriaEmpresarial = () => {
   return (
@@ -9,40 +15,82 @@ const ConsultoriaEmpresarial = () => {
         className="relative h-[300px] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url(${fondoN})` }}
       >
-        <div className="absolute inset-0 bg-black/50"></div>
-        <h1 className="relative text-4xl md:text-5xl font-bold text-white text-center z-10">
-          Consultoría Empresarial
-        </h1>
+        {/* Overlay oscuro */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        {/* Texto animado */}
+        <motion.h1
+          className="text-4xl md:text-6xl font-bold text-sky-400 relative z-10"
+          initial={{ opacity: 0, x: -100 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+        >
+          <TextType
+            text={["Consultoría Empresarial"]}
+            typingSpeed={70}
+            pauseDuration={2000}
+            loop={false}
+            showCursor={false}
+            textColors={["#38bdf8"]}
+          />
+        </motion.h1>
       </div>
 
       {/* Contenido principal */}
       <div className="px-4 py-12 max-w-7xl mx-auto">
         <div className="flex items-center flex-wrap mt-8">
           {/* Imagen a la izquierda */}
-          <div className="flex-1 pr-12 min-w-[300px]">
+          <motion.div
+            className="flex-1 pr-12 min-w-[300px]"
+            initial={{ opacity: 0, x: -150 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
             <img
               src="https://solucionesintegralesjb.com/wp-content/uploads/2024/12/empresarial.jpg"
               alt="Consultoría Empresarial"
               className="w-full max-w-[3000px] h-auto rounded-lg shadow-lg"
             />
-          </div>
+          </motion.div>
 
           {/* Información a la derecha */}
-          <div className="flex-1 min-w-[300px]">
+          <motion.div
+            className="flex-1 min-w-[300px]"
+            initial={{ opacity: 0, x: 150 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
             <div className="text-center p-6 bg-white rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold mb-5 text-[#2c3e50]">
-                <span className="text-[#7FA]">Consultoría Empresarial</span>
-              </h2>
+              <motion.h2
+                className="text-2xl font-semibold mb-5 text-[#2c3e50]"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <span className="text-sky-400">Consultoría Empresarial</span>
+              </motion.h2>
 
-              <p className="text-[#34495e] text-base leading-relaxed mb-5">
+              <motion.p
+                className="text-[#34495e] text-base leading-relaxed mb-5"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.2 }}
+              >
                 Mi objetivo es ayudarte a llevar tu negocio al siguiente nivel,
                 identificando oportunidades, resolviendo desafíos y optimizando
                 cada aspecto de tu empresa. Con años de experiencia en el mundo
                 empresarial, estoy aquí para trabajar contigo y construir
                 soluciones efectivas y sostenibles.
-              </p>
+              </motion.p>
 
-              <ul className="text-[#34495e] text-base leading-7 list-disc pl-6 text-left inline-block mb-5">
+              <motion.ul
+                className="text-[#34495e] text-base leading-7 list-disc pl-6 text-left inline-block mb-5"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.4 }}
+              >
                 <li>
                   <strong>Análisis estratégico:</strong> para identificar y
                   aprovechar tus ventajas competitivas.
@@ -59,23 +107,34 @@ const ConsultoriaEmpresarial = () => {
                   <strong>Planificación financiera:</strong> maximizo el uso de
                   tus recursos para alcanzar tus objetivos.
                 </li>
-              </ul>
+              </motion.ul>
 
-              <p className="text-[#34495e] text-base leading-relaxed mb-6">
+              <motion.p
+                className="text-[#34495e] text-base leading-relaxed mb-6"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.6 }}
+              >
                 Creo en un enfoque cercano y personalizado. Trabajo contigo como
                 si fuera parte de tu equipo, escuchando tus necesidades y
                 diseñando soluciones únicas para tu negocio.
-              </p>
+              </motion.p>
 
-              <a
+              <motion.a
                 href="#contacto"
-                className="bg-[#007BFF] text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-[#0056b3] transition duration-300"
+                className="bg-[#007BFF] text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-[#0056b3] transition duration-300 inline-block"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, delay: 0.8 }}
               >
                 ¡Hablemos!
-              </a>
+              </motion.a>
             </div>
-          </div>
+          </motion.div>
+
+          
         </div>
+        <ScrollButton />
       </div>
     </div>
   );

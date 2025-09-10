@@ -2,6 +2,9 @@ import React from "react";
 import quienes from '../assets/quienes.jpg';
 import { FaChartLine, FaEye } from "react-icons/fa";
 import { FaShieldAlt, FaClock, FaKey, FaLightbulb, FaUsers, FaHeart } from "react-icons/fa";
+import ScrollButton from "../components/ScrollButton";
+
+
 import {
   FaLock,
   FaCheckCircle,
@@ -139,33 +142,43 @@ const caracteristicas = [
 
 const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
   return (
-    <section className={"w-full " + (className || "")}>
-      {/* Imagen con botón encima */}
-      <div className="relative w-full">
-        {/* Imagen */}
-        <img
-          src={quienes}
-          alt="Quiénes somos"
-          className="w-full h-[500px] object-cover"
-        />
-        {/* Botón centrado */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <a
-            href="https://solucionesintegralesjb.com/#services"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="button">
-              <span className="button_lg">
-                <span className="button_sl"></span>
-                <span className="button_text">
-                  Descubre nuestros servicios
-                </span>
-              </span>
-            </button>
-          </a>
-        </div>
+  <section className={"w-full " + (className || "")}>
+  <div className="relative w-screen h-[600px] overflow-hidden flex items-center justify-center bg-gray-900">
+    {/* Imagen completa pero recortando 20px arriba y 20px abajo */}
+    <img
+      src="https://solucionesintegralesjb.com/wp-content/uploads/2024/06/Frame-916-1.png"
+      alt="Quiénes somos"
+      className="w-full h-auto object-contain -translate-y-[-100px]"
+    />
+
+    {/* Capa oscura */}
+    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    {/* Contenido */}
+    <div className="absolute inset-0 flex flex-col justify-center items-end pr-12">
+      <div className="bg-black bg-opacity-40 px-6 py-4 rounded-lg text-justify">
+        <h2 className="text-3xl font-bold text-white mb-4">
+          ¿Quiénes Somos?
+        </h2>
+        <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-2xl">
+          Quiénes Somos y Hacia Dónde Vamos
+        </p>
+        <a
+          href="https://solucionesintegralesjb.com/#services"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="button">
+            <span className="button_lg">
+              <span className="button_sl"></span>
+              <span className="button_text">Descubre nuestros servicios</span>
+            </span>
+          </button>
+        </a>
       </div>
+    </div>
+  </div>
+
 
       {/* Quienes somos */}
 <div className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
@@ -660,9 +673,11 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
                 <p className="text-sm text-center">{valor.descripcion}</p>
               </div>
             </div>
+             
           </div>
         ))}
       </div>
+      <ScrollButton />
     </section>
     </section>
     

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import ScrollButton from "../components/ScrollButton";
 
 // --- Datos de los Componentes ---
 const timelineItems = [
@@ -334,6 +335,7 @@ const App = () => {
       <ProjectSlider title="PROYECTOS ELÉCTRICOS" projects={electricalProjects} />
       <ProjectSlider title="PROYECTOS EN REDES Y EN TECNOLOGÍAS DE SEGURIDAD" projects={securityProjects} />
       <ProjectSlider title="PROYECTOS DE CÁMARAS DE SEGURIDAD" projects={cameraProjects} />
+      <ScrollButton />
     </>
   );
 };

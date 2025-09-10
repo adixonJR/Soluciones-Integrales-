@@ -1,6 +1,7 @@
 
 import React from 'react';
 import '../nuestroequipo.css';
+import ScrollButton from "../components/ScrollButton";
 
 interface MiembroEquipo {
   nombre: string;
@@ -74,6 +75,7 @@ const NuestroEquipo: React.FC = () => {
             <div className="cargo">{miembro.cargo}</div>
           </div>
         ))}
+        <ScrollButton />
       </div>
     </div>
   );

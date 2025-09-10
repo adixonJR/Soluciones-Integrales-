@@ -1,5 +1,6 @@
 import React from "react";
-import fondoN from "../assets/fondoN.jpg"; // 👈 asegúrate de que la ruta sea correcta
+import fondoN from "../assets/fondoN.jpg"; 
+import ScrollButton from "../components/ScrollButton";
 
 const Merchandising = () => {
   return (
@@ -53,6 +54,7 @@ const Merchandising = () => {
             </div>
           </div>
         </div>
+        <ScrollButton />
       </div>
     </div>
   );
