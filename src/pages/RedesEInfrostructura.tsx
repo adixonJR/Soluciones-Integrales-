@@ -5,7 +5,6 @@ import { Pagination , Autoplay} from 'swiper/modules';
 import 'swiper/css/autoplay'; 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import ScrollButton from "../components/ScrollButton";
 
 const testimonios = [
   {
@@ -35,7 +34,7 @@ const RedesEinfroestructura: React.FC = () => {
         style={{ backgroundImage: `url(${fondoN})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <h1 className="relative text-4xl md:text-5xl font-bold text-white text-center z-10">
+        <h1 className="relative text-4xl md:text-5xl font-bold text-sky-400 text-center z-10">
           Redes e Infraestructura
         </h1>
       </div>
@@ -205,7 +204,6 @@ Consultoría en Infraestructura
     ))}
   </Swiper>
 </div>
- <ScrollButton />
   </div>
 </section>
 

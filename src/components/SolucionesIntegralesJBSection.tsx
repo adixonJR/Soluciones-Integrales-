@@ -472,5 +472,4 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
     </section>
   );
 };
-
 export default SolucionesIntegralesJBSection;

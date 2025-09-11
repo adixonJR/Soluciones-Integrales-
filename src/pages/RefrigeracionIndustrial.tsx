@@ -5,7 +5,6 @@ import { Pagination , Autoplay} from 'swiper/modules';
 import 'swiper/css/autoplay'; 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import ScrollButton from "../components/ScrollButton";
 
 const testimonios = [
   {
@@ -35,9 +34,8 @@ const RefrigeracionIndustrial: React.FC = () => {
         style={{ backgroundImage: `url(${fondoN})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <h1 className="relative text-4xl md:text-5xl font-bold text-white text-center z-10">
-          Refrigeración Industrial
-
+        <h1 className="relative text-4xl md:text-5xl font-bold text-sky-400 text-center z-10">
+          Refrigeracion Industrial
         </h1>
       </div>
 
@@ -48,18 +46,17 @@ const RefrigeracionIndustrial: React.FC = () => {
           {/* Texto */}
           <div className="md:w-1/2 text-gray-800">
             <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">   
-              Optimización SEO Fundamental
+              Soluciones Personalizadas de Refrigeración Industrial
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
-             En Soluciones Integrales JB, ofrecemos servicios de SEO básico diseñados para mejorar la visibilidad orgánica de tu sitio web. Implementamos prácticas clave de optimización, como la investigación de palabras clave estratégicas para tu sector y la optimización de meta tags y descripciones. Nos aseguramos de que tu sitio siga las directrices más recientes de los motores de búsqueda, facilitando una indexación efectiva y un mejor posicionamiento en los resultados de búsqueda.
+            En Soluciones Integrales JB, ofrecemos soluciones de refrigeración industrial adaptadas a las necesidades específicas de tu empresa. Nuestro enfoque personalizado incluye el diseño, instalación y mantenimiento de sistemas de refrigeración que garantizan la eficiencia energética y la seguridad operativa. Nos especializamos en optimizar el rendimiento de tus equipos, asegurando un ambiente de trabajo seguro y productivo para tu personal.
             </p>
-
           </div>
 
           {/* Imagen */}
           <div className="md:w-1/2">
             <img
-              src="https://solucionesintegralesjb.com/wp-content/uploads/2024/07/seo.94e1f354aed0.svg"
+              src="https://solucionesintegralesjb.com/wp-content/uploads/2024/07/2148921408.jpg"
               alt="Descripción de la imagen"
               className="w-full max-w-[3000px] h-auto"
             />
@@ -73,21 +70,19 @@ const RefrigeracionIndustrial: React.FC = () => {
     {/* Imágenes a la izquierda */}
     <div className="md:w-1/2 flex flex-col gap-6">
       <img
-        src="https://solucionesintegralesjb.com/wp-content/uploads/2024/07/disenadora-web-femenina-papeles-notas-oficina_23-2149749879.jpg"
+        src="https://solucionesintegralesjb.com/wp-content/uploads/2024/07/2149250244.jpg"
         alt="Imagen 1"
         className="rounded-lg shadow-md w-full"
       />
-
     </div>
-
 
     {/* Texto a la derecha */}
     <div className="md:w-1/2 text-white">
       <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
-        Mejora de la Estructura del Sitio
+        Instalación Avanzada y Mantenimiento Proactivo
       </h2>
       <p className="mb-4 leading-relaxed text-justify">
-        Nuestro enfoque también se centra en optimizar la estructura del sitio, asegurando una navegación intuitiva y accesible tanto para los usuarios como para los motores de búsqueda. Mejoramos la arquitectura de enlaces internos para garantizar una distribución eficaz de la autoridad y facilitar el acceso al contenido. Esto no solo mejora la experiencia del usuario al hacer más fácil la exploración del sitio, sino que también ayuda a los motores de búsqueda a comprender mejor la relevancia y la jerarquía de las páginas, lo que contribuye a un mejor posicionamiento.
+       Contamos con un equipo técnico altamente capacitado para la instalación avanzada y el mantenimiento proactivo de sistemas de refrigeración industrial. Realizamos inspecciones regulares y ajustes preventivos para maximizar la fiabilidad y durabilidad de tus equipos. Este enfoque no solo reduce costos operativos a largo plazo, sino que también minimiza el riesgo de interrupciones no planificadas, garantizando la continuidad en tus procesos productivos.
       </p>
       <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
         CONTÁCTANOS
@@ -104,17 +99,17 @@ const RefrigeracionIndustrial: React.FC = () => {
           {/* Texto */}
           <div className="md:w-1/2 text-gray-800">
             <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
-              Contenido Optimizado
+             Cumplimiento Normativo y Seguridad
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
-              Desarrollamos estrategias de contenido optimizado que conectan de manera efectiva con tu audiencia objetivo y mejoran tu posicionamiento SEO. Cada pieza de contenido se optimiza con palabras clave específicas, al mismo tiempo que ofrece información valiosa y relevante para los usuarios. Esto no solo incrementa la visibilidad en los motores de búsqueda, sino que también fortalece la autoridad de tu marca dentro de la industria, generando mayor confianza y fomentando el compromiso de los visitantes.
+             Nos comprometemos a cumplir con las normativas de seguridad y medioambientales aplicables a los sistemas de refrigeración industrial. Nuestros servicios cumplen con los estándares más rigurosos, garantizando la seguridad de tus operaciones y la protección del medio ambiente. Este compromiso con el cumplimiento normativo fortalece la reputación de tu empresa como líder en prácticas responsables y seguras, atrayendo a clientes que valoran la conformidad legal y la gestión responsable.
             </p>
           </div>
 
           {/* Imagen */}
           <div className="md:w-1/2">
             <img
-              src="https://solucionesintegralesjb.com/wp-content/uploads/2024/09/medium.avif"
+              src="https://solucionesintegralesjb.com/wp-content/uploads/2024/07/hombre-tiro-medio-que-trabaja-herramienta_23-2148921405.jpg"
               alt="Descripción de la imagen"
               className="w-full max-w-[3000px] h-auto"
             />
@@ -129,8 +124,7 @@ const RefrigeracionIndustrial: React.FC = () => {
     {/* Imágenes a la izquierda */}
     <div className="md:w-1/2 flex flex-col gap-6">
       <img
-        src="https://solucionesintegralesjb.com/wp-content/uploads/2024/09/optimizacion-motores-busqueda-seo-concepto-digital-internet_53876-138498.avif"
-        alt="Imagen 1"
+        src="https://solucionesintegralesjb.com/wp-content/uploads/2024/07/gerente-empresa-tiene-planes-proyecto-mientras-habla-trabajador-manual-afroamericano-que-senala-algo-fabrica_637285-4115.jpg"
         className="rounded-lg shadow-md w-full"
       />
 
@@ -139,14 +133,12 @@ const RefrigeracionIndustrial: React.FC = () => {
     {/* Texto a la derecha */}
     <div className="md:w-1/2 text-gray-800">
       <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
-          Reportes y Seguimiento de Resultados
+         
+Asesoramiento en Eficiencia Energética y Sostenibilidad
       </h2>
       <p className="mb-4 leading-relaxed text-justify">
-       Ofrecemos reportes detallados y un seguimiento exhaustivo de los resultados para que puedas evaluar el impacto de nuestras estrategias de SEO. Monitoreamos métricas clave como el tráfico orgánico, las posiciones de palabras clave y la tasa de conversión, proporcionándote insights valiosos que te permiten ajustar y optimizar continuamente tu estrategia. Nuestro enfoque orientado a resultados garantiza que cada acción esté alineada con tus objetivos comerciales, maximizando así el retorno de inversión en marketing digital.
-
-
+      Ofrecemos asesoramiento especializado en eficiencia energética y sostenibilidad para optimizar el consumo de energía de tus sistemas de refrigeración industrial. Analizamos el rendimiento energético de tus equipos, identificamos áreas de mejora y recomendamos soluciones que reduzcan costos operativos y minimicen el impacto ambiental. Este enfoque no solo optimiza tus recursos, sino que también fortalece la imagen de tu empresa como un líder en innovación y responsabilidad ambiental.
       </p>
-
       <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
         CONTACTAR
       </button>
@@ -193,7 +185,6 @@ const RefrigeracionIndustrial: React.FC = () => {
     ))}
   </Swiper>
 </div>
- <ScrollButton />
   </div>
 </section>
 
