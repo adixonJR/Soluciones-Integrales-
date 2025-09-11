@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ScrollButton from "../components/ScrollButton";
 
 // ---- Types ----
 interface Service {
@@ -383,6 +384,8 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
               </div>
             ))}
           </div>
+          <ScrollButton />
+          
         </div>
       </div>
     </section>
