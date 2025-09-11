@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import fondoN from "../assets/fondoN.jpg"; 
 import ScrollButton from "../components/ScrollButton";
+import TextType from "../components/animacion";
 
 const SocialMedia = () => {
   return (
@@ -15,18 +16,18 @@ const SocialMedia = () => {
         }}
       >
         {/* Overlay oscuro */}
-        <div className="absolute inset-0 bg-black/50"></div>
-
+        <div className="absolute inset-0 bg-cyan bg-opacity-50"></div>
         {/* Texto centrado encima del fondo */}
-        <motion.h1
-          initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="relative text-4xl md:text-5xl font-bold text-white text-center z-10"
-        >
-          Social Media
-        </motion.h1>
+         <h1 className="relative text-4xl md:text-5xl font-bold text-sky-400 text-center z-10">
+            <TextType
+                    text={['Social Media'] }
+                    typingSpeed={70}
+                    pauseDuration={2000}
+                    loop={false}
+                     showCursor={false}
+                     textColors={['#38bdf8']}
+                        />
+          </h1>
       </div>
 
       {/* Contenido principal */}

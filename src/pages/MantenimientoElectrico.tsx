@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import ScrollButton from "../components/ScrollButton";
 import { motion } from "framer-motion"; // 👈 agregado
+import TextType from "../components/animacion";
 
 const testimonios = [
   {
@@ -32,16 +33,21 @@ const PosicionamientoSEO: React.FC = () => {
 
       {/* Banner Superior */}
       <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        
         className="relative w-full h-[300px] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${fondoN})` }}
       >
         <div className="absolute inset-0 bg-cyan bg-opacity-50"></div>
-        <h1 className="relative text-4xl md:text-5xl font-bold text-sky-400 text-center z-10">
-          Mantenimiento Eléctrico
-        </h1>
+         <h1 className="relative text-4xl md:text-5xl font-bold text-sky-400 text-center z-10">
+                    <TextType
+                            text={['Mantenimiento Eléctrico'] }
+                            typingSpeed={70}
+                            pauseDuration={2000}
+                            loop={false}
+                             showCursor={false}
+                             textColors={['#38bdf8']}
+                                />
+                  </h1>
       </motion.div>
 
       {/* Sección de Hosting y Dominio */}

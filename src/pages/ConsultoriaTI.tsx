@@ -18,9 +18,7 @@ const ConsultoriaTI = () => {
         {/* Texto animado */}
         <motion.h1
           className="text-4xl md:text-6xl font-bold text-sky-400 relative z-10"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          
         >
           <TextType
             text={["Consultoría en TI"]}

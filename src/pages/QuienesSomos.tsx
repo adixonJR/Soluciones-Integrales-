@@ -101,37 +101,37 @@ const valores = [
 
 const caracteristicas = [
   {
-    icon: <FaLock className="fa-3x text-cyan-500" />,
+    icon: <FaLock className="fa-3x"/>,
     titulo: "CONFIANZA",
     descripcion:
       "Nuestro objetivo es la protección de la información porque es un activo importante dentro de la organización, y se requiere de una protección adecuada; implementando un conjunto de políticas y controles de seguridad para la preservación de su confidencialidad, integridad y disponibilidad.",
   },
   {
-    icon: <FaCheckCircle className="fa-3x text-green-500" />,
+    icon: <FaCheckCircle className="fa-3x" />,
     titulo: "CALIDAD",
     descripcion:
       "La calidad de nuestros servicios y soluciones garantizan experiencias basadas en la responsabilidad, el trabajo en equipo y la comunicación con nuestros clientes para lograr los objetivos establecidos.",
   },
   {
-    icon: <FaRocket className="fa-3x text-yellow-500" />,
+    icon: <FaRocket className="fa-3x " />,
     titulo: "VELOCIDAD",
     descripcion:
       "Utilizamos la tecnología como socio estratégico, aplicándola como solución de negocio para mantener y aumentar la competitividad de nuestros clientes.",
   },
   {
-    icon: <FaShieldVirus className="fa-3x text-orange-500" />,
+    icon: <FaShieldVirus className="fa-3x" />,
     titulo: "SEGURIDAD",
     descripcion:
       "Nuestros equipos están en la continua búsqueda de nuevas soluciones tecnológicas, para integrarlas en los procesos de una organización.",
   },
   {
-    icon: <FaHandsHelping className="fa-3x text-purple-500" />,
+    icon: <FaHandsHelping className="fa-3x" />,
     titulo: "SOPORTE",
     descripcion:
       "Somos ágiles, sabemos escuchar, trabajamos de forma rigurosa y transparente con un alto sentido del servicio, buscando siempre satisfacer las expectativas de nuestros clientes.",
   },
   {
-    icon: <FaUserTie className="fa-3x text-red-500" />,
+    icon: <FaUserTie className="fa-3x " />,
     titulo: "PERSONALIZADO",
     descripcion:
       "Nuestra principal motivación es conocer y satisfacer las necesidades, dando respuestas rápidas y eficaces a los desafíos tecnológicos de nuestros clientes.",

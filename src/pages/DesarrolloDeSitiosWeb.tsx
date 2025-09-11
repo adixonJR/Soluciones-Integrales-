@@ -58,7 +58,7 @@ const DesarrolloWebBanner: React.FC = () => {
         />
 
         {/* Overlay oscuro */}
-        <div className="absolute inset-0 bg-black bg-opacity-70 z-10"></div>
+        <div className="absolute inset-0 bg-sky-400city-70 z-10"></div>
 {/* Contenido del banner */}
 <div className="rrelative z-20 flex flex-col items-center justify-center text-center px-4">
 

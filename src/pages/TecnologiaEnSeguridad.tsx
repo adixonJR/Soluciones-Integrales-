@@ -6,6 +6,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import ScrollButton from "../components/ScrollButton";
+import TextType from "../components/animacion";
 
 
 
@@ -41,12 +42,24 @@ const TecnologiaEnSeguridad: React.FC = () => {
   return (
     <div className="tecnologia-seguridad-page">
       <section className="page-header">
-        <div className="container">
-          <h1>Tecnologia en Seguridad</h1>
-          <nav className="breadcrumb">
-            <Link to="/">Inicio</Link> / Tecnología en Seguridad
-          </nav>
-        </div>
+        <div className="rrelative z-20 flex flex-col items-center justify-center text-center px-4">
+                
+                  <h1 className="text-4xl md:text-6xl font-bold text-sky-400">
+                  <TextType
+                    text={['Tecnología en Seguridad']}
+                    typingSpeed={70}
+                    pauseDuration={2000}
+                    loop={false}
+                    showCursor={false}
+                    textColors={['#38bdf8']}
+                  />
+                  </h1>
+                
+                
+                 <span className="mt-2 text-sm md:text-base font-semibold tracking-wider text-gray-300">
+                            Inicio / Tecnología en Seguridad
+                          </span>
+                </div>
       </section>
 
       <section className="protection-section">

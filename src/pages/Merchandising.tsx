@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import fondoN from "../assets/fondoN.jpg"; 
 import ScrollButton from "../components/ScrollButton";
+import TextType from "../components/animacion";
 
 const Merchandising = () => {
   return (
@@ -11,16 +12,17 @@ const Merchandising = () => {
         className="relative h-[300px] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url(${fondoN})` }}
       >
-        <div className="absolute inset-0 bg-black/50"></div>
-        <motion.h1
-          initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="relative text-4xl md:text-5xl font-bold text-white text-center z-10"
-        >
-          Merchandising
-        </motion.h1>
+        <div className="absolute inset-0 bg-cyan bg-opacity-50"></div>
+        <h1 className="relative text-4xl md:text-5xl font-bold text-sky-400 text-center z-10">
+                            <TextType
+                                                                                     text={['Merchandising']}
+                                                                                     typingSpeed={70}
+                                                                                     pauseDuration={2000}
+                                                                                     loop={false}
+                                                                                     showCursor={false}
+                                                                                     textColors={['#38bdf8']}
+                                                                                   />
+                                                </h1>
       </div>
 
       {/* Contenido principal */}

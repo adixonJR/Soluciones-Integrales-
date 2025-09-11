@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import ScrollButton from "../components/ScrollButton";
 import { motion } from "framer-motion";
+import TextType from "../components/animacion";
 
 const testimonios = [
   {
@@ -35,16 +36,17 @@ const PosicionamientoSEO: React.FC = () => {
         className="relative w-full h-[300px] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${fondoN})` }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, amount: 0.3 }}
-          className="relative text-4xl md:text-5xl font-bold text-white text-center z-10"
-        >
-          Posicionamiento SEO
-        </motion.h1>
+        <div className="absolute inset-0 bg-cyan bg-opacity-50"></div>
+        <h1 className="relative text-4xl md:text-5xl font-bold text-sky-400 text-center z-10">
+                                 <TextType
+                                                                     text={['Posicionamiento SEO']}
+                                                                     typingSpeed={70}
+                                                                     pauseDuration={2000}
+                                                                     loop={false}
+                                                                     showCursor={false}
+                                                                     textColors={['#38bdf8']}
+                                                                   />
+                                </h1>
       </div>
 
       {/* Sección de Optimización SEO Fundamental */}

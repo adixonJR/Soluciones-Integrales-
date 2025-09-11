@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
 import ScrollButton from "../components/ScrollButton";
+import TextType from "../components/animacion";
 
 const testimonios = [
   {
@@ -36,19 +37,19 @@ const Graficapublicitaria: React.FC = () => {
       <motion.div
         className="relative w-full h-[300px] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${fondoN})` }}
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-        <motion.h1
-          className="relative text-4xl md:text-5xl font-bold text-white text-center z-10"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
-          Gráfica Publicitaria
-        </motion.h1>
+        <div className="absolute inset-0 bg-cyan bg-opacity-50"></div>
+        <h1 className="relative text-4xl md:text-5xl font-bold text-sky-400 text-center z-10">
+                                         <TextType
+                                                                             text={['Gráfica Publicitaria']}
+                                                                             typingSpeed={70}
+                                                                             pauseDuration={2000}
+                                                                             loop={false}
+                                                                             showCursor={false}
+                                                                             textColors={['#38bdf8']}
+                                                                           />
+                                        </h1>
       </motion.div>
 
       {/* Sección Diseños Impactantes */}

@@ -45,10 +45,10 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-[#1a1a1a] text-white px-6 py-4 flex items-center justify-between shadow-md z-50">
+   <nav className="bg-[#1a1a1a] text-white px-6 py-4 flex items-center justify-between shadow-md relative z-50">
       {/* Logo */}
       <div className="flex items-center gap-3">
-        <img src={logo} alt="Logo" className="w-40 h-10" />
+        <img src={logo} alt="Logo" className="w-90 h-10" />
       </div>
 
       {/* Menú Desktop */}
@@ -62,187 +62,236 @@ function Navbar() {
           </a>
         </li>
 
-        {/* Dropdown Nosotros */}
-        <li className="relative cursor-pointer group">
-          <span className="hover:text-cyan-400 transition-colors duration-200">
-            NOSOTROS
-          </span>
-          <div
-            className="fixed left-0 top-[70px] w-[80%] mx-auto right-0 bg-white z-50 p-10 grid grid-cols-4 gap-10 
-                       opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-                       transition-all duration-300 shadow-lg rounded-lg"
-          >
-            <div>
-              <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
-                Nuestra Empresa
-              </p>
-              <ul className="space-y-3 text-gray-700 text-sm">
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaUsers /> <a href="/QuienesSomos">Quienes Somos</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaHistory /> <a href="/NuestraHistoria">Nuestra Historia</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
-                Responsabilidad Social
-              </p>
-              <ul className="space-y-3 text-gray-700 text-sm">
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaHandshake /> <a href="/Convenios">Convenios</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaPeopleCarry />{" "}
-                  <a href="/ComunidadActiva">Comunidad Activa</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
-                Consultoría
-              </p>
-              <ul className="space-y-3 text-gray-700 text-sm">
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaLaptopCode /> <a href="/ConsultoriaTI">Consultoría TI</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaBuilding />{" "}
-                  <a href="/ConsultoriaEmpresarial">Consultoría Empresarial</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
-                Nuestra Organización
-              </p>
-              <ul className="space-y-3 text-gray-700 text-sm">
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaSitemap /> <a href="/Organigrama">Organigrama</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaUserTie /> <a href="/NuestroEquipo">Nuestro Equipo</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
+    {/* Dropdown Nosotros */}
+<li className="relative cursor-pointer group">
+  <span className="hover:text-cyan-400 transition-colors duration-200">
+    NOSOTROS
+  </span>
+  <div
+    className="fixed left-0 top-[70px] w-[80%] mx-auto right-0 bg-white z-50 p-10 grid grid-cols-4 gap-10 
+               opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+               transition-all duration-300 shadow-lg rounded-lg"
+  >
+    {/* Sección Nuestra Empresa */}
+    <div>
+      <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
+        Nuestra Empresa
+      </p>
+      <ul className="space-y-3 text-gray-700 text-sm">
+        {[
+          { icon: <FaUsers />, label: "Quienes Somos", href: "/QuienesSomos" },
+          { icon: <FaHistory />, label: "Nuestra Historia", href: "/NuestraHistoria" }
+        ].map((item, idx) => (
+          <li key={idx} className="flex items-center gap-2 group/item relative">
+            {item.icon}
+            <a
+              href={item.href}
+              className="hover:text-cyan-600 transition-colors duration-200 relative"
+            >
+              {item.label}
+              {/* Subrayado animado */}
+              <span className="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-cyan-600 transition-all duration-300 group-hover/item:w-full"></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
 
-        {/* Dropdown Servicios */}
-        <li className="relative cursor-pointer group">
-          <span className="hover:text-cyan-400 transition-colors duration-200">
-            SERVICIOS
-          </span>
-          <div
-            className="fixed left-0 top-[70px] w-[90%] mx-auto right-0 bg-white z-50 p-10 grid grid-cols-4 gap-10 
-                       opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-                       transition-all duration-300 shadow-lg rounded-lg"
-          >
-            <div>
-              <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
-                Tecnología de Información
-              </p>
-              <ul className="space-y-3 text-gray-700 text-sm">
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaCode />{" "}
-                  <a href="/DesarrolloDeSoftware">Desarrollo de Software</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaFileInvoiceDollar />{" "}
-                  <a href="/FacturacionElectronica">Facturación Electrónica</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaLock />{" "}
-                  <a href="/TecnologiaEnSeguridad">Tecnología en Seguridad</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaNetworkWired />{" "}
-                  <a href="/RedesEInfrostructura">Redes e Infraestructura</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaServer /> <a href="/HostingYDominio">Hosting y Dominio</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaTools /> <a href="/SoporteTecnico">Soporte Técnico</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
-                Consultoría
-              </p>
-              <ul className="space-y-3 text-gray-700 text-sm">
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaLaptopCode /> <a href="/ConsultoriaTI">Consultoría TI</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaBuilding />{" "}
-                  <a href="/ConsultoriaEmpresarial">Consultoría Empresarial</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaChalkboardTeacher />{" "}
-                  <a href="/ConsultoriaEducativa">Consultoría Educativa</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaClipboardCheck /> <a href="/Auditorias">Auditorías</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaShieldAlt />{" "}
-                  <a href="/SeguridadInformatica">Seguridad Informática</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
-                Marketing Digital
-              </p>
-              <ul className="space-y-3 text-gray-700 text-sm">
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaCode />{" "}
-                  <a href="/DesarrolloDeSitiosWeb">Desarrollo de Sitio Web</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaSearch />{" "}
-                  <a href="/PosicionamientoSEO">Posicionamiento SEO</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaPaintBrush />{" "}
-                  <a href="/GraficaPublicitaria">Gráfica Publicitaria</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaGift /> <a href="/Merchandising">Merchandising</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaShareAlt /> <a href="/SocialMedia">Social Media</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
-                Ing. Eléctrica
-              </p>
-              <ul className="space-y-3 text-gray-700 text-sm">
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaBolt />{" "}
-                  <a href="/MantenimientoElectrico">Mantenimiento Eléctrico</a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaSnowflake />{" "}
-                  <a href="/RefrigeracionIndustrial">
-                    Refrigeración Industrial
-                  </a>
-                </li>
-                <li className="flex items-center gap-2 hover:text-cyan-600">
-                  <FaPlug />{" "}
-                  <a href="/InstalacionesElectricas">
-                    Instalaciones Eléctricas
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </li>
+    {/* Sección Responsabilidad Social */}
+    <div>
+      <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
+        Responsabilidad Social
+      </p>
+      <ul className="space-y-3 text-gray-700 text-sm">
+        {[
+          { icon: <FaHandshake />, label: "Convenios", href: "/Convenios" },
+          { icon: <FaPeopleCarry />, label: "Comunidad Activa", href: "/ComunidadActiva" }
+        ].map((item, idx) => (
+          <li key={idx} className="flex items-center gap-2 group/item relative">
+            {item.icon}
+            <a
+              href={item.href}
+              className="hover:text-cyan-600 transition-colors duration-200 relative"
+            >
+              {item.label}
+              <span className="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-cyan-600 transition-all duration-300 group-hover/item:w-full"></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Sección Consultoría */}
+    <div>
+      <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
+        Consultoría
+      </p>
+      <ul className="space-y-3 text-gray-700 text-sm">
+        {[
+          { icon: <FaLaptopCode />, label: "Consultoría TI", href: "/ConsultoriaTI" },
+          { icon: <FaBuilding />, label: "Consultoría Empresarial", href: "/ConsultoriaEmpresarial" }
+        ].map((item, idx) => (
+          <li key={idx} className="flex items-center gap-2 group/item relative">
+            {item.icon}
+            <a
+              href={item.href}
+              className="hover:text-cyan-600 transition-colors duration-200 relative"
+            >
+              {item.label}
+              <span className="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-cyan-600 transition-all duration-300 group-hover/item:w-full"></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Sección Nuestra Organización */}
+    <div>
+      <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
+        Nuestra Organización
+      </p>
+      <ul className="space-y-3 text-gray-700 text-sm">
+        {[
+          { icon: <FaSitemap />, label: "Organigrama", href: "/Organigrama" },
+          { icon: <FaUserTie />, label: "Nuestro Equipo", href: "/NuestroEquipo" }
+        ].map((item, idx) => (
+          <li key={idx} className="flex items-center gap-2 group/item relative">
+            {item.icon}
+            <a
+              href={item.href}
+              className="hover:text-cyan-600 transition-colors duration-200 relative"
+            >
+              {item.label}
+              <span className="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-cyan-600 transition-all duration-300 group-hover/item:w-full"></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</li>
+
+{/* Dropdown Servicios */}
+<li className="relative cursor-pointer group">
+  <span className="hover:text-cyan-400 transition-colors duration-200">
+    SERVICIOS
+  </span>
+  <div
+    className="fixed left-0 top-[70px] w-[90%] mx-auto right-0 bg-white z-50 p-10 grid grid-cols-4 gap-10 
+               opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+               transition-all duration-300 shadow-lg rounded-lg"
+  >
+    {/* Sección Tecnología */}
+    <div>
+      <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
+        Tecnología de Información
+      </p>
+      <ul className="space-y-3 text-gray-700 text-sm">
+        {[
+          { icon: <FaCode />, label: "Desarrollo de Software", href: "/DesarrolloDeSoftware" },
+          { icon: <FaFileInvoiceDollar />, label: "Facturación Electrónica", href: "/FacturacionElectronica" },
+          { icon: <FaLock />, label: "Tecnología en Seguridad", href: "/TecnologiaEnSeguridad" },
+          { icon: <FaNetworkWired />, label: "Redes e Infraestructura", href: "/RedesEInfrostructura" },
+          { icon: <FaServer />, label: "Hosting y Dominio", href: "/HostingYDominio" },
+          { icon: <FaTools />, label: "Soporte Técnico", href: "/SoporteTecnico" }
+        ].map((item, idx) => (
+          <li key={idx} className="flex items-center gap-2 group/item relative">
+            {item.icon}
+            <a
+              href={item.href}
+              className="hover:text-cyan-600 transition-colors duration-200 relative"
+            >
+              {item.label}
+              {/* Subrayado animado */}
+              <span className="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-cyan-600 transition-all duration-300 group-hover/item:w-full"></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Sección Consultoría */}
+    <div>
+      <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
+        Consultoría
+      </p>
+      <ul className="space-y-3 text-gray-700 text-sm">
+        {[
+          { icon: <FaLaptopCode />, label: "Consultoría TI", href: "/ConsultoriaTI" },
+          { icon: <FaBuilding />, label: "Consultoría Empresarial", href: "/ConsultoriaEmpresarial" },
+          { icon: <FaChalkboardTeacher />, label: "Consultoría Educativa", href: "/ConsultoriaEducativa" },
+          { icon: <FaClipboardCheck />, label: "Auditorías", href: "/Auditorias" },
+          { icon: <FaShieldAlt />, label: "Seguridad Informática", href: "/SeguridadInformatica" }
+        ].map((item, idx) => (
+          <li key={idx} className="flex items-center gap-2 group/item relative">
+            {item.icon}
+            <a
+              href={item.href}
+              className="hover:text-cyan-600 transition-colors duration-200 relative"
+            >
+              {item.label}
+              <span className="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-cyan-600 transition-all duration-300 group-hover/item:w-full"></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Sección Marketing Digital */}
+    <div>
+      <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
+        Marketing Digital
+      </p>
+      <ul className="space-y-3 text-gray-700 text-sm">
+        {[
+          { icon: <FaCode />, label: "Desarrollo de Sitio Web", href: "/DesarrolloDeSitiosWeb" },
+          { icon: <FaSearch />, label: "Posicionamiento SEO", href: "/PosicionamientoSEO" },
+          { icon: <FaPaintBrush />, label: "Gráfica Publicitaria", href: "/GraficaPublicitaria" },
+          { icon: <FaGift />, label: "Merchandising", href: "/Merchandising" },
+          { icon: <FaShareAlt />, label: "Social Media", href: "/SocialMedia" }
+        ].map((item, idx) => (
+          <li key={idx} className="flex items-center gap-2 group/item relative">
+            {item.icon}
+            <a
+              href={item.href}
+              className="hover:text-cyan-600 transition-colors duration-200 relative"
+            >
+              {item.label}
+              <span className="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-cyan-600 transition-all duration-300 group-hover/item:w-full"></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Sección Ing. Eléctrica */}
+    <div>
+      <p className="text-xs uppercase font-bold text-cyan-600 mb-4">
+        Ing. Eléctrica
+      </p>
+      <ul className="space-y-3 text-gray-700 text-sm">
+        {[
+          { icon: <FaBolt />, label: "Mantenimiento Eléctrico", href: "/MantenimientoElectrico" },
+          { icon: <FaSnowflake />, label: "Refrigeración Industrial", href: "/RefrigeracionIndustrial" },
+          { icon: <FaPlug />, label: "Instalaciones Eléctricas", href: "/InstalacionesElectricas" }
+        ].map((item, idx) => (
+          <li key={idx} className="flex items-center gap-2 group/item relative">
+            {item.icon}
+            <a
+              href={item.href}
+              className="hover:text-cyan-600 transition-colors duration-200 relative"
+            >
+              {item.label}
+              <span className="absolute left-0 bottom-[-3px] w-0 h-[2px] bg-cyan-600 transition-all duration-300 group-hover/item:w-full"></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</li>
+
+
 
         <li>
           <Link
