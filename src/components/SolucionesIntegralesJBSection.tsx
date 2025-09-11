@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ScrollButton from "../components/ScrollButton";
+import '../App.css'
+import LogoLoop from "./LogoLoop";
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
+
 
 // ---- Types ----
 interface Service {
@@ -92,24 +96,25 @@ const testimonials: Testimonial[] = [
     { name: "Ana montes", avatar: "https://solucionesintegralesjb.com/wp-content/uploads/2024/10/unnamed-4.png", quote: "Muy buen servicio de parte de los empleados y cómo atienden y ayudan." },
 ];
 
-const clients: ClientLogo[] = [
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-5.svg", alt: "Cliente 1" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-4.svg", alt: "Cliente 2" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-1-1.svg", alt: "Cliente 3" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-7.svg", alt: "Cliente 4" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-10.svg", alt: "Cliente 5" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-3.svg", alt: "Cliente 6" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-9.svg", alt: "Cliente 7" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-11.svg", alt: "Cliente 8" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-12.svg", alt: "Cliente 9" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-6.svg", alt: "Cliente 10" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-18.svg", alt: "Cliente 11" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-19.svg", alt: "Cliente 12" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-8.svg", alt: "Cliente 13" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-15.svg", alt: "Cliente 14" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-13.svg", alt: "Cliente 15" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-14.svg", alt: "Cliente 16" },
+const clientLogos = [
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-5.svg", alt: "Cliente 1", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-4.svg", alt: "Cliente 2", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-1-1.svg", alt: "Cliente 3", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-7.svg", alt: "Cliente 4", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-10.svg", alt: "Cliente 5", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-3.svg", alt: "Cliente 6", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-9.svg", alt: "Cliente 7", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-11.svg", alt: "Cliente 8", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-12.svg", alt: "Cliente 9", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-6.svg", alt: "Cliente 10", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-18.svg", alt: "Cliente 11", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-19.svg", alt: "Cliente 12", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-8.svg", alt: "Cliente 13", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-15.svg", alt: "Cliente 14", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-13.svg", alt: "Cliente 15", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-14.svg", alt: "Cliente 16", href: "#" },
 ];
+
 
 const uiImage = "https://solucionesintegralesjb.com/wp-content/uploads/elementor/thumbs/Frame-932-qqow7tfd3r2zohqj4jx9yf23tmjv30p5niiolmvipc.png";
 const videoUrl = "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/ES-1.mp4";
@@ -373,17 +378,32 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
         </div>
       </section>
 
-      <div className="bg-neutral-800 text-white py-24 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-2">Nuestros clientes</h2>
-          <p className="text-gray-400 text-lg">Las marcas que confían en Soluciones Integrales JB</p>
-          <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 place-items-center">
-            {clients.map((c, idx) => (
-              <div key={idx} className="p-3 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
-                <img src={c.src} alt={c.alt} className="max-h-12 w-auto object-contain" />
-              </div>
-            ))}
-          </div>
+     <div className="bg-neutral-800 text-white py-24 px-4 md:px-8">
+  <div className="max-w-7xl mx-auto text-center">
+    <h2 className="text-3xl font-bold text-white mb-2">Nuestros clientes</h2>
+    <p className="text-gray-400 text-lg">
+      Las marcas que confían en Soluciones Integrales JB
+    </p>
+
+    {/* Contenedor del carrusel */}
+    <div className="relative w-full mt-12">
+      <div className="h-32 md:h-40 overflow-hidden">
+        <LogoLoop
+          logos={clientLogos}
+          speed={100}
+          direction="left"
+          logoHeight={60}
+          gap={40}
+          pauseOnHover
+          scaleOnHover
+          fadeOut
+          fadeOutColor="#ffffff"
+          ariaLabel="Technology partners"
+        />
+      </div>
+
+</div>
+
           <ScrollButton />
           
         </div>

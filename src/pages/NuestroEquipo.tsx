@@ -1,85 +1,32 @@
-
-import React from 'react';
-import '../nuestroequipo.css';
-import ScrollButton from "../components/ScrollButton";
-
-interface MiembroEquipo {
-  nombre: string;
-  cargo: string;
-  imagen: string;
-  alt: string;
-}
+import React from "react";
+import CircularGallery from "../components/CircularGallery";
+import { miembros } from "../components/Miembros"; // Ajusta la ruta según tu estructura
 
 const NuestroEquipo: React.FC = () => {
-  const miembros: MiembroEquipo[] = [
-    {
-      nombre: "Wilder Julca",
-      cargo: "Gerente de Servicios",
-      imagen: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-952.png",
-      alt: "Wilder Julca - Gerente de Servicios"
-    },
-    {
-      nombre: "Ytalo Romero",
-      cargo: "Programador Web",
-      imagen: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-953.png",
-      alt: "Ytalo Romero - Programador Web"
-    },
-    {
-      nombre: "Diego Chancafe",
-      cargo: "Programador Móvil",
-      imagen: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-956.png",
-      alt: "Diego Chancafe - Programador Móvil"
-    },
-    {
-      nombre: "Victor Galarza",
-      cargo: "Analista de Sistemas",
-      imagen: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-955.png",
-      alt: "Victor Galarza - Analista de Sistemas"
-    },
-    {
-      nombre: "Edwin Bustamante",
-      cargo: "Administración de Redes",
-      imagen: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-954.png",
-      alt: "Edwin Bustamante - Administración de Redes"
-    }
-  ];
+  // Convertimos los miembros al formato que necesita CircularGallery
+const items = miembros.map(miembro => ({
+  image: miembro.imagen,
+  text: `${miembro.nombre}\n${miembro.cargo}` // Nombre arriba, cargo abajo
+}));
 
-  const primerosTres = miembros.slice(0, 3);
-  const ultimosDos = miembros.slice(3);
+
 
   return (
-    <div className="equipo-container">
-      <h1>Todos los miembros del equipo</h1>
-      <h2>Nuestro Equipo</h2>
-      
-      <div className="fila-equipo">
-        {primerosTres.map((miembro, index) => (
-          <div key={index} className="miembro">
-            <div className="imagen">
-              <img src={miembro.imagen} alt={miembro.alt} />
-            </div>
-            <div className="nombre">{miembro.nombre}</div>
-            <div className="cargo">{miembro.cargo}</div>
-          </div>
-        ))}
+    <section className="w-full h-[600px] relative bg-gray-900 flex flex-col items-center justify-center">
+      <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Nuestro Equipo</h2>
+      <div className="w-full h-full">
+        <CircularGallery
+          items={items}
+          bend={0}                 // Curvatura del carrusel
+          textColor="#ffffff"      // Color del texto
+          borderRadius={0.1}      // Bordes redondeados de las imágenes
+          font="bold 20px Figtree" // Fuente del texto
+          scrollSpeed={2}          // Velocidad de arrastre
+          scrollEase={0.08}        // Suavizado del scroll
+        />
       </div>
-      
-      
-      <div className="fila-equipo fila-inferior">
-        {ultimosDos.map((miembro, index) => (
-          <div key={index} className="miembro">
-            <div className="imagen">
-              <img src={miembro.imagen} alt={miembro.alt} />
-            </div>
-            <div className="nombre">{miembro.nombre}</div>
-            <div className="cargo">{miembro.cargo}</div>
-          </div>
-        ))}
-        <ScrollButton />
-      </div>
-    </div>
+    </section>
   );
 };
 
 export default NuestroEquipo;
-

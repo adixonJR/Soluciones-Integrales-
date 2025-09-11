@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ScrollButton from "../components/ScrollButton";
 import TextType from "../components/animacion";
-
+import Magnet from '../Components/Magnet';
 
 const DesarrolloWebBanner: React.FC = () => {
   // Datos para el carrusel de testimonios (ahora con 4 comentarios)
@@ -199,15 +199,12 @@ const DesarrolloWebBanner: React.FC = () => {
               está en buenas manos.
             </motion.p>
 
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
-            >
-              CONTACTANOS
-            </motion.button>
+           <Magnet padding={300} magnetStrength={2}>
+  <p className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg cursor-pointer">
+    Contáctanos
+  </p>
+</Magnet>
+
           </div>
         </div>
       </section>

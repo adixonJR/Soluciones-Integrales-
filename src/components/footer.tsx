@@ -1,4 +1,8 @@
 import React from "react";
+
+import StickerPeel from '../components/StickerPeel';
+import logo from '../assets/logo2.jpg'
+
 import {
   FaFacebookF,
   FaInstagram,
@@ -14,14 +18,32 @@ const Footer = () => {
     <footer className="bg-[#0b0b0b] text-gray-300 px-6 py-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Logo + descripción */}
-        <div>
-          <img src="/logo2.jpg" alt="Logo" className="w-36 mb-4" />
-          <p className="text-sm leading-relaxed text-gray-400">
-            Impulsamos el éxito de tu negocio con soluciones digitales
-            innovadoras y diseño creativo, adaptados a tus necesidades para
-            asegurar tu crecimiento.
-          </p>
-        </div>
+  
+ <div className="flex flex-col items-center"> 
+  {/* Logo con efecto */}
+  <div className="mb-6 relative w-[144px] h-[144px]">
+    <StickerPeel
+      imageSrc="/logo2.jpg"
+      width={144}               // mismo tamaño que el <img>
+      rotate={1}
+      peelBackHoverPct={39}
+      peelBackActivePct={40}
+      shadowIntensity={0.6}
+      lightingIntensity={0.1}
+      initialPosition="center"
+      peelDirection={45}
+    />
+  </div>
+
+  {/* Descripción */}
+  <p className="text-sm leading-relaxed text-gray-400 text-center">
+    Impulsamos el éxito de tu negocio con soluciones digitales
+    innovadoras y diseño creativo, adaptados a tus necesidades para
+    asegurar tu crecimiento.
+  </p>
+</div>
+
+
 
         {/* Servicios */}
         <div>
