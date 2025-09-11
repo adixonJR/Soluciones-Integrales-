@@ -1,70 +1,84 @@
-import React from 'react';
-
-
-
+import React from "react";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#111] text-white px-6 py-12">
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-8">
-
+    <footer className="bg-[#0b0b0b] text-gray-300 px-6 py-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Logo + descripción */}
-        <div className="flex-1 min-w-[250px]">
-          <img src="/logo2.jpg" alt="Logo" className="w-32 mb-4" />
-          <p className="leading-relaxed">
-            Impulsamos el éxito de tu negocio con soluciones digitales innovadoras y diseño creativo,
-            adaptados a tus necesidades para asegurar tu crecimiento.
+        <div>
+          <img src="/logo2.jpg" alt="Logo" className="w-36 mb-4" />
+          <p className="text-sm leading-relaxed text-gray-400">
+            Impulsamos el éxito de tu negocio con soluciones digitales
+            innovadoras y diseño creativo, adaptados a tus necesidades para
+            asegurar tu crecimiento.
           </p>
         </div>
 
         {/* Servicios */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Servicios</h3>
-          <ul className="space-y-2">
-            <li>Tecnología de información</li>
-            <li>Ingeniería eléctrica</li>
-            <li>Marketing digital</li>
+          <h3 className="text-lg font-semibold text-white mb-4">Servicios</h3>
+          <ul className="space-y-2 text-sm">
+            <li className="hover:text-cyan-400 transition">Tecnología de información</li>
+            <li className="hover:text-cyan-400 transition">Ingeniería eléctrica</li>
+            <li className="hover:text-cyan-400 transition">Marketing digital</li>
           </ul>
         </div>
 
         {/* Nosotros */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Nosotros</h3>
-          <ul className="space-y-2">
-            <li>¿Quienes Somos?</li>
-            <li>Convenios</li>
-            <li>Organigrama</li>
-            <li>Términos y Garantías</li>
-            <li>Formulario de Contacto</li>
+          <h3 className="text-lg font-semibold text-white mb-4">Nosotros</h3>
+          <ul className="space-y-2 text-sm">
+            <li className="hover:text-cyan-400 transition">¿Quiénes Somos?</li>
+            <li className="hover:text-cyan-400 transition">Convenios</li>
+            <li className="hover:text-cyan-400 transition">Organigrama</li>
+            <li className="hover:text-cyan-400 transition">Términos y Garantías</li>
+            <li className="hover:text-cyan-400 transition">Formulario de Contacto</li>
           </ul>
         </div>
 
         {/* Contacto */}
         <div>
-          <h3 className="text-lg font-semibold mb-4">Conecta con nosotros</h3>
-          <ul className="space-y-2">
-            <li>📍 Av. Lopez de Zúñiga Nº 547 2º Piso, Chancay</li>
-            <li>✉️ consultas@solucionesintegralesjb.com</li>
-            <li>📞 +51 996 720 630</li>
-            <li>📞 +51 979 687 700</li>
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Conecta con nosotros
+          </h3>
+          <ul className="space-y-3 text-sm">
+            <li className="flex items-center gap-2">
+              <FaMapMarkerAlt className="text-cyan-400" />
+              Av. Lopez de Zúñiga Nº 547 2º Piso, Chancay
+            </li>
+            <li className="flex items-center gap-2">
+              <FaEnvelope className="text-cyan-400" />
+              consultas@solucionesintegralesjb.com
+            </li>
+            <li className="flex items-center gap-2">
+              <FaPhoneAlt className="text-cyan-400" />
+              +51 996 720 630
+            </li>
+            <li className="flex items-center gap-2">
+              <FaPhoneAlt className="text-cyan-400" />
+              +51 979 687 700
+            </li>
           </ul>
         </div>
+        
       </div>
 
       {/* Línea inferior */}
-      <div className="border-t border-gray-700 mt-10 pt-6 flex flex-wrap items-center justify-between gap-4">
-
-      
-
+      <div className="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Copyright */}
-        <p className="text-sm text-center flex-1">
-          © 2024 Soluciones Integrales JB S.A.C. - Todos los derechos reservados.
-        </p>
-
-        {/* Logo circular */}
-        <div className="w-10 h-10 rounded-full bg-cyan-500 flex items-center justify-center">
-          <img src="/logo2.jpg" alt="Mini Logo" className="w-6 h-6" />
-        </div>
+       {/* Copyright */}
+  <p className="text-xs text-gray-500 flex-1 text-center">
+    © 2024 Soluciones Integrales JB S.A.C. - Todos los derechos reservados.
+  </p>
       </div>
     </footer>
   );
