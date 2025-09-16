@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ScrollButton from "../components/ScrollButton";
 import TextType from "../components/animacion";
-import Magnet from '../Components/Magnet';
+import Magnet from '../Components/magnet';
 
 const DesarrolloWebBanner: React.FC = () => {
   // Datos para el carrusel de testimonios (ahora con 4 comentarios)
