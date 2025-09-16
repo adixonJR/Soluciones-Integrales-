@@ -90,52 +90,54 @@ const Soporte: React.FC = () => {
       </section>
 
       {/* Sección Monitoreo */}
-      <section className="bg-black py-20 px-6 md:px-16">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+<section className="bg-neutral-800 py-20 px-6 md:px-16">
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
 
-          {/* Imágenes */}
-          <motion.div
-            className="md:w-1/2 flex flex-col gap-6"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src="https://solucionesintegralesjb.com/wp-content/uploads/2024/07/4051.jpg"
-              alt="Imagen 1"
-              className="rounded-lg shadow-md w-full max-w-[500px]"
-            />
-            <img
-              src="https://solucionesintegralesjb.com/wp-content/uploads/2024/09/images-4.jpg"
-              alt="Imagen 2"
-              className="rounded-lg shadow-md w-full max-w-[500px]"
-            />
-          </motion.div>
+    {/* Imágenes */}
+    <motion.div
+      className="md:w-1/2 flex flex-col gap-6 items-center"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      <img
+        src="https://solucionesintegralesjb.com/wp-content/uploads/2024/07/4051.jpg"
+        alt="Imagen 1"
+        className="rounded-lg shadow-md w-full max-w-[350px] mx-auto"
+      />
+      <img
+        src="https://solucionesintegralesjb.com/wp-content/uploads/2024/09/images-4.jpg"
+        alt="Imagen 2"
+        className="rounded-lg shadow-md w-full max-w-[350px] mx-auto"
+      />
+    </motion.div>
 
-          {/* Texto */}
-          <motion.div
-            className="md:w-1/2 text-white"
-            initial={{ opacity: 0, y: -50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
-              Monitoreo y Mantenimiento Proactivo
-            </h2>
-            <p className="mb-4 leading-relaxed text-justify">
-              Nuestro servicio de soporte técnico va más allá de la simple resolución de problemas; incluye monitoreo y mantenimiento proactivo para anticiparnos a posibles fallos. Utilizamos herramientas avanzadas para supervisar tus sistemas en tiempo real, detectando cualquier irregularidad y aplicando ajustes preventivos para evitar interrupciones. 
-            </p>
-            <p className="mb-6 leading-relaxed text-justify">
-              Nos comprometemos a mantener tu infraestructura tecnológica en su mejor estado, asegurando un rendimiento óptimo y prolongando la vida útil de tus equipos, lo que se traduce en una mayor eficiencia operativa para tu negocio.
-            </p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
-              CONTÁCTANOS
-            </button>
-          </motion.div>
-        </div>
-      </section>
+    {/* Texto */}
+    <motion.div
+      className="md:w-1/2 text-white flex flex-col"
+      initial={{ opacity: 0, y: -50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+        Monitoreo y Mantenimiento Proactivo
+      </h2>
+      <p className="mb-4 leading-relaxed text-justify">
+        Nuestro servicio de soporte técnico va más allá de la simple resolución de problemas; incluye monitoreo y mantenimiento proactivo para anticiparnos a posibles fallos. Utilizamos herramientas avanzadas para supervisar tus sistemas en tiempo real, detectando cualquier irregularidad y aplicando ajustes preventivos para evitar interrupciones.
+      </p>
+      <p className="mb-6 leading-relaxed text-justify">
+        Nos comprometemos a mantener tu infraestructura tecnológica en su mejor estado, asegurando un rendimiento óptimo y prolongando la vida útil de tus equipos, lo que se traduce en una mayor eficiencia operativa para tu negocio.
+      </p>
+      <div className="separator"></div>
+     <button className="solutions-contact-btn">CONTACTANOS</button>
+    </motion.div>
+    
+  </div>
+
+</section>
+
 
       {/* Sección Remoto y On-Site */}
       <section className="bg-white py-20 px-6 md:px-16">

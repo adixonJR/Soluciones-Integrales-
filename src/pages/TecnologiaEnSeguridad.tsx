@@ -177,7 +177,7 @@ const TecnologiaEnSeguridad: React.FC = () => {
               <p className="service-description">
                 Tu seguridad es nuestra máxima prioridad, y estamos comprometidos a brindar un servicio excepcional que garantice la protección continua de tus propiedades. Con nosotros, obtienes más que equipos de seguridad; obtienes tranquilidad y la confianza de saber que estás protegido en todo momento.
               </p>
-              <button className="contact-btn">CONTACTAR</button>
+              <button className="solutions-contact-btn">CONTACTAR</button>
             </div>
           </div>
         </div>
