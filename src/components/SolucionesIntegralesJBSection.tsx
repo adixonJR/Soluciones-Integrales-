@@ -388,18 +388,33 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
     {/* Contenedor del carrusel */}
     <div className="relative w-full mt-12">
       <div className="h-32 md:h-40 overflow-hidden">
-        <LogoLoop
-          logos={clientLogos}
-          speed={100}
-          direction="left"
-          logoHeight={60}
-          gap={40}
-          pauseOnHover
-          scaleOnHover
-          fadeOut
-          fadeOutColor="#ffffff"
-          ariaLabel="Technology partners"
-        />
+       <LogoLoop
+  logos={clientLogos}
+  speed={100}
+  direction="left"
+  logoHeight={60}
+  gap={40}
+  pauseOnHover
+  scaleOnHover
+  ariaLabel="Technology partners"
+  fadeOut
+  fadeOutColor="#262626"
+/>
+
+      </div>
+      <div className="h-32 md:h-40 overflow-hidden">
+       <LogoLoop
+  logos={clientLogos}
+  speed={100}
+  direction="right"
+  logoHeight={60}
+  gap={40}
+  pauseOnHover
+  scaleOnHover
+  ariaLabel="Technology partners"
+  fadeOut
+  fadeOutColor="#262626"
+/>
       </div>
 
 </div>
