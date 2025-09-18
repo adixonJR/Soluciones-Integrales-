@@ -45,8 +45,7 @@ function Navbar() {
   };
 
   return (
-   <nav className="bg-[#1a1a1a] text-white px-6 py-4 flex items-center justify-between shadow-md fixed top-0 left-0 w-full z-50">
-
+   <nav className="bg-[#1a1a1a] text-white px-6 py-4 flex items-center justify-between shadow-md relative z-50">
       {/* Logo */}
       <div className="flex items-center gap-3">
         <img src={logo} alt="Logo" className="w-90 h-10" />
@@ -328,7 +327,7 @@ function Navbar() {
    
    {/* Sidebar móvil */}
 {mobileMenuOpen && (
-  <div className="fixed inset-0 z-60 flex">
+  <div className="fixed inset-0 z-50 flex">
     {/* Fondo oscuro */}
     <div
       className="fixed inset-0 bg-black bg-opacity-50"
