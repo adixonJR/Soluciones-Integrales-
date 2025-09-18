@@ -85,7 +85,7 @@ const HostingYDominio: React.FC = () => {
       </section>
 
       {/* Sección Dominios */}
-      <section className="bg-black py-20 px-6 md:px-16">
+      <section className="bg-neutral-800 py-20 px-6 md:px-16">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
 
           {/* Imagen */}
@@ -113,11 +113,13 @@ const HostingYDominio: React.FC = () => {
               Registro de Dominios Personalizados
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
-              Nuestro servicio de registro de dominios personalizados te permite obtener la dirección web perfecta para tu negocio. Ya sea que necesites un dominio .com, .pe o cualquier otra extensión, estamos aquí para ayudarte a encontrar y registrar el dominio ideal que represente tu marca.
+              Registra tu dominio con Soluciones Integrales JB y dale a tu negocio una identidad única en internet. Te ayudamos a encontrar y registrar el nombre de dominio perfecto que represente tu marca de manera efectiva. Además, ofrecemos servicios de gestión de dominios para que tengas control total sobre tu presencia en línea. Con nosotros, asegurar tu nombre de dominio es fácil y rápido.
             </p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
-              CONTÁCTANOS
-            </button>
+            <a href="/contacto">
+        <button className="px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+          CONTÁCTANOS
+        </button>
+      </a>
           </motion.div>
         </div>
       </section>
@@ -194,9 +196,11 @@ const HostingYDominio: React.FC = () => {
             <p className="leading-relaxed text-justify mb-6">
               Además, implementamos certificados digitales SSL para proteger tu página web, y certificados digitales para correo electrónico, garantizando la seguridad en todas tus comunicaciones.
             </p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
-              CONTACTAR
-            </button>
+            <a href="/contacto">
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
+                CONTACTAR
+              </button>
+            </a>
           </motion.div>
         </div>
       </section>

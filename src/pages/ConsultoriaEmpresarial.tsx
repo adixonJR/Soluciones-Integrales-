@@ -121,7 +121,7 @@ const ConsultoriaEmpresarial = () => {
               </motion.p>
 
               <motion.a
-                href="#contacto"
+                href="/contacto"
                 className="bg-[#007BFF] text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-[#0056b3] transition duration-300 inline-block"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}

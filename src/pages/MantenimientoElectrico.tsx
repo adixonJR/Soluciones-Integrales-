@@ -68,9 +68,11 @@ const PosicionamientoSEO: React.FC = () => {
             <p className="mb-4 leading-relaxed text-justify">
              En Soluciones Integrales JB, ofrecemos servicios de mantenimiento eléctrico preventivo especializados para empresas que buscan asegurar la fiabilidad y eficiencia de sus sistemas. Nuestro enfoque se centra en la detección proactiva de problemas, mediante inspecciones regulares y pruebas de funcionamiento. Esto no solo minimiza riesgos de averías costosas, sino que también mejora la durabilidad de las instalaciones eléctricas, beneficiando así el rendimiento operativo y reduciendo tiempos de inactividad imprevistos.
             </p>
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
-                CONTÁCTANOS
-              </button>
+              <a href="/contacto">
+        <button className="px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+          CONTACTAR
+        </button>
+      </a>
           </motion.div>
 
           {/* Imagen */}
@@ -91,7 +93,7 @@ const PosicionamientoSEO: React.FC = () => {
       </section>
 
       {/* Segunda sección */}
-      <section className="bg-black py-20 px-6 md:px-16">
+      <section className="bg-neutral-800 py-20 px-6 md:px-16">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
     
           {/* Imágenes a la izquierda */}
@@ -122,9 +124,11 @@ const PosicionamientoSEO: React.FC = () => {
             <p className="mb-4 leading-relaxed text-justify">
              En Soluciones Integrales JB, ofrecemos servicios de mantenimiento eléctrico preventivo especializados para empresas que buscan asegurar la fiabilidad y eficiencia de sus sistemas. Nuestro enfoque se centra en la detección proactiva de problemas, mediante inspecciones regulares y pruebas de funcionamiento. Esto no solo minimiza riesgos de averías costosas, sino que también mejora la durabilidad de las instalaciones eléctricas, beneficiando así el rendimiento operativo y reduciendo tiempos de inactividad imprevistos.
             </p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
-              CONTÁCTANOS
-            </button>
+           <a href="/contacto">
+        <button className="px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+          CONTÁCTANOS
+        </button>
+      </a>
           </motion.div>
         </div>
       </section>

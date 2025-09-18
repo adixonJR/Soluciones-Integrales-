@@ -5,6 +5,7 @@ import { miembros } from "../components/Miembros"; // Ajusta la ruta según tu e
 const NuestroEquipo: React.FC = () => {
   // Convertimos los miembros al formato que necesita CircularGallery
 const items = miembros.map(miembro => ({
+  text2: miembro.nombre,
   image: miembro.imagen,
   text: `${miembro.nombre}\n${miembro.cargo}` // Nombre arriba, cargo abajo
 }));
@@ -19,7 +20,7 @@ const items = miembros.map(miembro => ({
           items={items}
           bend={0}                 // Curvatura del carrusel
           textColor="#ffffff"      // Color del texto
-          borderRadius={0.1}      // Bordes redondeados de las imágenes
+          borderRadius={0.0}      // Bordes redondeados de las imágenes
           font="bold 20px Figtree" // Fuente del texto
           scrollSpeed={2}          // Velocidad de arrastre
           scrollEase={0.08}        // Suavizado del scroll

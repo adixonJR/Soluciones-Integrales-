@@ -72,11 +72,12 @@ const Merchandising = () => {
               </p>
 
               <motion.a
-                href="#contacto"
+                href="/contacto"
                 whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-[#3498db] text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-[#2980b9] transition duration-300 inline-block"
               >
+                
                 ¡Hablemos!
               </motion.a>
             </div>

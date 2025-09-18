@@ -87,7 +87,7 @@ const PosicionamientoSEO: React.FC = () => {
       </section>
 
       {/* Mejora de la Estructura del Sitio */}
-      <section className="bg-black py-20 px-6 md:px-16">
+      <section className="bg-neutral-800 py-20 px-6 md:px-16">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           
           {/* Imagen */}
@@ -117,7 +117,7 @@ const PosicionamientoSEO: React.FC = () => {
               Mejora de la Estructura del Sitio
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
-              Nuestro enfoque también se centra en optimizar la estructura del sitio, asegurando una navegación intuitiva y accesible tanto para los usuarios como para los motores de búsqueda. Mejoramos la arquitectura de enlaces internos para garantizar una distribución eficaz de la autoridad y facilitar el acceso al contenido.
+             Nuestro enfoque también se centra en optimizar la estructura del sitio, asegurando una navegación intuitiva y accesible tanto para los usuarios como para los motores de búsqueda. Mejoramos la arquitectura de enlaces internos para garantizar una distribución eficaz de la autoridad y facilitar el acceso al contenido. Esto no solo mejora la experiencia del usuario al hacer más fácil la exploración del sitio, sino que también ayuda a los motores de búsqueda a comprender mejor la relevancia y la jerarquía de las páginas, lo que contribuye a un mejor posicionamiento.
             </p>
             <motion.button
               initial={{ opacity: 0, y: 20 }}
@@ -125,8 +125,10 @@ const PosicionamientoSEO: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true, amount: 0.3 }}
               className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300"
-            >
-              CONTÁCTANOS
+            ><a href="/contacto" className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+                  CONTACTANOS
+                </a>
+              
             </motion.button>
           </motion.div>
         </div>
@@ -148,7 +150,7 @@ const PosicionamientoSEO: React.FC = () => {
               Contenido Optimizado
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
-              Desarrollamos estrategias de contenido optimizado que conectan de manera efectiva con tu audiencia objetivo y mejoran tu posicionamiento SEO.
+             Desarrollamos estrategias de contenido optimizado que conectan de manera efectiva con tu audiencia objetivo y mejoran tu posicionamiento SEO. Cada pieza de contenido se optimiza con palabras clave específicas, al mismo tiempo que ofrece información valiosa y relevante para los usuarios. Esto no solo incrementa la visibilidad en los motores de búsqueda, sino que también fortalece la autoridad de tu marca dentro de la industria, generando mayor confianza y fomentando el compromiso de los visitantes.
             </p>
           </motion.div>
 
@@ -200,7 +202,7 @@ const PosicionamientoSEO: React.FC = () => {
               Reportes y Seguimiento de Resultados
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
-              Ofrecemos reportes detallados y un seguimiento exhaustivo de los resultados para que puedas evaluar el impacto de nuestras estrategias de SEO.
+             Ofrecemos reportes detallados y un seguimiento exhaustivo de los resultados para que puedas evaluar el impacto de nuestras estrategias de SEO. Monitoreamos métricas clave como el tráfico orgánico, las posiciones de palabras clave y la tasa de conversión, proporcionándote insights valiosos que te permiten ajustar y optimizar continuamente tu estrategia. Nuestro enfoque orientado a resultados garantiza que cada acción esté alineada con tus objetivos comerciales, maximizando así el retorno de inversión en marketing digital.
             </p>
             <motion.button
               initial={{ opacity: 0, y: 20 }}
@@ -209,7 +211,9 @@ const PosicionamientoSEO: React.FC = () => {
               viewport={{ once: true, amount: 0.3 }}
               className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300"
             >
-              CONTACTAR
+              <a href="/contacto" className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+                  CONTACTAR
+                </a>
             </motion.button>
           </motion.div>
         </div>

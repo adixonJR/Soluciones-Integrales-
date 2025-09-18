@@ -89,7 +89,7 @@ const RefrigeracionIndustrial: React.FC = () => {
       </section>
 
       {/* Segunda sección */}
-      <section className="bg-black py-20 px-6 md:px-16">
+      <section className="bg-neutral-800 py-20 px-6 md:px-16">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
     
           {/* Imágenes a la izquierda */}
@@ -121,9 +121,11 @@ const RefrigeracionIndustrial: React.FC = () => {
             <p className="mb-4 leading-relaxed text-justify">
               Contamos con un equipo técnico altamente capacitado para la instalación avanzada y el mantenimiento proactivo de sistemas de refrigeración industrial. Realizamos inspecciones regulares y ajustes preventivos para maximizar la fiabilidad y durabilidad de tus equipos. Este enfoque no solo reduce costos operativos a largo plazo, sino que también minimiza el riesgo de interrupciones no planificadas, garantizando la continuidad en tus procesos productivos.
             </p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
-              CONTÁCTANOS
-            </button>
+            <a href="/contacto">
+        <button className="px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+          CONTÁCTANOS
+        </button>
+      </a>
           </motion.div>
         </div>
       </section>
@@ -197,9 +199,11 @@ const RefrigeracionIndustrial: React.FC = () => {
             <p className="mb-4 leading-relaxed text-justify">
               Ofrecemos asesoramiento especializado en eficiencia energética y sostenibilidad para optimizar el consumo de energía de tus sistemas de refrigeración industrial. Analizamos el rendimiento energético de tus equipos, identificamos áreas de mejora y recomendamos soluciones que reduzcan costos operativos y minimicen el impacto ambiental. Este enfoque no solo optimiza tus recursos, sino que también fortalece la imagen de tu empresa como un líder en innovación y responsabilidad ambiental.
             </p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
-              CONTACTAR
-            </button>
+           <a href="/contacto">
+        <button className="px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+          CONTACTAR
+        </button>
+      </a>
           </motion.div>
         </div>
       </section>

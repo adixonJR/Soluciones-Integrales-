@@ -89,7 +89,7 @@ const InstalacionesElectricas: React.FC = () => {
 
       {/* Soluciones Personalizadas */}
       <motion.section
-        className="bg-black py-20 px-6 md:px-16"
+        className="bg-neutral-800 py-20 px-6 md:px-16"
         initial={{ opacity: 0, x: 60 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
@@ -119,13 +119,11 @@ const InstalacionesElectricas: React.FC = () => {
             <p className="mb-4 leading-relaxed text-justify">
               Nos especializamos en proporcionar soluciones eléctricas personalizadas que optimizan el rendimiento y la eficiencia energética de tus instalaciones. Nuestro enfoque se centra en la adaptabilidad y la innovación, utilizando tecnologías avanzadas para maximizar el uso de recursos y reducir costos operativos a largo plazo.
             </p>
-            <motion.button
-              className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              CONTÁCTANOS
-            </motion.button>
+            <a href="/contacto">
+        <button className="px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+          CONTÁCTANOS
+        </button>
+      </a>
           </div>
         </div>
       </motion.section>
@@ -198,13 +196,11 @@ const InstalacionesElectricas: React.FC = () => {
             <p className="mb-4 leading-relaxed text-justify">
               Nos comprometemos a cumplir con todas las normativas eléctricas y de seguridad vigentes, garantizando que cada instalación cumpla con los requisitos legales y de seguridad más estrictos. Esto no solo protege tus activos y personal, sino que también fortalece la reputación de tu empresa como un operador comprometido con prácticas seguras y responsables.
             </p>
-            <motion.button
-              className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              CONTACTAR
-            </motion.button>
+            <a href="/contacto">
+        <button className="px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+          CONTACTAR
+        </button>
+      </a>
           </div>
         </div>
       </motion.section>

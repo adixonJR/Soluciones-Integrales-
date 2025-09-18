@@ -45,7 +45,8 @@ function Navbar() {
   };
 
   return (
-   <nav className="bg-[#1a1a1a] text-white px-6 py-4 flex items-center justify-between shadow-md relative z-50">
+   <nav className="bg-[#1a1a1a] text-white px-6 py-4 flex items-center justify-between shadow-md fixed top-0 left-0 w-full z-50">
+
       {/* Logo */}
       <div className="flex items-center gap-3">
         <img src={logo} alt="Logo" className="w-90 h-10" />
@@ -324,85 +325,145 @@ function Navbar() {
       >
         {mobileMenuOpen ? <FiX /> : <FiMenu />}
       </button>
+   
+   {/* Sidebar móvil */}
+{mobileMenuOpen && (
+  <div className="fixed inset-0 z-60 flex">
+    {/* Fondo oscuro */}
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50"
+      onClick={() => setMobileMenuOpen(false)}
+    ></div>
 
-      {/* Menú móvil */}
-      {mobileMenuOpen && (
-        <div className="absolute top-[70px] left-0 w-full bg-white shadow-lg p-6 md:hidden">
-          <ul className="space-y-4 font-semibold text-gray-800">
-            <li>
-              <Link to="/" onClick={() => setMobileMenuOpen(false)}>
-                INICIO
-              </Link>
-            </li>
-            <li>
-              <button
-                onClick={() => toggleDropdown("nosotros")}
-                className="w-full text-left"
-              >
-                NOSOTROS
-              </button>
-              {openDropdown === "nosotros" && (
-                <ul className="ml-4 mt-2 space-y-2 text-sm">
-                  <li className="flex items-center gap-2">
-                    <FaUsers /> <a href="/QuienesSomos">Quiénes Somos</a>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaHistory /> <a href="/NuestraHistoria">Nuestra Historia</a>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaSitemap /> <a href="/Organigrama">Organigrama</a>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaUserTie /> <a href="/NuestroEquipo">Nuestro Equipo</a>
-                  </li>
+    {/* Sidebar */}
+    <div className="ml-auto w-80 bg-white shadow-lg p-6 h-full overflow-y-auto transform transition-transform duration-300 ease-in-out">
+      <button
+        className="absolute top-4 right-4 text-2xl"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        <FiX />
+      </button>
+
+      <ul className="mt-10 space-y-4 font-semibold text-gray-800">
+        <li>
+          <Link to="/" onClick={() => setMobileMenuOpen(false)}>
+            INICIO
+          </Link>
+        </li>
+
+        {/* Dropdown Nosotros */}
+        <li>
+          <button
+            onClick={() => toggleDropdown("nosotros")}
+            className="w-full text-left"
+          >
+            NOSOTROS
+          </button>
+          {openDropdown === "nosotros" && (
+            <div className="mt-4 grid grid-cols-1 gap-6 text-sm">
+              <div>
+                <h4 className="font-bold text-gray-700 mb-2">Nuestra Identidad</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2"><FaUsers /> <a href="/QuienesSomos">Quiénes Somos</a></li>
+                  <li className="flex items-center gap-2"><FaHistory /> <a href="/NuestraHistoria">Nuestra Historia</a></li>
                 </ul>
-              )}
-            </li>
-            <li>
-              <button
-                onClick={() => toggleDropdown("servicios")}
-                className="w-full text-left"
-              >
-                SERVICIOS
-              </button>
-              {openDropdown === "servicios" && (
-                <ul className="ml-4 mt-2 space-y-2 text-sm">
-                  <li className="flex items-center gap-2">
-                    <FaLaptopCode />{" "}
-                    <a href="/DesarrolloDeSoftware">Desarrollo de Software</a>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaFileInvoiceDollar />{" "}
-                    <a href="/FacturacionElectronica">Facturación Electrónica</a>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaLock />{" "}
-                    <a href="/TecnologiaEnSeguridad">Tecnología en Seguridad</a>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaNetworkWired />{" "}
-                    <a href="/RedesEInfraestructura">Redes e Infraestructura</a>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaServer /> <a href="/HostingYDominio">Hosting y Dominio</a>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaHeadset /> <a href="/SoporteTecnico">Soporte Técnico</a>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <FaClipboardCheck /> <a href="/Auditorias">Auditorías</a>
-                  </li>
+              </div>
+              <div>
+                <h4 className="font-bold text-gray-700 mb-2">Alianzas</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2"><FaHandshake /> <a href="/convenios">Convenios</a></li>
+                  <li className="flex items-center gap-2"><FaPeopleCarry /> <a href="/comunidadActiva">Comunidad Activa</a></li>
                 </ul>
-              )}
-            </li>
-            <li>
-              <Link to="/contacto" onClick={() => setMobileMenuOpen(false)}>
-                CONTACTO
-              </Link>
-            </li>
-          </ul>
-        </div>
-      )}
+              </div>
+              <div>
+                <h4 className="font-bold text-gray-700 mb-2">Consultoría</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2"><FaLaptopCode /> <a href="/ConsultoriaTI">Consultoría TI</a></li>
+                  <li className="flex items-center gap-2"><FaBuilding /> <a href="/ConsultoriaEmpresarial">Consultoría Empresarial</a></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-bold text-gray-700 mb-2">Equipo</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2"><FaUserTie /> <a href="/NuestroEquipo">Nuestro Equipo</a></li>
+                  <li className="flex items-center gap-2"><FaSitemap /> <a href="/Organigrama">Organigrama</a></li>
+                </ul>
+              </div>
+            </div>
+          )}
+        </li>
+
+        {/* Dropdown Servicios */}
+        <li>
+          <button
+            onClick={() => toggleDropdown("servicios")}
+            className="w-full text-left"
+          >
+            SERVICIOS
+          </button>
+          {openDropdown === "servicios" && (
+            <div className="mt-4 grid grid-cols-1 gap-6 text-sm">
+              {/* Tecnología de Información */}
+              <div>
+                <h4 className="font-bold text-gray-700 mb-2">Tecnología de Información</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2"><FaCode /> <a href="/DesarrolloDeSoftware">Desarrollo de Software</a></li>
+                  <li className="flex items-center gap-2"><FaFileInvoiceDollar /> <a href="/FacturacionElectronica">Facturación Electrónica</a></li>
+                  <li className="flex items-center gap-2"><FaLock /> <a href="/TecnologiaEnSeguridad">Tecnología en Seguridad</a></li>
+                  <li className="flex items-center gap-2"><FaNetworkWired /> <a href="/RedesEInfraestructura">Redes e Infraestructura</a></li>
+                  <li className="flex items-center gap-2"><FaServer /> <a href="/HostingYDominio">Hosting y Dominio</a></li>
+                  <li className="flex items-center gap-2"><FaTools /> <a href="/SoporteTecnico">Soporte Técnico</a></li>
+                </ul>
+              </div>
+
+              {/* Consultoría */}
+              <div>
+                <h4 className="font-bold text-gray-700 mb-2">Consultoría</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2"><FaLaptopCode /> <a href="/ConsultoriaTI">Consultoría TI</a></li>
+                  <li className="flex items-center gap-2"><FaBuilding /> <a href="/ConsultoriaEmpresarial">Consultoría Empresarial</a></li>
+                  <li className="flex items-center gap-2"><FaChalkboardTeacher /> <a href="/ConsultoriaEducativa">Consultoría Educativa</a></li>
+                  <li className="flex items-center gap-2"><FaClipboardCheck /> <a href="/Auditorias">Auditorías</a></li>
+                  <li className="flex items-center gap-2"><FaShieldAlt /> <a href="/SeguridadInformatica">Seguridad Informática</a></li>
+                </ul>
+              </div>
+
+              {/* Marketing Digital */}
+              <div>
+                <h4 className="font-bold text-gray-700 mb-2">Marketing Digital</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2"><FaCode /> <a href="/DesarrolloDeSitiosWeb">Desarrollo de Sitio Web</a></li>
+                  <li className="flex items-center gap-2"><FaSearch /> <a href="/PosicionamientoSEO">Posicionamiento SEO</a></li>
+                  <li className="flex items-center gap-2"><FaPaintBrush /> <a href="/GraficaPublicitaria">Gráfica Publicitaria</a></li>
+                  <li className="flex items-center gap-2"><FaGift /> <a href="/Merchandising">Merchandising</a></li>
+                  <li className="flex items-center gap-2"><FaShareAlt /> <a href="/SocialMedia">Social Media</a></li>
+                </ul>
+              </div>
+
+              {/* Ingeniería Eléctrica */}
+              <div>
+                <h4 className="font-bold text-gray-700 mb-2">Ing. Eléctrica</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2"><FaBolt /> <a href="/MantenimientoElectrico">Mantenimiento Eléctrico</a></li>
+                  <li className="flex items-center gap-2"><FaSnowflake /> <a href="/RefrigeracionIndustrial">Refrigeración Industrial</a></li>
+                  <li className="flex items-center gap-2"><FaPlug /> <a href="/InstalacionesElectricas">Instalaciones Eléctricas</a></li>
+                </ul>
+              </div>
+            </div>
+          )}
+        </li>
+
+        <li>
+          <Link to="/contacto" onClick={() => setMobileMenuOpen(false)}>
+            CONTACTO
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </div>
+)}
+
+
     </nav>
   );
 }

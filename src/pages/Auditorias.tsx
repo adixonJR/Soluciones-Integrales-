@@ -94,7 +94,7 @@ const Auditorias = () => {
               </p>
 
               <motion.a
-                href="#contacto"
+                href="/Contacto"
                 className="bg-[#3498db] text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-[#2980b9] transition duration-300 inline-block"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

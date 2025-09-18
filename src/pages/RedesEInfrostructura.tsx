@@ -115,7 +115,7 @@ const RedesEinfroestructura: React.FC = () => {
       </section>
 
       {/* Optimización y Mantenimiento */}
-      <section className="bg-black py-20 px-6 md:px-16">
+      <section className="bg-neutral-800 py-20 px-6 md:px-16">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Imágenes */}
           <motion.div
@@ -151,18 +151,16 @@ const RedesEinfroestructura: React.FC = () => {
               Optimización y Mantenimiento de Redes
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
-              En Soluciones Integrales JB, ofrecemos servicios de optimización y
-              mantenimiento de redes diseñados para garantizar que tu
-              infraestructura opere de manera eficiente en todo momento.
+              En Soluciones Integrales JB, ofrecemos servicios de optimización y mantenimiento de redes diseñados para garantizar que tu infraestructura opere de manera eficiente en todo momento. Nuestro equipo de expertos realiza un monitoreo continuo de tu red, detectando y solucionando posibles problemas antes de que impacten en tus operaciones.
             </p>
             <p className="mb-4 leading-relaxed text-justify">
-              Implementamos un enfoque proactivo con mantenimiento preventivo y
-              actualizaciones regulares, asegurando que tu red se mantenga en su
-              mejor estado y funcione de manera óptima.
+              Implementamos un enfoque proactivo con mantenimiento preventivo y actualizaciones regulares, asegurando que tu red se mantenga en su mejor estado y funcione de manera óptima. De esta manera, puedes concentrarte en el crecimiento de tu negocio sin preocuparte por interrupciones o problemas técnicos. Con nuestra gestión integral, tu red estará siempre al máximo rendimiento, ofreciendo una experiencia fluida y confiable.
             </p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
-              CONTÁCTANOS
-            </button>
+            <a href="/contacto">
+        <button className="px-8 py-4 bg-blue-600 text-white font-semibold text-lg rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+          CONTÁCTANOS
+        </button>
+      </a>
           </motion.div>
         </div>
       </section>
@@ -182,8 +180,7 @@ const RedesEinfroestructura: React.FC = () => {
               Seguridad en Redes
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
-              Implementamos firewalls, detección de intrusos y cifrado para
-              asegurar tu infraestructura contra amenazas externas e internas.
+              En Soluciones Integrales JB, la seguridad de tu red es nuestra máxima prioridad. Implementamos las mejores prácticas y tecnologías avanzadas para proteger tu infraestructura contra amenazas externas e internas. Utilizamos firewalls de última generación, sistemas de detección de intrusos y soluciones de cifrado de datos para asegurar que tu red permanezca segura en todo momento. Nuestro enfoque integral te brinda tranquilidad al garantizar la integridad y confidencialidad de tu información. Confía en nosotros para mantener la protección continua de tus activos digitales.
             </p>
           </motion.div>
           <motion.div
@@ -231,18 +228,16 @@ const RedesEinfroestructura: React.FC = () => {
               Consultoría en Infraestructura
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
-              Nuestro servicio de consultoría en infraestructura está diseñado
-              para asistirte en la planificación y ejecución de proyectos de
-              redes.
+              Nuestro servicio de consultoría en infraestructura está diseñado para asistirte en la planificación y ejecución de proyectos de redes con la máxima eficiencia y efectividad.
             </p>
             <p className="mb-4 leading-relaxed text-justify">
-              Realizamos un análisis detallado y te ofrecemos soluciones
-              personalizadas que optimizan tu infraestructura actual mientras
-              preparan tu red para el futuro.
+              Realizamos un análisis detallado de tus necesidades específicas y te ofrecemos soluciones personalizadas que optimizan tu infraestructura actual mientras preparan tu red para futuros crecimientos. Con Soluciones Integrales JB, contarás con una infraestructura robusta y escalable, capaz de soportar las demandas actuales y futuras de tu negocio, asegurando que estés siempre un paso adelante en el desarrollo tecnológico.
             </p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
-              CONTACTAR
-            </button>
+            <a href="/contacto">
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
+                CONTACTAR
+              </button>
+            </a>
           </motion.div>
         </div>
       </section>

@@ -201,59 +201,94 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
           {strategicServices.map((s, idx) => (<StrategicServiceCard key={`${s.title}-${idx}`} item={s} />))}
         </Carousel>
       </div>
+<div className="mx-auto max-w-6xl px-4 py-10">
+  <motion.p
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true }}
+    className="italic font-semibold text-center text-blue-400"
+  >
+    Lo que te ofrecemos para potenciar tu éxito digital
+  </motion.p>
 
-      <div className="mx-auto max-w-6xl px-4 py-10">
-        <motion.p initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="italic font-semibold text-center text-blue-400">Lo que te ofrecemos para potenciar tu éxito digital</motion.p>
-        <motion.h2 initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} viewport={{ once: true }} className="text-3xl font-bold text-center text-gray-800">Características de Soluciones Integrales JB</motion.h2>
+  <motion.h2
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7, delay: 0.2 }}
+    viewport={{ once: true }}
+    className="text-2xl md:text-3xl font-bold text-center text-gray-800"
+  >
+    Características de Soluciones Integrales JB
+  </motion.h2>
 
-        <div className="mt-10 grid lg:grid-cols-3 gap-6 items-center">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } } }}
-            viewport={{ once: true }}
-            className="space-y-8 text-right"
-          >
-            {features.slice(0, 3).map((f, idx) => (
-              <motion.div
-                key={`${f.title}-${idx}`}
-                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-                transition={{ duration: 0.6 }}
-              >
-                <FeatureBlock feature={f} />
-              </motion.div>
-            ))}
-          </motion.div>
+  {/* Grid responsive */}
+  <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+    {/* Bloques Izquierda */}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { staggerChildren: 0.2 },
+        },
+      }}
+      viewport={{ once: true }}
+      className="space-y-8 text-right md:text-left lg:text-right"
+    >
+      {features.slice(0, 3).map((f, idx) => (
+        <motion.div
+          key={`${f.title}-${idx}`}
+          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          transition={{ duration: 0.6 }}
+        >
+          <FeatureBlock feature={f} />
+        </motion.div>
+      ))}
+    </motion.div>
 
-          <motion.img
-            src={uiImage}
-            alt="Diseño web profesional en teléfono"
-            className="w-64 mx-auto rounded-xl shadow-lg"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          />
+    {/* Imagen central */}
+    <motion.img
+      src={uiImage}
+      alt="Diseño web profesional en teléfono"
+      className="w-40 sm:w-56 md:w-64 mx-auto rounded-xl shadow-lg"
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true }}
+    />
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } } }}
-            viewport={{ once: true }}
-            className="space-y-8 text-left"
-          >
-            {features.slice(3, 6).map((f, idx) => (
-              <motion.div
-                key={`${f.title}-${idx}`}
-                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-                transition={{ duration: 0.6 }}
-              >
-                <FeatureBlock feature={f} />
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
+    {/* Bloques Derecha */}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { staggerChildren: 0.2 },
+        },
+      }}
+      viewport={{ once: true }}
+      className="space-y-8 text-left"
+    >
+      {features.slice(3, 6).map((f, idx) => (
+        <motion.div
+          key={`${f.title}-${idx}`}
+          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          transition={{ duration: 0.6 }}
+        >
+          <FeatureBlock feature={f} />
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+</div>
+
       
       {/* ====================== SECCIÓN DE VIDEO CON NUEVO DISEÑO ====================== */}
       <section className="bg-neutral-800 text-white py-24 px-4 md:px-8">

@@ -154,45 +154,54 @@ const FacturacionElectronica: React.FC = () => {
       </section>
 
       {/* Sección 3 */}
-      <section className="bg-neutral-800 20 px-6 md:px-16">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
+<section className="bg-neutral-900 py-16 px-6 md:px-16">
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+    
+    {/* Texto */}
+    <motion.div
+      className="md:w-1/2 text-white"
+      variants={fadeInLeft}
+      initial="hidden"
+      whileInView="visible"
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6"> Acceso y Control desde Cualquier Lugar </h2>
 
-          <motion.div
-            className="md:w-1/2 text-white-800"
-            variants={fadeInLeft}
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
-              Acceso y Control desde Cualquier Lugar
-            </h2>
-           <p className="solutions-description">
-  Con nuestro software, puedes acceder a tus facturas electrónicas y gestionar tus operaciones desde cualquier lugar y en cualquier momento, garantizando la seguridad de tus datos. La plataforma en la nube te permite monitorear y controlar tus facturas en tiempo real desde cualquier dispositivo, ya sea una computadora, tablet o smartphone.
-</p>
-<p className="solutions-description">
-  Esto no solo aumenta la eficiencia, sino que también te brinda la flexibilidad necesaria para adaptarte rápidamente a las necesidades de tu negocio, asegurando que siempre estés en control, sin importar dónde te encuentres. Además, las actualizaciones automáticas te aseguran que siempre estarás utilizando la última tecnología sin complicaciones adicionales.
-</p>
-<div className="separator"></div>
-          </motion.div>
+      <p className="text-lg md:text-xl leading-relaxed text-gray-300 mb-6">
+        Con nuestro software, puedes acceder a tus facturas electrónicas y gestionar tus operaciones 
+        desde cualquier lugar y en cualquier momento, garantizando la seguridad de tus datos. 
+        La plataforma en la nube te permite monitorear y controlar tus facturas en tiempo real 
+        desde cualquier dispositivo: computadora, tablet o smartphone.
+      </p>
 
-          <motion.div
-            className="md:w-1/2"
-            variants={fadeInRight}
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src="https://solucionesintegralesjb.com/wp-content/uploads/2024/09/700a3e638490cb4d215f4b94405c40d1.jpg"
-              alt="Acceso remoto"
-              className="w-full max-w-[500px] h-auto rounded-lg shadow-md mx-auto"
-            />
-          </motion.div>
-        </div>
-      </section>
+      <p className="text-lg md:text-xl leading-relaxed text-gray-300">
+        Esto no solo aumenta la eficiencia, sino que también te brinda la flexibilidad necesaria 
+        para adaptarte rápidamente a las necesidades de tu negocio. Además, las actualizaciones 
+        automáticas aseguran que siempre cuentes con la última tecnología sin complicaciones.
+      </p>
+
+      <div className="separator"></div>
+    </motion.div>
+
+    {/* Imagen */}
+    <motion.div
+      className="md:w-1/2 flex justify-center"
+      variants={fadeInRight}
+      initial="hidden"
+      whileInView="visible"
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      <img
+        src="https://solucionesintegralesjb.com/wp-content/uploads/2024/09/700a3e638490cb4d215f4b94405c40d1.jpg"
+        alt="Acceso remoto"
+        className="w-full max-w-[550px] h-auto rounded-2xl shadow-2xl border-4 border-blue-600"
+      />
+    </motion.div>
+  </div>
+</section>
+
 
       {/* Sección 4 */}
       <section className="bg-white py-20 px-6 md:px-16">

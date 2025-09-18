@@ -131,7 +131,9 @@ const Soporte: React.FC = () => {
         Nos comprometemos a mantener tu infraestructura tecnológica en su mejor estado, asegurando un rendimiento óptimo y prolongando la vida útil de tus equipos, lo que se traduce en una mayor eficiencia operativa para tu negocio.
       </p>
       <div className="separator"></div>
-     <button className="solutions-contact-btn">CONTACTANOS</button>
+      <a href="/contacto">
+        <button className="solutions-contact-btn">CONTACTANOS</button>
+      </a>
     </motion.div>
     
   </div>
@@ -215,9 +217,11 @@ const Soporte: React.FC = () => {
             <p className="mb-6 leading-relaxed text-justify">
               Nuestro objetivo es ayudarte a tomar decisiones informadas sobre tus inversiones tecnológicas, asegurando que tu negocio esté preparado para crecer y adaptarse a las nuevas demandas del mercado.
             </p>
-            <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
-              CONTACTAR
-            </button>
+            <a href="/contacto">
+              <button className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition duration-300">
+                CONTACTAR
+              </button>
+            </a>
           </motion.div>
         </div>
       </section>

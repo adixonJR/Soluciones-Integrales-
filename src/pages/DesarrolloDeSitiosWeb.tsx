@@ -142,7 +142,7 @@ const DesarrolloWebBanner: React.FC = () => {
       </section>
 
       {/* ====================== SECCIÓN DE MANTENIMIENTO Y SOPORTE ====================== */}
-      <section className="bg-black text-white py-16 px-4 md:px-8">
+      <section className="bg-neutral-800 text-white py-16 px-4 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Imagen de Mantenimiento y Soporte */}
           <motion.div
@@ -208,7 +208,9 @@ const DesarrolloWebBanner: React.FC = () => {
               viewport={{ once: true, amount: 0.3 }}
               className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
             >
-              CONTACTANOS
+             <a href="/contacto" className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+                  CONTACTANOS
+                </a>
             </motion.button>
           </div>
         </div>
@@ -339,16 +341,18 @@ const DesarrolloWebBanner: React.FC = () => {
             </motion.p>
 
             {/* BOTÓN ACTUALIZADO */}
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
-            >
-              CONTACTANOS
-            </motion.button>
-          </div>
+            
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                <a href="/contacto" className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+                  CONTACTAR
+                </a>
+              </motion.button>
+            </div>
         </div>
       </section>
 

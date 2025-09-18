@@ -81,7 +81,9 @@ const Graficapublicitaria: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              CONTACTAR
+             <a href="/contacto" className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+                  CONTACTAR
+                </a>
             </motion.button>
           </motion.div>
 
@@ -103,7 +105,7 @@ const Graficapublicitaria: React.FC = () => {
       </section>
 
       {/* Sección Identidad Visual */}
-      <section className="bg-black py-20 px-6 md:px-16">
+      <section className="bg-neutral-800 py-20 px-6 md:px-16">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Imagen */}
           <motion.div
@@ -145,7 +147,9 @@ const Graficapublicitaria: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              CONTÁCTANOS
+              <a href="/contacto" className="px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+                  CONTACTANOS
+                </a>
             </motion.button>
           </motion.div>
         </div>
