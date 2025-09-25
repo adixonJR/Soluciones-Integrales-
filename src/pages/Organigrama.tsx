@@ -121,9 +121,9 @@ const Organigrama = () => {
           const colors = [
             'rgba(59, 130, 246, 0.4)',
             'rgba(139, 92, 246, 0.4)',
-            'rgba(16, 185, 129, 0.4)',
+            'rgba(21, 110, 81, 0.4)',
             'rgba(245, 158, 11, 0.4)',
-            'rgba(236, 72, 153, 0.4)',
+            'rgba(100, 6, 53, 0.4)',
             'rgba(99, 102, 241, 0.4)',
           ];
           const randomColor = colors[Math.floor(Math.random() * colors.length)];
@@ -184,7 +184,7 @@ const Organigrama = () => {
             <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-blue-700 to-purple-800 rounded-full animate-pulse"></span>
           </h2>
           <p 
-            className="text-lg text-gray-800 mt-4 max-w-3xl mx-auto leading-relaxed animate-fade-in-up font-medium"
+            className="text-lg text-white mt-4 max-w-3xl mx-auto leading-relaxed animate-fade-in-up font-medium"
             style={{ animationDelay: '0.5s' }}
           >
             En esta sección encontrarás una lista detallada de los cargos

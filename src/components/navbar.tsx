@@ -36,6 +36,7 @@ import {
 import { FiMenu, FiX } from "react-icons/fi"; // iconos hamburguesa
 import logo from "../assets/logo.svg";
 
+
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -45,7 +46,10 @@ function Navbar() {
   };
 
   return (
-   <nav className="bg-[#1a1a1a] text-white px-6 py-4 flex items-center justify-between shadow-md relative z-50">
+  <nav className="bg-[#1a1a1a] text-white px-6 py-4 flex items-center justify-between shadow-md w-full md:sticky md:top-0 md:z-40">
+
+
+
       {/* Logo */}
       <div className="flex items-center gap-3">
         <img src={logo} alt="Logo" className="w-90 h-10" />
