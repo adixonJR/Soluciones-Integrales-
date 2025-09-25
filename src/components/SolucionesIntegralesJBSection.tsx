@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import VoiceflowChat from "./voiceflowChat";
+import VoiceflowChat from "./VoiceflowChat";
 import ScrollButton from "./ScrollButton";
 
 // ---- Types ----
