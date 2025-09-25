@@ -2,8 +2,13 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import ScrollButton from "../components/ScrollButton";
+import '../App.css'
+import LogoLoop from "./LogoLoop";
 import VoiceflowChat from "./VoiceflowChat";
-import ScrollButton from "./ScrollButton";
+
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss } from 'react-icons/si';
+
 
 // ---- Types ----
 interface Service {
@@ -46,7 +51,7 @@ interface Props {
 
 // ---- Data ----
 const heroSlides: HeroSlide[] = [
-    { image: "https://i.postimg.cc/1RcGzXkb/Imagen-de-Whats-App-2025-09-19-a-las-16-27-54-057b9817.jpg", imageAlt: "", title: "", subtitle: "", href: "#" },
+    { image: "https://img.freepik.com/vector-premium/fondo-banner-azul-marino-oscuro-plantilla-fondo-patron-banner-diseno-grafico-abstracto-vector_181182-18817.jpg", imageAlt: "Promoción de routers y conectividad", title: "Conectividad Superior", subtitle: "Routers de alta velocidad para tu hogar y oficina", href: "#" },
     { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWCnsm9J7wUIodn531mcr04n2CLAjRkG8yvw&s", imageAlt: "Servicios de tecnología", title: "Soluciones Tecnológicas", subtitle: "Innovación y soporte a tu alcance", href: "#" },
     { image: "https://cdn.pixabay.com/photo/2021/09/12/07/58/banner-6617553_960_720.jpg", imageAlt: "Banner de tecnología", title: "Tu Socio Estratégico", subtitle: "Impulsamos tu crecimiento digital", href: "#" },
     { image: "https://img.freepik.com/premium-vector/modern-blue-abstract-background-banner-wave-blue-abstract-banner-design-background_181182-28890.jpg", imageAlt: "Fondo abstracto azul", title: "Diseño y Desarrollo", subtitle: "Creamos experiencias únicas para tus usuarios", href: "#" },
@@ -93,24 +98,25 @@ const testimonials: Testimonial[] = [
     { name: "Ana montes", avatar: "https://solucionesintegralesjb.com/wp-content/uploads/2024/10/unnamed-4.png", quote: "Muy buen servicio de parte de los empleados y cómo atienden y ayudan." },
 ];
 
-const clients: ClientLogo[] = [
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-5.svg", alt: "Cliente 1" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-4.svg", alt: "Cliente 2" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-1-1.svg", alt: "Cliente 3" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-7.svg", alt: "Cliente 4" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-10.svg", alt: "Cliente 5" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-3.svg", alt: "Cliente 6" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-9.svg", alt: "Cliente 7" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-11.svg", alt: "Cliente 8" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-12.svg", alt: "Cliente 9" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-6.svg", alt: "Cliente 10" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-18.svg", alt: "Cliente 11" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-19.svg", alt: "Cliente 12" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-8.svg", alt: "Cliente 13" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-15.svg", alt: "Cliente 14" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-13.svg", alt: "Cliente 15" },
-    { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-14.svg", alt: "Cliente 16" },
+const clientLogos = [
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-5.svg", alt: "Cliente 1", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-4.svg", alt: "Cliente 2", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-1-1.svg", alt: "Cliente 3", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-7.svg", alt: "Cliente 4", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-10.svg", alt: "Cliente 5", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-3.svg", alt: "Cliente 6", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-9.svg", alt: "Cliente 7", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-11.svg", alt: "Cliente 8", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-12.svg", alt: "Cliente 9", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-6.svg", alt: "Cliente 10", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-18.svg", alt: "Cliente 11", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-19.svg", alt: "Cliente 12", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-8.svg", alt: "Cliente 13", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-15.svg", alt: "Cliente 14", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-13.svg", alt: "Cliente 15", href: "#" },
+  { src: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-394-modified-14.svg", alt: "Cliente 16", href: "#" },
 ];
+
 
 const uiImage = "https://solucionesintegralesjb.com/wp-content/uploads/elementor/thumbs/Frame-932-qqow7tfd3r2zohqj4jx9yf23tmjv30p5niiolmvipc.png";
 const videoUrl = "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/ES-1.mp4";
@@ -178,7 +184,7 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
           {heroSlides.map((slide, index) => (
             <div key={index} className="relative w-full h-80 md:h-96 text-white">
               <img src={slide.image} alt={slide.imageAlt} className="absolute inset-0 w-full h-full object-cover" />
-        
+              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
               <div className="relative h-full flex flex-col items-center justify-center text-center p-4">
                 <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-3xl md:text-5xl font-extrabold uppercase tracking-wide">{slide.title}</motion.h2>
                 <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="mt-4 text-sm md:text-lg font-semibold tracking-wider">{slide.subtitle}</motion.p>
@@ -198,58 +204,95 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
         </Carousel>
       </div>
 
-      <div className="mx-auto max-w-6xl px-4 py-10">
-        <motion.p initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="italic font-semibold text-center text-blue-400">Lo que te ofrecemos para potenciar tu éxito digital</motion.p>
-        <motion.h2 initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} viewport={{ once: true }} className="text-3xl font-bold text-center text-gray-800">Características de Soluciones Integrales JB</motion.h2>
 
-        <div className="mt-10 grid lg:grid-cols-3 gap-6 items-center">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } } }}
-            viewport={{ once: true }}
-            className="space-y-8 text-right"
-          >
-            {features.slice(0, 3).map((f, idx) => (
-              <motion.div
-                key={`${f.title}-${idx}`}
-                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-                transition={{ duration: 0.6 }}
-              >
-                <FeatureBlock feature={f} />
-              </motion.div>
-            ))}
-          </motion.div>
+<div className="mx-auto max-w-6xl px-4 py-10">
+  <motion.p
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true }}
+    className="italic font-semibold text-center text-blue-400"
+  >
+    Lo que te ofrecemos para potenciar tu éxito digital
+  </motion.p>
 
-          <motion.img
-            src={uiImage}
-            alt="Diseño web profesional en teléfono"
-            className="w-64 mx-auto rounded-xl shadow-lg"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-          />
+  <motion.h2
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7, delay: 0.2 }}
+    viewport={{ once: true }}
+    className="text-2xl md:text-3xl font-bold text-center text-gray-800"
+  >
+    Características de Soluciones Integrales JB
+  </motion.h2>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } } }}
-            viewport={{ once: true }}
-            className="space-y-8 text-left"
-          >
-            {features.slice(3, 6).map((f, idx) => (
-              <motion.div
-                key={`${f.title}-${idx}`}
-                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-                transition={{ duration: 0.6 }}
-              >
-                <FeatureBlock feature={f} />
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
+  {/* Grid responsive */}
+  <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+    {/* Bloques Izquierda */}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { staggerChildren: 0.2 },
+        },
+      }}
+      viewport={{ once: true }}
+      className="space-y-8 text-right md:text-left lg:text-right"
+    >
+      {features.slice(0, 3).map((f, idx) => (
+        <motion.div
+          key={`${f.title}-${idx}`}
+          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          transition={{ duration: 0.6 }}
+        >
+          <FeatureBlock feature={f} />
+        </motion.div>
+      ))}
+    </motion.div>
+
+    {/* Imagen central */}
+    <motion.img
+      src={uiImage}
+      alt="Diseño web profesional en teléfono"
+      className="w-40 sm:w-56 md:w-64 mx-auto rounded-xl shadow-lg"
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.7 }}
+      viewport={{ once: true }}
+    />
+
+    {/* Bloques Derecha */}
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { staggerChildren: 0.2 },
+        },
+      }}
+      viewport={{ once: true }}
+      className="space-y-8 text-left"
+    >
+      {features.slice(3, 6).map((f, idx) => (
+        <motion.div
+          key={`${f.title}-${idx}`}
+          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+          transition={{ duration: 0.6 }}
+        >
+          <FeatureBlock feature={f} />
+        </motion.div>
+      ))}
+    </motion.div>
+  </div>
+</div>
+
       
       {/* ====================== SECCIÓN DE VIDEO CON NUEVO DISEÑO ====================== */}
       <section className="bg-neutral-800 text-white py-24 px-4 md:px-8">
@@ -374,19 +417,49 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
         </div>
       </section>
 
-        <div className="bg-neutral-800 text-white py-24 px-4 md:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-2">Nuestros clientes</h2>
-          <p className="text-gray-400 text-lg">Las marcas que confían en Soluciones Integrales JB</p>
-          <div className="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 place-items-center">
-            {clients.map((c, idx) => (
-              <div key={idx} className="p-3 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
-                <img src={c.src} alt={c.alt} className="max-h-12 w-auto object-contain" />
-              </div>
-            ))}
-          </div>
-           <ScrollButton />
-           <VoiceflowChat />
+     <div className="bg-neutral-800 text-white py-24 px-4 md:px-8">
+  <div className="max-w-7xl mx-auto text-center">
+    <h2 className="text-3xl font-bold text-white mb-2">Nuestros clientes</h2>
+    <p className="text-gray-400 text-lg">
+      Las marcas que confían en Soluciones Integrales JB
+    </p>
+
+    {/* Contenedor del carrusel */}
+    <div className="relative w-full mt-12">
+      <div className="h-32 md:h-40 overflow-hidden">
+       <LogoLoop
+  logos={clientLogos}
+  speed={100}
+  direction="left"
+  logoHeight={60}
+  gap={40}
+  pauseOnHover
+  scaleOnHover
+  ariaLabel="Technology partners"
+  fadeOut
+  fadeOutColor="#262626"
+/>
+
+      </div>
+      <div className="h-32 md:h-40 overflow-hidden">
+       <LogoLoop
+  logos={clientLogos}
+  speed={100}
+  direction="right"
+  logoHeight={60}
+  gap={40}
+  pauseOnHover
+  scaleOnHover
+  ariaLabel="Technology partners"
+  fadeOut
+  fadeOutColor="#262626"
+/>
+      </div>
+
+</div>
+ <VoiceflowChat />
+          <ScrollButton />
+          
         </div>
       </div>
     </section>
