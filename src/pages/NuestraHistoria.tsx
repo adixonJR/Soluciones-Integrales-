@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import ScrollButton from "../components/ScrollButton";
 
-// --- Datos de los Componentes ---
 const timelineItems = [
   {
     year: "2010",
@@ -30,7 +29,6 @@ const timelineItems = [
   },
 ];
 
-// --- DATOS RESTAURADOS ---
 const electricalProjects = [
   { date: "MARZO DEL 2010", image: "https://i.postimg.cc/Th84b2Ys/imagen-1.png", description: "Instalación de alumbrado público en la obra Rehabilitación de pistas y veredas. Calle de 28 de Julio Chancay." },
   { date: "ABRIL DEL 2010", image: "https://i.postimg.cc/Bnf2rLVy/imagen-2.jpg", description: "Instalación de alumbrado público en la obra Construcción de pistas, veredas. Centro Poblado Aldea Campesina Chancay." },
@@ -52,7 +50,6 @@ const securityProjects = [
   { date: "NOVIEMBRE DEL 2022", image: "https://i.postimg.cc/Z5ZpfCRc/Imagen14.jpg", description: "Descripción del proyecto de seguridad de noviembre 2022." },
 ];
 
-// NUEVO: Proyectos de Cámaras de Seguridad
 const cameraProjects = [
   { date: "ENERO DEL 2016", image: "https://i.postimg.cc/g2Rp8g9T/IMAGEN-1.jpg", description: "Instalación y mantenimiento de cámaras para el sistema de seguridad. Planta procesadora FRUTIPACK Huaral." },
   { date: "JULIO DEL 2019", image: "https://i.postimg.cc/qRBdf0NP/imagen-2.jpg", description: "Instalación de sistema de vigilancia con cámaras IP. Edificio Corporativo Lima." },
@@ -63,7 +60,6 @@ const cameraProjects = [
   { date: "JULIO DEL 2024", image: "https://i.postimg.cc/d17cQ696/Imagen12.jpg", description: "Implementación de cámaras con IA para detección de movimientos sospechosos." },
 ];
 
-// --- Componente Reutilizable para los Sliders de Proyectos ---
 interface Project {
   date: string;
   image: string;
@@ -84,10 +80,10 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ title, projects }) => {
     
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex === projects.length - 1 ? 0 : prevIndex + 1));
-    }, 3000); // Cambiado a 3 segundos
+    }, 3000);
     
     return () => clearInterval(interval);
-  }, [projects.length, isAutoPlaying, activeIndex]); // Added activeIndex to dependencies
+  }, [projects.length, isAutoPlaying, activeIndex]);
 
   if (projects.length === 0) {
     return null;
@@ -96,24 +92,18 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ title, projects }) => {
   const handlePrev = () => {
     setIsAutoPlaying(false);
     setActiveIndex((prevIndex) => (prevIndex === 0 ? projects.length - 1 : prevIndex - 1));
-    
-    // Reanudar reproducción automática después de 10 segundos de inactividad
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
   const handleNext = () => {
     setIsAutoPlaying(false);
     setActiveIndex((prevIndex) => (prevIndex === projects.length - 1 ? 0 : prevIndex + 1));
-    
-    // Reanudar reproducción automática después de 10 segundos de inactividad
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
   const goToIndex = (index: number) => {
     setIsAutoPlaying(false);
     setActiveIndex(index);
-    
-    // Reanudar reproducción automática después de 10 segundos de inactividad
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
@@ -124,7 +114,6 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ title, projects }) => {
       </h2>
       
       <div className="relative max-w-6xl mx-auto">
-        {/* Contenedor principal de la imagen */}
         <div className="border-4 border-cyan-400 rounded-xl overflow-hidden relative bg-black">
           <div className="w-full h-[500px] flex items-center justify-center relative">
             <motion.img
@@ -137,7 +126,6 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ title, projects }) => {
               transition={{ duration: 0.5 }}
             />
             
-            {/* Botones de navegación */}
             <button 
               onClick={handlePrev}
               className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-70 transition-all z-10"
@@ -159,14 +147,12 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ title, projects }) => {
             </button>
           </div>
           
-          {/* Descripción del proyecto */}
           <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-6 text-white">
             <h3 className="text-xl font-semibold mb-2">{projects[activeIndex].date}</h3>
             <p className="text-sm">{projects[activeIndex].description}</p>
           </div>
         </div>
         
-        {/* Selector de fechas mejorado */}
         <div className="mt-8 flex justify-center">
           <div className="bg-white rounded-lg shadow-md p-4 w-full max-w-4xl">
             <div className="flex overflow-x-auto pb-2 space-x-4 scrollbar-hide">
@@ -188,7 +174,6 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ title, projects }) => {
           </div>
         </div>
         
-        {/* Indicadores de progreso */}
         <div className="flex justify-center mt-6 space-x-2">
           {projects.map((_, idx) => (
             <button
@@ -206,13 +191,11 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ title, projects }) => {
   );
 };
 
-// --- Componente Principal de la Página ---
 const App = () => {
   const carouselRef = useRef(null);
   const [carouselWidth, setCarouselWidth] = useState(0);
 
   useEffect(() => {
-    // Esperar a que el DOM se cargue completamente
     const timer = setTimeout(() => {
       if (carouselRef.current) {
         const totalWidth = carouselRef.current.scrollWidth;
@@ -226,12 +209,10 @@ const App = () => {
 
   return (
     <>
-      {/* Menú superior */}
       <div id="menu_main" className="absolute top-0 left-0 w-full bg-white bg-opacity-80 py-4 px-6 shadow-sm z-10">
         <p className="text-center font-bold text-gray-800">Menú de Navegación</p>
       </div>
 
-      {/* Hero con animación */}
       <div className="relative w-screen h-screen bg-gray-900 overflow-hidden">
         <img
           src="https://solucionesintegralesjb.com/wp-content/uploads/2024/10/nhhh.png"
@@ -239,26 +220,93 @@ const App = () => {
           className="absolute inset-0 w-full h-full object-cover"
         />
         <motion.div
-          className="absolute top-1/2 right-20 transform -translate-y-1/2 z-20"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+  className="absolute top-1/2 right-20 transform -translate-y-1/2 z-20"
+  initial={{ opacity: 0, x: 100, rotateY: 90 }}
+  animate={{ opacity: 1, x: 0, rotateY: 0 }}
+  transition={{ duration: 1.2, ease: "easeOut", type: "spring", stiffness: 80, damping: 15 }}
+>
+  <motion.div
+    className="bg-gradient-to-br from-black/75 to-black/90 px-12 py-10 rounded-2xl border-2 border-cyan-500 text-center w-[480px] shadow-2xl hover:shadow-cyan-500/60 transition-all duration-300 group relative overflow-hidden"
+    whileHover={{ scale: 1.05, borderColor: "rgb(34, 211, 238)" }}
+  >
+    
+    {/* Animated background glow */}
+    <motion.div
+      className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-transparent to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+      animate={{ backgroundPosition: ["0% 0%", "100% 100%"] }}
+      transition={{ duration: 3, repeat: Infinity, repeatType: "reverse" }}
+    ></motion.div>
+    
+    <div className="relative z-10">
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        whileHover={{ scale: 1.05 }}
+        className="text-5xl font-black text-white mb-4 tracking-tight"
+      >
+        Nuestra <span className="text-cyan-400 drop-shadow-lg">historia</span>
+      </motion.h2>
+      
+      <motion.p
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="text-cyan-300 text-lg font-semibold mb-6"
+      >
+        ¡Conoce nuestra trayectoria!
+      </motion.p>
+      
+      <motion.a
+        href="https://solucionesintegralesjb.com/#services"
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        whileHover={{ y: -3 }}
+      >
+        <motion.button
+          whileHover={{ scale: 1.08, boxShadow: "0 0 30px rgba(239, 68, 68, 0.8)" }}
+          whileTap={{ scale: 0.92 }}
+          className="cta cta-large transition-all duration-300"
         >
-          <div className="bg-black bg-opacity-60 p-10 rounded-xl text-center shadow-xl w-[400px] border-2 border-white group relative overflow-hidden">
-            <h2 className="text-4xl font-semibold text-white mb-4">Nuestra historia</h2>
-            <p className="text-white text-lg mb-6">Conoce nuestra historia!</p>
-            <button className="relative z-10 px-6 py-3 font-bold uppercase tracking-wide rounded-md border border-white bg-black text-white overflow-hidden group hover:text-white transition-all duration-300">
-              <span className="relative z-10">Descubre nuestros servicios</span>
-              <span className="absolute left-0 top-0 h-full w-full bg-blue-600 z-0 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"></span>
-            </button>
-          </div>
-        </motion.div>
+          <span className="span">Descubre nuestros servicios</span>
+          <span className="second">
+            <svg
+              width="50px"
+              height="20px"
+              viewBox="0 0 66 43"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="arrow" fill="none" fillRule="evenodd">
+                <path
+                  className="one"
+                  d="M40.15 3.89L43.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L44.67 42.86a.5.5 0 01-.7 0L40.15 39.1a.5.5 0 01.01-.71L56.99 21.86a.5.5 0 000-.71L40.15 3.9z"
+                  fill="#fff"
+                />
+                <path
+                  className="two"
+                  d="M20.15 3.89L23.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L24.67 42.86a.5.5 0 01-.7 0L20.15 39.1a.5.5 0 01.01-.71L36.99 21.86a.5.5 0 000-.71L20.15 3.9z"
+                  fill="#fff"
+                />
+                <path
+                  className="three"
+                  d="M0.15 3.89L3.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L4.67 42.86a.5.5 0 01-.7 0L0.15 39.1a.5.5 0 01.01-.71L16.99 21.86a.5.5 0 000-.71L0.15 3.9z"
+                  fill="#fff"
+                />
+              </g>
+            </svg>
+          </span>
+        </motion.button>
+      </motion.a>
+    </div>
+  </motion.div>
+</motion.div>
       </div>
       
-      {/* Separadores blancos */}
       <div className="w-full h-16 bg-white"></div>
       
-      {/* Timeline como carrusel con conexiones */}
       <section className="bg-[#1a1a1a] py-20 px-6 text-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto border-4 border-white rounded-xl p-10 overflow-hidden">
           <div className="text-center">
@@ -289,9 +337,7 @@ const App = () => {
             </motion.p>
           </div>
 
-          {/* Carrusel arrastrable con conexiones */}
           <div className="relative">
-            {/* Línea de conexión */}
             <div className="absolute left-0 right-0 top-12 h-1 bg-cyan-400 z-0"></div>
             
             <div className="overflow-hidden" ref={carouselRef}>
@@ -309,7 +355,6 @@ const App = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.2 }}
                   >
-                    {/* Punto de conexión en la línea */}
                     <div className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-6 h-6 bg-cyan-400 rounded-full z-10 border-4 border-[#1a1a1a]"></div>
                     
                     <div className="w-24 h-24 mb-4 z-10 bg-[#1a1a1a] p-2 flex items-center justify-center">
@@ -331,11 +376,99 @@ const App = () => {
         </div>
       </section>
 
-      {/* Uso del componente reutilizable para los tres sliders */}
       <ProjectSlider title="PROYECTOS ELÉCTRICOS" projects={electricalProjects} />
       <ProjectSlider title="PROYECTOS EN REDES Y EN TECNOLOGÍAS DE SEGURIDAD" projects={securityProjects} />
       <ProjectSlider title="PROYECTOS DE CÁMARAS DE SEGURIDAD" projects={cameraProjects} />
       <ScrollButton />
+
+      <style>{`
+        .cta {
+          display: flex;
+          padding: 16px 50px;
+          text-decoration: none;
+          font-size: 24px;
+          color: #ffffff;
+          background: #ff0000;
+          transition: 1s;
+          box-shadow: 6px 6px 0 black;
+          transform: skewX(-15deg);
+          border: none;
+          cursor: pointer;
+        }
+
+        .cta.cta-large {
+          padding: 12px 40px;
+          font-size: 18px;
+          min-width: 280px;
+        }
+
+        .cta:focus {
+          outline: none;
+        }
+
+        .cta:hover {
+          transition: 0.5s;
+          box-shadow: 10px 10px 0 #ffffff;
+        }
+
+        .cta .second {
+          transition: 0.5s;
+          margin-right: 0px;
+        }
+
+        .cta:hover .second {
+          transition: 0.5s;
+          margin-right: 45px;
+        }
+
+        .span {
+          transform: skewX(15deg);
+          font-weight: 600;
+        }
+
+        .second {
+          width: 20px;
+          margin-left: 30px;
+          position: relative;
+          top: 12%;
+        }
+
+        .one {
+          transition: 0.4s;
+          transform: translateX(-60%);
+        }
+
+        .two {
+          transition: 0.5s;
+          transform: translateX(-30%);
+        }
+
+        .cta:hover .three {
+          animation: color_anim 1s infinite 0.2s;
+        }
+
+        .cta:hover .one {
+          transform: translateX(0%);
+          animation: color_anim 1s infinite 0.6s;
+        }
+
+        .cta:hover .two {
+          transform: translateX(0%);
+          animation: color_anim 1s infinite 0.4s;
+        }
+
+        @keyframes color_anim {
+          0% {
+            fill: #fff;
+          }
+          50% {
+            fill: #000;
+          }
+          100% {
+            fill: #fff;
+          }
+        }
+      `}</style>
     </>
   );
 };
