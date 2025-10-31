@@ -4,7 +4,6 @@ import { FaChartLine, FaEye } from "react-icons/fa";
 import { FaShieldAlt, FaClock, FaKey, FaLightbulb, FaUsers, FaHeart } from "react-icons/fa";
 import ScrollButton from "../components/ScrollButton";
 
-
 import {
   FaLock,
   FaCheckCircle,
@@ -14,13 +13,11 @@ import {
   FaUserTie,
 } from "react-icons/fa";
 
-
 interface Feature {
   title: string;
   text: string;
   as?: "h3" | "h4";
 }
-
 
 interface Props {
   className?: string;
@@ -29,7 +26,7 @@ interface Props {
   badges?: { label: string; icon: React.ReactNode }[];
   quienes?: string;
 }
-// ---- Data (from your snippet) ----
+
 const badges = [
   { label: "Confianza", icon: "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/icons8-done-1-1.svg" },
   { label: "Velocidad", icon: "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/icons8-done-1-1.svg" },
@@ -39,7 +36,6 @@ const badges = [
   { label: "Personalizado", icon: "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/icons8-done-1-1.svg" },
 ];
 
-
 const hero3 = "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/Frame-911-1.png"
 const hero2 = "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Frame-926.png"
 const heroImage = "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/Frame-907-1.png";
@@ -48,7 +44,6 @@ const uiImage = "https://solucionesintegralesjb.com/wp-content/uploads/elementor
 const mockupImage = "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/MacBook-Pro-and-iPhone-15-Pro-Mockup-768x787.png";
 const videoUrl = "https://solucionesintegralesjb.com/wp-content/uploads/2024/06/ES-1.mp4";
 
-// ---- Component ----
 const Badge: React.FC<{ label: string; icon: string }>
   = ({ label, icon }) => (
   <div className="flex items-center gap-2 py-1">
@@ -96,9 +91,6 @@ const valores = [
   },
 ];
 
-
-
-
 const caracteristicas = [
   {
     icon: <FaLock className="fa-3x"/>,
@@ -138,29 +130,24 @@ const caracteristicas = [
   },
 ];
 
-
-
 const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
   return (
   <section className={"w-full " + (className || "")}>
   <div className="relative w-screen h-[600px] overflow-hidden flex items-center justify-center bg-gray-900">
-    {/* Imagen completa pero recortando 20px arriba y 20px abajo */}
     <img
       src="https://solucionesintegralesjb.com/wp-content/uploads/2024/06/Frame-916-1.png"
       alt="Quiénes somos"
       className="w-full h-auto object-contain -translate-y-[-100px]"
     />
 
-    {/* Capa oscura */}
     <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-    {/* Contenido */}
     <div className="absolute inset-0 flex flex-col justify-center items-end pr-12">
-      <div className="bg-black bg-opacity-40 px-6 py-4 rounded-lg text-justify">
-        <h2 className="text-3xl font-bold text-white mb-4">
+      <div className="bg-black bg-opacity-40 px-12 py-8 rounded-lg border-2 border-gray-300 text-justify w-[450px]">
+        <h2 className="text-4xl font-semibold text-white mb-3">
           ¿Quiénes Somos?
         </h2>
-        <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-2xl">
+        <p className="text-white text-base mb-6">
           Quiénes Somos y Hacia Dónde Vamos
         </p>
         <a
@@ -168,10 +155,33 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="button">
-            <span className="button_lg">
-              <span className="button_sl"></span>
-              <span className="button_text">Descubre nuestros servicios</span>
+          <button className="cta cta-large">
+            <span className="span">Descubre<br/>nuestros servicios</span>
+            <span className="second">
+              <svg
+                width="50px"
+                height="20px"
+                viewBox="0 0 66 43"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="arrow" fill="none" fillRule="evenodd">
+                  <path
+                    className="one"
+                    d="M40.15 3.89L43.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L44.67 42.86a.5.5 0 01-.7 0L40.15 39.1a.5.5 0 01.01-.71L56.99 21.86a.5.5 0 000-.71L40.15 3.9z"
+                    fill="#fff"
+                  />
+                  <path
+                    className="two"
+                    d="M20.15 3.89L23.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L24.67 42.86a.5.5 0 01-.7 0L20.15 39.1a.5.5 0 01.01-.71L36.99 21.86a.5.5 0 000-.71L20.15 3.9z"
+                    fill="#fff"
+                  />
+                  <path
+                    className="three"
+                    d="M0.15 3.89L3.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L4.67 42.86a.5.5 0 01-.7 0L0.15 39.1a.5.5 0 01.01-.71L16.99 21.86a.5.5 0 000-.71L0.15 3.9z"
+                    fill="#fff"
+                  />
+                </g>
+              </svg>
             </span>
           </button>
         </a>
@@ -179,47 +189,40 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
     </div>
   </div>
 
+      <div className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-2 gap-4">
+          <img
+            src={hero2}
+            alt="Imagen 1"
+            className="w-full h-72 object-cover rounded-lg shadow-md"
+          />
+          <img
+            src={hero3}
+            alt="Imagen 2"
+            className="w-full h-72 object-cover rounded-lg shadow-md"
+          />
+        </div>
 
-      {/* Quienes somos */}
-<div className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
-  {/* Columna de imágenes */}
-  <div className="grid grid-cols-2 gap-4">
-    <img
-      src={hero2}
-      alt="Imagen 1"
-      className="w-full h-72 object-cover rounded-lg shadow-md"
-    />
-    <img
-      src={hero3}
-      alt="Imagen 2"
-      className="w-full h-72 object-cover rounded-lg shadow-md"
-    />
-  </div>
+        <div className="space-y-4">
+          <p className="text-sm uppercase tracking-wider text-gray-500">
+            Innovación y tecnología para tu crecimiento
+          </p>
+          <h2 className="text-3xl font-bold">Quiénes Somos</h2>
+          <p className="text-gray-700 leading-relaxed">
+            Somos una empresa de tecnología especializada en automatizar procesos de 
+            negocio para mejorar la eficiencia y resultados en diversas áreas de 
+            producción. Nos enfocamos en la Gestión de Servicios de TI, ofreciendo 
+            soluciones basadas en ITSM e ITIL. 
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Contamos con un equipo de profesionales que optimizan tanto el tiempo 
+            como los recursos económicos de nuestros clientes, garantizando un 
+            servicio de alta calidad.
+          </p>
+        </div>
+      </div>
 
-  {/* Columna de texto */}
-  <div className="space-y-4">
-    <p className="text-sm uppercase tracking-wider text-gray-500">
-      Innovación y tecnología para tu crecimiento
-    </p>
-    <h2 className="text-3xl font-bold">Quiénes Somos</h2>
-    <p className="text-gray-700 leading-relaxed">
-      Somos una empresa de tecnología especializada en automatizar procesos de 
-      negocio para mejorar la eficiencia y resultados en diversas áreas de 
-      producción. Nos enfocamos en la Gestión de Servicios de TI, ofreciendo 
-      soluciones basadas en ITSM e ITIL. 
-    </p>
-    <p className="text-gray-700 leading-relaxed">
-      Contamos con un equipo de profesionales que optimizan tanto el tiempo 
-      como los recursos económicos de nuestros clientes, garantizando un 
-      servicio de alta calidad.
-    </p>
-  </div>
-</div>
-
-      
-{/* Misión y Visión */}
       <div className="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-2 gap-8">
-        {/* Card Misión */}
         <div className="custom-card">
           <div className="custom-card__icon">
             <FaChartLine />
@@ -237,7 +240,6 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
           </div>
         </div>
 
-        {/* Card Visión */}
         <div className="custom-card light">
           <div className="custom-card__icon">
             <FaEye />
@@ -254,195 +256,117 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
           </div>
         </div>
       </div>
-                <section className="w-full bg-[#007BFF] py-16 flex justify-center items-center">
-      <div className="max-w-3xl w-full text-center px-4">
-        <h2 className="text-white text-3xl font-bold mb-6">OBJETIVOS</h2>
-        <p className="text-white mb-8">
-          La empresa se centra en reforzar la gestión de servicios de TI,
-          desarrollando soluciones que respondan a las necesidades de los
-          clientes mediante el uso de tecnología avanzada. Buscamos mejorar
-          nuestras operaciones y proyectos, fortaleciendo nuestras habilidades
-          para enfrentar los retos digitales actuales, promoviendo la seguridad
-          y la productividad.
-        </p>
 
-        {/* Botón */}
-        <div className="buttons flex justify-center">
-          <button className="btn" onClick={() => alert("Abrir chat")}>
-            <span></span>
-            <p data-text="GRACIAS!" data-title="CONTACTANOS"></p>
-          </button>
+      <section className="w-full bg-[#007BFF] py-16 flex justify-center items-center">
+        <div className="max-w-3xl w-full text-center px-4">
+          <h2 className="text-white text-3xl font-bold mb-6">OBJETIVOS</h2>
+          <p className="text-white mb-8">
+            La empresa se centra en reforzar la gestión de servicios de TI,
+            desarrollando soluciones que respondan a las necesidades de los
+            clientes mediante el uso de tecnología avanzada. Buscamos mejorar
+            nuestras operaciones y proyectos, fortaleciendo nuestras habilidades
+            para enfrentar los retos digitales actuales, promoviendo la seguridad
+            y la productividad.
+          </p>
+
+          <div className="flex justify-center">
+            <a href="#contact" target="_blank" rel="noopener noreferrer">
+              <button className="cta cta-large">
+                <span className="span">CONTACTANOS</span>
+                <span className="second">
+                  <svg
+                    width="50px"
+                    height="20px"
+                    viewBox="0 0 66 43"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="arrow" fill="none" fillRule="evenodd">
+                      <path
+                        className="one"
+                        d="M40.15 3.89L43.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L44.67 42.86a.5.5 0 01-.7 0L40.15 39.1a.5.5 0 01.01-.71L56.99 21.86a.5.5 0 000-.71L40.15 3.9z"
+                        fill="#fff"
+                      />
+                      <path
+                        className="two"
+                        d="M20.15 3.89L23.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L24.67 42.86a.5.5 0 01-.7 0L20.15 39.1a.5.5 0 01.01-.71L36.99 21.86a.5.5 0 000-.71L20.15 3.9z"
+                        fill="#fff"
+                      />
+                      <path
+                        className="three"
+                        d="M0.15 3.89L3.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L4.67 42.86a.5.5 0 01-.7 0L0.15 39.1a.5.5 0 01.01-.71L16.99 21.86a.5.5 0 000-.71L0.15 3.9z"
+                        fill="#fff"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </a>
+          </div>
         </div>
-      </div>
-
-      {/* Estilos del botón */}
-      <style>{`
-        .buttons button {
-          width: 180px;
-          height: 60px;
-          background-color: #007BFF;
-          margin: 20px;
-          color: white;
-          position: relative;
-          overflow: hidden;
-          font-size: 16px;
-          letter-spacing: 1px;
-          font-weight: 500;
-          text-transform: uppercase;
-          transition: all 0.3s ease;
-          cursor: pointer;
-          border: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 3px;
-          padding: 0 10px;
-        }
-
-        .buttons button:before,
-        .buttons button:after {
-          content: "";
-          position: absolute;
-          width: 0;
-          height: 2px;
-          background-color: white;
-          transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
-        }
-
-        .buttons button:before {
-          right: 0;
-          top: 0;
-          transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
-        }
-
-        .buttons button:after {
-          left: 0;
-          bottom: 0;
-        }
-
-        .buttons button span {
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          left: 0;
-          top: 0;
-          margin: 0;
-          padding: 0;
-          z-index: 1;
-        }
-
-        .buttons button span:before,
-        .buttons button span:after {
-          content: "";
-          position: absolute;
-          width: 2px;
-          height: 0;
-          background-color: white;
-          transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
-        }
-
-        .buttons button span:before {
-          right: 0;
-          top: 0;
-          transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
-        }
-
-        .buttons button span:after {
-          left: 0;
-          bottom: 0;
-        }
-
-        .buttons button p {
-          padding: 0;
-          margin: 0;
-          transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
-          position: absolute;
-          width: 100%;
-          height: 100%;
-        }
-
-        .buttons button p:before,
-        .buttons button p:after {
-          position: absolute;
-          width: 100%;
-          transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
-          z-index: 1;
-          left: 0;
-        }
-
-        .buttons button p:before {
-          content: attr(data-title);
-          top: 50%;
-          transform: translateY(-50%);
-        }
-
-        .buttons button p:after {
-          content: attr(data-text);
-          top: 150%;
-          color: white;
-        }
-
-        .buttons button:hover:before,
-        .buttons button:hover:after {
-          width: 100%;
-        }
-
-        .buttons button:hover span {
-          z-index: 1;
-        }
-
-        .buttons button:hover span:before,
-        .buttons button:hover span:after {
-          height: 100%;
-        }
-
-        .buttons button:hover p:before {
-          top: -50%;
-          transform: rotate(5deg);
-        }
-
-        .buttons button:hover p:after {
-          top: 50%;
-          transform: translateY(-50%);
-        }
-
-        .buttons button:active {
-          outline: none;
-          border: none;
-        }
-
-        .buttons button:focus {
-          outline: 0;
-        }
-      `}</style>
-    </section>
+      </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16">
-  <h2 className="text-3xl font-bold text-center mb-12">Nuestros Valores</h2>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-    {valores.map((valor, index) => (
-      <div key={index} className="group w-full h-64 [perspective:1000px]">
-        <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-          
-          {/* Frente */}
-          <div className="absolute inset-0 bg-[#1c1c1c] text-white flex flex-col items-center justify-center p-6 rounded-lg [backface-visibility:hidden]">
-            <div className="text-5xl">{valor.icon}</div>
-            <h3 className="mt-4 font-bold text-lg">{valor.titulo}</h3>
-          </div>
-          
-          {/* Reverso */}
-          <div className="absolute inset-0 bg-black text-white flex flex-col items-center justify-center p-6 rounded-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
-            <p className="text-sm text-center">{valor.descripcion}</p>
-          </div>
+        <h2 className="text-3xl font-bold text-center mb-12">Nuestros Valores</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {valores.map((valor, index) => (
+            <div key={index} className="group w-full h-64 [perspective:1000px]">
+              <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                
+                <div className="absolute inset-0 bg-[#1c1c1c] text-white flex flex-col items-center justify-center p-6 rounded-lg [backface-visibility:hidden]">
+                  <div className="text-5xl">{valor.icon}</div>
+                  <h3 className="mt-4 font-bold text-lg">{valor.titulo}</h3>
+                </div>
+                
+                <div className="absolute inset-0 bg-black text-white flex flex-col items-center justify-center p-6 rounded-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                  <p className="text-sm text-center">{valor.descripcion}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <img
+            src={heroImage}
+            alt={heroImageAlt}
+            className="w-full max-w-md mx-auto md:mx-0"
+          />
+        </div>
+        <div className="space-y-4">
+          <p className="text-sm uppercase tracking-wider text-gray-500">Quienes somos</p>
+          <h2 className="text-3xl font-bold">Somos tus aliados Digitales.</h2>
+          <p>
+            Somos una empresa dedicada a ofrecer servicios digitales personalizados, desde el desarrollo de software y sitios web con diseño gráfico. entre mas servicios. Transformamos sus ideas en soluciones que impulsan su negocio hacia el éxito corporativo con Soluciones Integrales.
+          </p>
         </div>
       </div>
-    ))}
-  </div>
-</section>
 
-    
+      <section className="mx-auto max-w-6xl px-4 py-16">
+        <h2 className="text-3xl font-bold text-center mb-12">
+          Características de Nuestros Servicios:
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {caracteristicas.map((valor, index) => (
+            <div key={index} className="group w-full h-64 [perspective:1000px]">
+              <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                
+                <div className="absolute inset-0 bg-[#1c1c1c] text-white flex flex-col items-center justify-center p-6 rounded-lg [backface-visibility:hidden]">
+                  <div className="text-5xl">{valor.icon}</div>
+                  <h3 className="mt-4 font-bold text-lg">{valor.titulo}</h3>
+                </div>
+                
+                <div className="absolute inset-0 bg-black text-white flex flex-col items-center justify-center p-6 rounded-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                  <p className="text-sm text-center">{valor.descripcion}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <ScrollButton />
+      </section>
 
-      {/* Estilos personalizados */}
       <style>{`
         .custom-card {
           position: relative;
@@ -510,179 +434,95 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
           font-size: 20px;
           font-weight: bold;
         }
-      `}</style>
 
-       {/* Estilos botón */}
-      <style>{`
-        .button {
-          -moz-appearance: none;
-          -webkit-appearance: none;
-          appearance: none;
+        .cta {
+          display: flex;
+          padding: 16px 50px;
+          text-decoration: none;
+          font-size: 24px;
+          color: #ffffff;
+          background: #ff0000;
+          transition: 1s;
+          box-shadow: 6px 6px 0 black;
+          transform: skewX(-15deg);
           border: none;
-          background: none;
-          color: #0f1923;
           cursor: pointer;
-          position: relative;
-          padding: 8px;
-          margin-bottom: 20px;
-          text-transform: uppercase;
-          font-weight: bold;
-          font-size: 14px;
-          transition: all .15s ease;
         }
 
-        .button::before,
-        .button::after {
-          content: '';
-          display: block;
-          position: absolute;
-          right: 0;
-          left: 0;
-          height: calc(50% - 5px);
-          border: 1px solid #7D8082;
-          transition: all .15s ease;
+        .cta.cta-large {
+          padding: 12px 40px;
+          font-size: 18px;
+          min-width: 280px;
         }
 
-        .button::before {
-          top: 0;
-          border-bottom-width: 0;
-        }
-
-        .button::after {
-          bottom: 0;
-          border-top-width: 0;
-        }
-
-        .button:active,
-        .button:focus {
+        .cta:focus {
           outline: none;
         }
 
-        .button:active::before,
-        .button:active::after {
-          right: 3px;
-          left: 3px;
+        .cta:hover {
+          transition: 0.5s;
+          box-shadow: 10px 10px 0 #ffffff;
         }
 
-        .button:active::before {
-          top: 3px;
+        .cta .second {
+          transition: 0.5s;
+          margin-right: 0px;
         }
 
-        .button:active::after {
-          bottom: 3px;
+        .cta:hover .second {
+          transition: 0.5s;
+          margin-right: 45px;
         }
 
-        .button_lg {
+        .span {
+          transform: skewX(15deg);
+          font-weight: 600;
+        }
+
+        .second {
+          width: 20px;
+          margin-left: 30px;
           position: relative;
-          display: block;
-          padding: 10px 20px;
-          color: #fff;
-          background-color: black;
-          overflow: hidden;
-          box-shadow: inset 0px 0px 0px 1px transparent;
+          top: 12%;
         }
 
-        .button_lg::before {
-          content: '';
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 2px;
-          height: 2px;
-          background-color: #0f1923;
+        .one {
+          transition: 0.4s;
+          transform: translateX(-60%);
         }
 
-        .button_lg::after {
-          content: '';
-          display: block;
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          width: 4px;
-          height: 4px;
-          background-color: white;
-          transition: all .2s ease;
+        .two {
+          transition: 0.5s;
+          transform: translateX(-30%);
         }
 
-        .button_sl {
-          display: block;
-          position: absolute;
-          top: 0;
-          bottom: -1px;
-          left: -8px;
-          width: 0;
-          background-color: #106CD8;
-          transform: skew(-15deg);
-          transition: all .2s ease;
+        .cta:hover .three {
+          animation: color_anim 1s infinite 0.2s;
         }
 
-        .button_text {
-          position: relative;
+        .cta:hover .one {
+          transform: translateX(0%);
+          animation: color_anim 1s infinite 0.6s;
         }
 
-        .button:hover {
-          color: #0f1923;
+        .cta:hover .two {
+          transform: translateX(0%);
+          animation: color_anim 1s infinite 0.4s;
         }
 
-        .button:hover .button_sl {
-          width: calc(100% + 15px);
-        }
-
-        .button:hover .button_lg::after {
-          background-color: #fff;
+        @keyframes color_anim {
+          0% {
+            fill: #fff;
+          }
+          50% {
+            fill: #000;
+          }
+          100% {
+            fill: #fff;
+          }
         }
       `}</style>
-
-      {/* Quienes somos */}
-      <div className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <img
-            src={heroImage}
-            alt={heroImageAlt}
-            className="w-full max-w-md mx-auto md:mx-0"
-          />
-        </div>
-        <div className="space-y-4">
-          <p className="text-sm uppercase tracking-wider text-gray-500">Quienes somos</p>
-          <h2 className="text-3xl font-bold">Somos tus aliados Digitales.</h2>
-          <p>
-            Somos una empresa dedicada a ofrecer servicios digitales personalizados, desde el desarrollo de software y sitios web con diseño gráfico. entre mas servicios. Transformamos sus ideas en soluciones que impulsan su negocio hacia el éxito corporativo con Soluciones Integrales.
-          </p>
-          
-        </div>
-      </div>
-{/*/////////////////////////////////////////////////////////////////////////////////////////////*/ }
-       <section className="mx-auto max-w-6xl px-4 py-16">
-      <h2 className="text-3xl font-bold text-center mb-12">
-        Características de Nuestros Servicios:
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {caracteristicas.map((valor, index) => (
-          <div key={index} className="group w-full h-64 [perspective:1000px]">
-            <div className="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-              
-              {/* Frente */}
-              <div className="absolute inset-0 bg-[#1c1c1c] text-white flex flex-col items-center justify-center p-6 rounded-lg [backface-visibility:hidden]">
-                <div className="text-5xl">{valor.icon}</div>
-                <h3 className="mt-4 font-bold text-lg">{valor.titulo}</h3>
-              </div>
-              
-              {/* Reverso */}
-              <div className="absolute inset-0 bg-black text-white flex flex-col items-center justify-center p-6 rounded-lg [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                <p className="text-sm text-center">{valor.descripcion}</p>
-              </div>
-            </div>
-             
-          </div>
-        ))}
-      </div>
-      <ScrollButton />
     </section>
-    </section>
-    
-
-
   );
 };
 
