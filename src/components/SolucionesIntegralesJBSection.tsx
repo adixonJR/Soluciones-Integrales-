@@ -51,13 +51,13 @@ interface Props {
 
 // ---- Data ----
 const heroSlides: HeroSlide[] = [
-    { image: "https://img.freepik.com/vector-premium/fondo-banner-azul-marino-oscuro-plantilla-fondo-patron-banner-diseno-grafico-abstracto-vector_181182-18817.jpg", imageAlt: "Promoción de routers y conectividad", title: "Conectividad Superior", subtitle: "Routers de alta velocidad para tu hogar y oficina", href: "#" },
-    { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWCnsm9J7wUIodn531mcr04n2CLAjRkG8yvw&s", imageAlt: "Servicios de tecnología", title: "Soluciones Tecnológicas", subtitle: "Innovación y soporte a tu alcance", href: "#" },
-    { image: "https://cdn.pixabay.com/photo/2021/09/12/07/58/banner-6617553_960_720.jpg", imageAlt: "Banner de tecnología", title: "Tu Socio Estratégico", subtitle: "Impulsamos tu crecimiento digital", href: "#" },
-    { image: "https://img.freepik.com/premium-vector/modern-blue-abstract-background-banner-wave-blue-abstract-banner-design-background_181182-28890.jpg", imageAlt: "Fondo abstracto azul", title: "Diseño y Desarrollo", subtitle: "Creamos experiencias únicas para tus usuarios", href: "#" },
-    { image: "https://i.pinimg.com/originals/3b/20/bf/3b20bf22bd77577f9881becd558eccf5.jpg", imageAlt: "Redes y seguridad", title: "Seguridad Garantizada", subtitle: "Protegemos lo que más importa", href: "#" },
-    { image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKI86JmEHMBOtHzCh2TC4rSSlkNovG-7XNQrwODBsDn0Y_MVqUxUtby9nXjBbAk64Igdc&usqp=CAU", imageAlt: "Soporte técnico", title: "Soporte 24/7", subtitle: "Estamos aquí para ayudarte cuando nos necesites", href: "#" },
-    { image: "https://solucionesintegralesjb.com/wp-content/uploads/2024/07/Diseño-sin-título-5.png", imageAlt: "Integración de sistemas", title: "Integración Sin Esfuerzo", subtitle: "Conectamos tus sistemas para una operación fluida", href: "#" },
+    { image: "https://solucionesintegralesjb.com/wp-content/uploads/slider/cache/456a340008da7d76915187e50dcc7cf4/ed40b25e-eec1-4e3e-bf86-92ae710d6d06-e1727215670672.jpg", imageAlt: "Promoción de routers y conectividad", title: "Conectividad Superior", subtitle: "Routers de alta velocidad para tu hogar y oficina", href: "#" },
+    { image: "https://solucionesintegralesjb.com/wp-content/uploads/slider/cache/5f7d0fef1ec7a6d768636f30af4dcfb5/c3cc9f73-0e33-4fd0-aa2d-050c9b272e8c.jpg", title: "Soluciones Tecnológicas", subtitle: "Innovación y soporte a tu alcance", href: "#" },
+    { image: "https://solucionesintegralesjb.com/wp-content/uploads/slider/cache/4b9df303a3e55818808c971f39340ea6/d429c0fa-c3b2-4b6d-a65b-56c8ea26bcbc-1.jpg", imageAlt: "Banner de tecnología", title: "Tu Socio Estratégico", subtitle: "Impulsamos tu crecimiento digital", href: "#" },
+    { image: "https://solucionesintegralesjb.com/wp-content/uploads/slider/cache/382ed7f76699f6eae27f4e965558d97e/8671e011-0391-4bd6-a5b1-114495d3d898.jpg", imageAlt: "Fondo abstracto azul", title: "Diseño y Desarrollo", subtitle: "Creamos experiencias únicas para tus usuarios", href: "#" },
+    { image: "https://solucionesintegralesjb.com/wp-content/uploads/slider/cache/bc0e25010ca8388680ab2c9af3bd226c/cdba0529-3664-4dff-92fb-2bbfe5cb09f6.jpg", imageAlt: "Redes y seguridad", title: "Seguridad Garantizada", subtitle: "Protegemos lo que más importa", href: "#" },
+    { image: "https://solucionesintegralesjb.com/wp-content/uploads/slider/cache/794a0e0b79da6a5cf270643ec721eee8/Agregar-un-titulo.png", imageAlt: "Soporte técnico", title: "Soporte 24/7", subtitle: "Estamos aquí para ayudarte cuando nos necesites", href: "#" },
+    { image: "https://solucionesintegralesjb.com/wp-content/uploads/slider/cache/0c9dd85eb5a49fc3e81e2093f2a540c6/Agregar-un-titulo-1.png", imageAlt: "Integración de sistemas", title: "Integración Sin Esfuerzo", subtitle: "Conectamos tus sistemas para una operación fluida", href: "#" },
 ];
 
 const responsiveServices = {
@@ -179,48 +179,203 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
 
   return (
     <section className={"w-full " + (className || "")}>
-      <div className="w-full mb-10">
-        <Carousel responsive={heroResponsive} infinite={true} autoPlay={true} autoPlaySpeed={3000} keyBoardControl={true} showDots={true} arrows={true} containerClass="carousel-container" dotListClass="custom-dot-list-style" itemClass="carousel-item-padding-40-px">
-          {heroSlides.map((slide, index) => (
-            <div key={index} className="relative w-full h-80 md:h-96 text-white">
-              <img src={slide.image} alt={slide.imageAlt} className="absolute inset-0 w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-              <div className="relative h-full flex flex-col items-center justify-center text-center p-4">
-                <motion.h2 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-3xl md:text-5xl font-extrabold uppercase tracking-wide">{slide.title}</motion.h2>
-                <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="mt-4 text-sm md:text-lg font-semibold tracking-wider">{slide.subtitle}</motion.p>
-              </div>
-            </div>
-          ))}
-        </Carousel>
+    
+
+
+
+{/* ====================== BANNER DEL PRIMER CÓDIGO ====================== */}
+<div className="w-full mb-10">
+  <Carousel 
+    responsive={heroResponsive} 
+    infinite={true} 
+    autoPlay={true} 
+    autoPlaySpeed={3000} 
+    keyBoardControl={true} 
+    showDots={true} 
+    arrows={true} 
+    containerClass="carousel-container" 
+    dotListClass="custom-dot-list-style" 
+    itemClass="carousel-item-padding-40-px"
+  >
+    {heroSlides.map((slide, index) => (
+      <div key={index} className="relative w-full h-80 md:h-96 text-white overflow-hidden group">
+        {/* Imagen sin filtro oscuro */}
+        <img 
+          src={slide.image} 
+          alt={slide.imageAlt} 
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+        />
+        
+        {/* Overlay removido - Imagen completamente visible */}
+        
+        {/* Contenido: Removido para que solo se vea la imagen */}
+        {/* Si quieres mantener el texto, descomenta esto y ajusta: */}
+        {/* <div className="relative h-full flex flex-col items-center justify-center text-center p-4">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8 }} 
+            className="text-3xl md:text-5xl font-extrabold uppercase tracking-wide drop-shadow-lg"
+          >
+            {slide.title}
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }} 
+            animate={{ opacity: 1, y: 0 }} 
+            transition={{ duration: 0.8, delay: 0.3 }} 
+            className="mt-4 text-sm md:text-lg font-semibold tracking-wider drop-shadow-lg"
+          >
+            {slide.subtitle}
+          </motion.p>
+        </div> */}
       </div>
+    ))}
+  </Carousel>
+</div>
 
-      <div className="bg-black w-full px-6 py-10">
-        <div className="text-center mb-12">
-          <h2 className="text-xl font-semibold tracking-wide text-cyan-400">Soluciones Integrales para Impulsar tu Negocio</h2>
-          <p className="mt-2 text-5xl font-extrabold tracking-tight text-white sm:text-6xl">Soluciones Estratégicas para Crecer</p>
-        </div>
-        <Carousel responsive={responsiveServices} infinite={true} autoPlay={true} autoPlaySpeed={4000} keyBoardControl={true} showDots={true} arrows={true} containerClass="carousel-container" itemClass="p-2">
-          {strategicServices.map((s, idx) => (<StrategicServiceCard key={`${s.title}-${idx}`} item={s} />))}
-        </Carousel>
-      </div>
+      
+<div className="bg-gradient-to-b from-black via-slate-900 to-black w-full px-6 py-16 md:py-24 relative overflow-hidden">
+  {/* Elementos decorativos de fondo */}
+  <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+  <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
 
+  {/* Encabezado mejorado */}
+  <motion.div
+    initial={{ opacity: 0, y: -30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7, ease: "easeOut" }}
+    viewport={{ once: true, amount: 0.3 }}
+    className="text-center mb-16 relative z-10"
+  >
+    <motion.h2
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6, delay: 0.1 }}
+      viewport={{ once: true }}
+      className="text-xl font-semibold tracking-wide text-cyan-400"
+    >
+      Soluciones Integrales para Impulsar tu Negocio
+    </motion.h2>
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, delay: 0.2 }}
+      viewport={{ once: true }}
+      className="mt-4 text-5xl md:text-6xl font-extrabold tracking-tight text-white"
+    >
+      Soluciones Estratégicas para <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Crecer</span>
+    </motion.p>
+  </motion.div>
 
+  {/* Carrusel mejorado */}
+  <motion.div
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    transition={{ duration: 0.6, delay: 0.3 }}
+    viewport={{ once: true, amount: 0.3 }}
+    className="relative z-10"
+  >
+    <Carousel
+      responsive={responsiveServices}
+      infinite={true}
+      autoPlay={true}
+      autoPlaySpeed={4000}
+      keyBoardControl={true}
+      showDots={true}
+      arrows={true}
+      containerClass="carousel-container"
+      itemClass="p-2"
+      dotListClass="custom-strategic-dots"
+    >
+      {strategicServices.map((s, idx) => (
+        <motion.div
+          key={`${s.title}-${idx}`}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: idx * 0.1 }}
+          viewport={{ once: true }}
+        >
+          <StrategicServiceCard item={s} />
+        </motion.div>
+      ))}
+    </Carousel>
+  </motion.div>
+
+  {/* Estilos CSS para las animaciones */}
+  <style jsx>{`
+    .carousel-container {
+      position: relative;
+      z-index: 10;
+    }
+
+    .react-multi-carousel-item {
+      animation: slideInUp 0.8s ease-out forwards;
+    }
+
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .custom-strategic-dots {
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+      list-style: none;
+      padding: 2rem 0 0 0;
+      margin: 0;
+    }
+
+    .custom-strategic-dots li {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .custom-strategic-dots li.react-multi-carousel-dot {
+      background: rgba(148, 163, 184, 0.6);
+      height: 0.5rem;
+      width: 0.75rem;
+      border-radius: 9999px;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .custom-strategic-dots li.react-multi-carousel-dot:hover {
+      background: rgba(34, 211, 238, 0.8);
+      transform: scale(1.2);
+    }
+
+    .custom-strategic-dots li.react-multi-carousel-dot.active {
+      background: linear-gradient(90deg, #22d3ee, #3b82f6);
+      width: 2rem;
+      box-shadow: 0 0 15px rgba(34, 211, 238, 0.6);
+    }
+  `}</style>
+</div>
+      {/* ====================== CARACTERÍSTICAS CON ANIMACIÓN 3D ====================== */}
 <div className="mx-auto max-w-6xl px-4 py-10">
   <motion.p
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.6 }}
+    initial={{ opacity: 0, y: 50, rotateX: 90 }}
+    whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
     viewport={{ once: true }}
-    className="italic font-semibold text-center text-blue-400"
+    style={{ transformStyle: "preserve-3d", perspective: "1200px" }}
+    className="italic font-semibold text-center text-cyan-400"
   >
     Lo que te ofrecemos para potenciar tu éxito digital
   </motion.p>
 
   <motion.h2
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.7, delay: 0.2 }}
+    initial={{ opacity: 0, y: 60, rotateX: 80, z: -100 }}
+    whileInView={{ opacity: 1, y: 0, rotateX: 0, z: 0 }}
+    transition={{ duration: 0.9, delay: 0.1, ease: "easeOut" }}
     viewport={{ once: true }}
+    style={{ transformStyle: "preserve-3d", perspective: "1200px" }}
     className="text-2xl md:text-3xl font-bold text-center text-gray-800"
   >
     Características de Soluciones Integrales JB
@@ -233,235 +388,684 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
       initial="hidden"
       whileInView="visible"
       variants={{
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0 },
         visible: {
           opacity: 1,
-          y: 0,
-          transition: { staggerChildren: 0.2 },
+          transition: { staggerChildren: 0.15, delayChildren: 0.2 },
         },
       }}
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.3 }}
       className="space-y-8 text-right md:text-left lg:text-right"
     >
       {features.slice(0, 3).map((f, idx) => (
         <motion.div
           key={`${f.title}-${idx}`}
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-          transition={{ duration: 0.6 }}
+          variants={{
+            hidden: { opacity: 0, x: -60, rotateY: 90, z: -100 },
+            visible: {
+              opacity: 1,
+              x: 0,
+              rotateY: 0,
+              z: 0,
+              transition: { duration: 0.7, ease: "easeOut" },
+            },
+          }}
+          whileHover={{ 
+            x: -8, 
+            rotateY: -8,
+            rotateZ: 2,
+            scale: 1.02,
+            transition: { duration: 0.3 }
+          }}
+          style={{
+            transformStyle: "preserve-3d",
+            perspective: "1200px"
+          }}
         >
-          <FeatureBlock feature={f} />
+          <div>
+            <h3 className="text-lg font-bold text-cyan-400">{f.title}</h3>
+            <p className="text-sm text-gray-600 leading-relaxed mt-2">{f.text}</p>
+          </div>
         </motion.div>
       ))}
     </motion.div>
 
     {/* Imagen central */}
-    <motion.img
-      src={uiImage}
-      alt="Diseño web profesional en teléfono"
-      className="w-40 sm:w-56 md:w-64 mx-auto rounded-xl shadow-lg"
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.7 }}
-      viewport={{ once: true }}
-    />
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5, rotateX: -45, rotateY: -45, z: -150 }}
+      whileInView={{ opacity: 1, scale: 1, rotateX: 0, rotateY: 0, z: 0 }}
+      transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      whileHover={{ 
+        scale: 1.08,
+        rotateX: 10,
+        rotateY: -10,
+        rotateZ: 5,
+        transition: { duration: 0.4 }
+      }}
+      style={{
+        transformStyle: "preserve-3d",
+        perspective: "1200px"
+      }}
+    >
+      <motion.img
+        src={uiImage}
+        alt="Diseño web profesional en teléfono"
+        className="w-40 sm:w-56 md:w-64 mx-auto rounded-xl shadow-2xl"
+        style={{ transformStyle: "preserve-3d" }}
+      />
+    </motion.div>
 
     {/* Bloques Derecha */}
     <motion.div
       initial="hidden"
       whileInView="visible"
       variants={{
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0 },
         visible: {
           opacity: 1,
-          y: 0,
-          transition: { staggerChildren: 0.2 },
+          transition: { staggerChildren: 0.15, delayChildren: 0.2 },
         },
       }}
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.3 }}
       className="space-y-8 text-left"
     >
       {features.slice(3, 6).map((f, idx) => (
         <motion.div
           key={`${f.title}-${idx}`}
-          variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-          transition={{ duration: 0.6 }}
+          variants={{
+            hidden: { opacity: 0, x: 60, rotateY: -90, z: -100 },
+            visible: {
+              opacity: 1,
+              x: 0,
+              rotateY: 0,
+              z: 0,
+              transition: { duration: 0.7, ease: "easeOut" },
+            },
+          }}
+          whileHover={{ 
+            x: 8, 
+            rotateY: 8,
+            rotateZ: -2,  
+            scale: 1.02,
+            transition: { duration: 0.3 }
+          }}
+          style={{
+            transformStyle: "preserve-3d",
+            perspective: "1200px"
+          }}
         >
-          <FeatureBlock feature={f} />
+          <div>
+            <h3 className="text-lg font-bold text-cyan-400">{f.title}</h3>
+            <p className="text-sm text-gray-600 leading-relaxed mt-2">{f.text}</p>
+          </div>
         </motion.div>
       ))}
     </motion.div>
   </div>
 </div>
-
       
-      {/* ====================== SECCIÓN DE VIDEO CON NUEVO DISEÑO ====================== */}
-      <section className="bg-neutral-800 text-white py-24 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
-          {/* Columna del Video */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="flex justify-center lg:justify-start w-full relative"
-          >
-            {/* Contenedor con altura fija para el video */}
-            <div className="w-full rounded-xl shadow-lg overflow-hidden" style={{ minHeight: '380px', maxHeight: '500px' }}>
-              <video
-                className="w-full h-full object-cover" // object-cover para que el video se adapte y cubra el contenedor
-                src={videoUrl}
-                controls
-                preload="metadata"
-                poster={videoPoster}
-              />
-            </div>
-          </motion.div>
+      {/* ====================== SECCIÓN DE VIDEO CON FONDO OSCURO ====================== */}
+<section className="bg-neutral-800 text-white py-20 px-4 md:px-8 relative">
+  <div className="max-w-6xl mx-auto">
+    
+    {/* Header Section */}
+    <motion.div
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+      <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <span className="text-white">Nuestras</span> <span className="text-cyan-400">Soluciones</span>
+      </h2>
+      <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+        Mira cómo transformamos negocios con tecnología innovadora
+      </p>
+    </motion.div>
 
-          {/* Columna del Texto */}
-          <div className="text-gray-300">
-             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="italic text-cyan-400"
-             >
-                Transformando Ideas en Soluciones Integrales
-            </motion.p>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="text-3xl md:text-4xl font-bold text-white mb-6 mt-2"
-            >
-              Soluciones Digitales Personalizadas
-            </motion.h2>
+    {/* Video Large */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="mb-16"
+    >
+      <div className="relative rounded-xl overflow-hidden shadow-lg border border-gray-700 w-full h-96 md:h-[500px] bg-black">
+        <video
+          className="w-full h-full object-cover"
+          src={videoUrl}
+          controls
+          preload="none"
+          poster="https://i.postimg.cc/ncJGw17n/image.png"
+        />
+      </div>
+    </motion.div>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="text-lg md:text-base leading-relaxed"
+    {/* Content Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      {/* Left Content */}
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="space-y-6"
+      >
+        <div>
+          <h3 className="text-2xl md:text-3xl font-bold mb-3">
+            Soluciones Digitales Personalizadas
+          </h3>
+          <p className="text-gray-300 leading-relaxed">
+            Transformamos tus ideas en soluciones digitales que generan resultados reales. Cada proyecto es único y diseñado específicamente para tus necesidades.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {[
+            "Consultoría estratégica personalizada",
+            "Desarrollo de software a medida",
+            "Implementación e integración"
+          ].map((item, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 + idx * 0.1 }}
+              viewport={{ once: true }}
+              className="flex items-start gap-3"
             >
-              Sumérgete en nuestro enfoque colaborativo para desarrollar 
-              soluciones digitales únicas. Desde la concepción hasta la 
-              implementación, estamos aquí para hacer realidad tus visiones 
-              digitales y mejorar tu estrategia empresarial con nosotros.
-            </motion.p>
+              <div className="w-6 h-6 rounded-full bg-cyan-600 flex items-center justify-center flex-shrink-0 mt-1">
+                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <span className="text-gray-200 font-medium">{item}</span>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.a
+          href="#"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="inline-block px-6 py-3 bg-cyan-600 text-white font-semibold rounded-lg hover:bg-cyan-700 transition-colors"
+        >
+          Contactar Ahora
+        </motion.a>
+      </motion.div>
+
+      {/* Right Stats */}
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="space-y-6"
+      >
+        <div className="bg-slate-800 p-8 rounded-lg border border-slate-700">
+          <h4 className="text-lg font-bold text-white mb-4">¿Por qué elegirnos?</h4>
+          <div className="space-y-4">
+            {[
+              { label: "Experiencia", value: "15+ años" },
+              { label: "Proyectos", value: "100+ completados" },
+              { label: "Satisfacción", value: "98% clientes" },
+              { label: "Soporte", value: "24/7 disponible" }
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.2 + idx * 0.08 }}
+                viewport={{ once: true }}
+                className="flex justify-between items-center pb-3 border-b border-slate-700 last:border-0 last:pb-0"
+              >
+                <span className="text-gray-300">{item.label}</span>
+                <span className="font-bold text-cyan-400">{item.value}</span>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </section>
 
-       {/* ====================== SECCIÓN DE OPINIONES CON CARRUSEL MEJORADO ====================== */}
-       <section className="bg-slate-800 text-white py-24 px-4 md:px-8">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Título */}
+        <div className="bg-gradient-to-br from-cyan-900/40 to-blue-900/40 border border-cyan-700/50 text-white p-8 rounded-lg">
+          <p className="text-sm mb-4">
+            "Trabajar con este equipo fue transformacional para nuestro negocio. Son profesionales, dedicados y entienden realmente lo que necesitas."
+          </p>
+          <p className="font-semibold text-sm">Cliente Satisfecho</p>
+        </div>
+      </motion.div>
+    </div>
+  </div>
+</section>
+
+     {/* ====================== SECCIÓN DE OPINIONES CON CARRUSEL MEJORADA ====================== */}
+<section className="bg-white py-16 px-4 md:px-8 relative overflow-hidden">
+  {/* Decorativos de fondo */}
+  <div className="absolute inset-0 opacity-10">
+    <div className="absolute top-20 right-20 w-96 h-96 bg-cyan-500 rounded-full blur-3xl"></div>
+    <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+  </div>
+
+  <div className="max-w-7xl mx-auto relative z-10">
+    {/* Encabezado mejorado */}
+    <motion.div
+      initial={{ opacity: 0, y: -30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      className="mb-12 text-center"
+    >
+      <motion.span
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        viewport={{ once: true }}
+        className="text-cyan-400 text-sm font-black tracking-[0.2em] uppercase inline-block px-4 py-2 border border-cyan-400/30 rounded-full bg-cyan-400/5 mb-4"
+      >
+        Testimonios
+      </motion.span>
+      
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.15 }}
+        viewport={{ once: true }}
+        className="text-3xl md:text-4xl font-black text-slate-900 mt-4 leading-tight"
+      >
+        La voz de nuestros <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">clientes</span>
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.25 }}
+        viewport={{ once: true }}
+      className="text-base text-slate-600 mt-4 max-w-2xl mx-auto"
+      >
+        Descubre cómo hemos transformado negocios y generado resultados tangibles
+      </motion.p>
+    </motion.div>
+
+    {/* Carrusel de testimonios mejorado */}
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="relative"
+    >
+      <Carousel
+        responsive={{
+          desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
+          tablet: { breakpoint: { max: 1024, min: 640 }, items: 2 },
+          mobile: { breakpoint: { max: 640, min: 0 }, items: 1 },
+        }}
+        infinite={true}
+        autoPlay={true}
+        autoPlaySpeed={5000}
+        arrows={true}
+        showDots={true}
+        dotListClass="custom-testimonial-dots"
+        itemClass="px-3 md:px-4"
+        containerClass="pb-12"
+      >
+        {testimonials.map((testimonial, index) => (
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true, amount: 0.3 }}
+            key={index}
+            initial={{ opacity: 0, y: 50, rotateX: 80 }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+            transition={{ duration: 0.8, delay: index * 0.1, ease: "backOut" }}
+            viewport={{ once: true }}
+            whileHover={{ 
+              y: -12,
+              scale: 1.04,
+              transition: { duration: 0.3, type: "spring", stiffness: 300, damping: 10 }
+            }}
+            style={{
+              perspective: "1200px",
+              transformStyle: "preserve-3d"
+            }}
+            className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 h-full flex flex-col group border border-slate-100 hover:border-cyan-200"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-400">
-              Opiniones de Nuestros
-            </h2>
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-400 mt-2">
-              Servicio digital
-            </h2>
-          </motion.div>
-
-          {/* Carrusel de Comentarios (diseño mejorado) */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="bg-gray-800 p-8 rounded-lg shadow-xl relative overflow-hidden h-[250px] md:h-[220px] flex items-center justify-center"
-          >
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className={`absolute w-full px-8 transition-opacity duration-700 ease-in-out ${
-                  currentIndex === index ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                }`}
-              >
-                <p className="text-lg text-gray-300 mb-6 italic min-h-[100px] md:min-h-[80px]">
-                  "{testimonial.quote}"
-                </p>
-                <div className="flex items-center">
-                  <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full mr-4 border-2 border-blue-400" />
-                  <div>
-                    <p className="font-semibold text-white">{testimonial.name}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-
-            {/* Paginación */}
-            <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-3">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  aria-label={`Ir al testimonio ${index + 1}`}
-                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                    currentIndex === index ? 'bg-blue-500' : 'bg-gray-600 hover:bg-gray-500'
-                  }`}
-                ></button>
+            {/* Estrellas animadas */}
+            <div className="flex gap-2 mb-5">
+              {[...Array(5)].map((_, i) => (
+                <motion.svg
+                  key={i}
+                  initial={{ opacity: 0, scale: 0, rotateZ: -180 }}
+                  whileInView={{ opacity: 1, scale: 1, rotateZ: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 + i * 0.08, ease: "easeOut" }}
+                  viewport={{ once: true }}
+                  whileHover={{ 
+                    scale: 1.4, 
+                    rotateZ: 360,
+                    y: -10,
+                    transition: { duration: 0.5 } 
+                  }}
+                  className="w-6 h-6 fill-yellow-400 cursor-pointer"
+                  viewBox="0 0 20 20"
+                >
+                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                </motion.svg>
               ))}
             </div>
+
+            {/* Icono de comilla */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-5xl text-cyan-400/20 mb-3 leading-none"
+            >
+              "
+            </motion.div>
+
+            {/* Texto del testimonio */}
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.25 }}
+              viewport={{ once: true }}
+              className="text-slate-700 text-base leading-relaxed mb-8 flex-grow font-medium"
+            >
+              {testimonial.quote}
+            </motion.p>
+
+            {/* Separador */}
+            <div className="h-1 w-12 bg-gradient-to-r from-cyan-400 to-blue-500 mb-6 rounded-full"></div>
+
+            {/* Avatar y nombre */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="flex items-center gap-4"
+            >
+              <motion.div
+                whileHover={{ 
+                  scale: 1.15,
+                  rotate: 5,
+                  transition: { duration: 0.3 }
+                }}
+                className="relative"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <img
+                  src={testimonial.avatar}
+                  alt={testimonial.name}
+                  className="relative w-14 h-14 rounded-full object-cover border-2 border-white shadow-md"
+                />
+              </motion.div>
+              <div className="flex-1">
+                <p className="font-bold text-slate-900 text-sm">
+                  {testimonial.name}
+                </p>
+                <p className="text-cyan-500 text-xs font-semibold">Cliente satisfecho</p>
+              </div>
+            </motion.div>
           </motion.div>
-        </div>
-      </section>
+        ))}
+      </Carousel>
+    </motion.div>
 
-     <div className="bg-neutral-800 text-white py-24 px-4 md:px-8">
-  <div className="max-w-7xl mx-auto text-center">
-    <h2 className="text-3xl font-bold text-white mb-2">Nuestros clientes</h2>
-    <p className="text-gray-400 text-lg">
-      Las marcas que confían en Soluciones Integrales JB
-    </p>
+    {/* Estilos personalizados */}
+    <style jsx>{`
+      .custom-testimonial-dots {
+        display: flex;
+        justify-content: center;
+        gap: 0.75rem;
+        list-style: none;
+        padding: 2rem 0 0 0;
+        margin: 0;
+      }
 
-    {/* Contenedor del carrusel */}
-    <div className="relative w-full mt-12">
-      <div className="h-32 md:h-40 overflow-hidden">
-       <LogoLoop
-  logos={clientLogos}
-  speed={100}
-  direction="left"
-  logoHeight={60}
-  gap={40}
-  pauseOnHover
-  scaleOnHover
-  ariaLabel="Technology partners"
-  fadeOut
-  fadeOutColor="#262626"
-/>
+      .custom-testimonial-dots li {
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
 
-      </div>
-      <div className="h-32 md:h-40 overflow-hidden">
-       <LogoLoop
-  logos={clientLogos}
-  speed={100}
-  direction="right"
-  logoHeight={60}
-  gap={40}
-  pauseOnHover
-  scaleOnHover
-  ariaLabel="Technology partners"
-  fadeOut
-  fadeOutColor="#262626"
-/>
-      </div>
+      .custom-testimonial-dots li.react-multi-carousel-dot {
+        background: rgba(148, 163, 184, 0.5);
+        height: 0.6rem;
+        width: 0.8rem;
+        border-radius: 9999px;
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
 
+      .custom-testimonial-dots li.react-multi-carousel-dot:hover {
+        background: rgba(34, 211, 238, 0.8);
+        transform: scale(1.2);
+      }
+
+      .custom-testimonial-dots li.react-multi-carousel-dot.active {
+        background: linear-gradient(90deg, #22d3ee, #3b82f6);
+        width: 2rem;
+        box-shadow: 0 0 15px rgba(34, 211, 238, 0.6);
+      }
+    `}</style>
+  </div>
+</section>
+
+      {/* ====================== SECCIÓN DE CLIENTES GRID ====================== */}
+<div className="bg-neutral-800 text-white py-8 px-4 md:px-8 relative overflow-hidden">
+  {/* Fondo limpio */}
+
+  <div className="max-w-7xl mx-auto text-center relative z-10">
+    <motion.h2
+      initial={{ opacity: 0, y: -15 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="text-4xl md:text-5xl font-black text-white mb-3 tracking-tight"
+    >
+      Nuestros <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">clientes</span>
+    </motion.h2>
+
+    <motion.p
+      initial={{ opacity: 0, y: -10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="text-gray-300 text-lg md:text-xl mb-8 font-semibold tracking-wide"
+    >
+      Las marcas que confían en <span className="text-cyan-400">Soluciones Integrales JB</span>
+    </motion.p>
+
+    {/* Estadísticas mejoradas */}
+    <motion.div
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="flex justify-center gap-8 md:gap-16 mb-8 flex-wrap"
+    >
+      {[
+        { number: "100+", text: "Clientes" },
+        { number: "15+", text: "Años" },
+        { number: "98%", text: "Satisfacción" },
+      ].map((stat, idx) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, scale: 0.6, y: 25 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ 
+            duration: 0.6, 
+            delay: 0.2 + idx * 0.12, 
+            ease: "backOut",
+            type: "spring",
+            stiffness: 120,
+            damping: 12
+          }}
+          viewport={{ once: true }}
+          whileHover={{ 
+            scale: 1.2, 
+            y: -15,
+            transition: { duration: 0.3, type: "spring", stiffness: 300, damping: 10 }
+          }}
+          className="text-center group cursor-pointer relative px-6 py-4"
+        >
+          {/* Fondo decorativo hover */}
+          <motion.div
+            className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-cyan-500/10 rounded-xl opacity-0 group-hover:opacity-100 blur-md"
+            whileHover={{ opacity: 1 }}
+          ></motion.div>
+
+          {/* Borde animado */}
+          <motion.div
+            className="absolute inset-0 rounded-xl border-2 border-cyan-500/0 group-hover:border-cyan-500/40 transition-all duration-300"
+            whileHover={{ 
+              boxShadow: "0 0 20px rgba(34, 211, 238, 0.4)"
+            }}
+          ></motion.div>
+
+          <motion.div
+            className="relative text-3xl md:text-4xl font-black bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:to-purple-500 transition-all duration-300"
+            whileHover={{ scale: 1.25 }}
+          >
+            {stat.number}
+          </motion.div>
+          <motion.p 
+            className="relative text-gray-300 text-sm md:text-base mt-3 font-semibold group-hover:text-cyan-300 transition-colors duration-300"
+            whileHover={{ y: -3 }}
+          >
+            {stat.text}
+          </motion.p>
+        </motion.div>
+      ))}
+    </motion.div>
+
+    {/* Carrusel de logos animado */}
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="relative w-full mt-8 overflow-hidden"
+    >
+      {/* Primera fila - movimiento izquierda */}
+      <motion.div 
+        className="h-28 md:h-32 overflow-hidden mb-6"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <motion.div
+          className="flex gap-12 md:gap-16 items-center"
+          animate={{ x: [0, -2000] }}
+          transition={{ 
+            duration: 40, 
+            repeat: Infinity, 
+            ease: "linear",
+            repeatType: "loop"
+          }}
+          whileHover={{ animationPlayState: "paused" }}
+        >
+          {[...clientLogos, ...clientLogos, ...clientLogos].map((logo, idx) => (
+            <motion.div
+              key={idx}
+              whileHover={{ 
+                scale: 1.2,
+                y: -12,
+                transition: { duration: 0.3 }
+              }}
+              className="flex-shrink-0 flex items-center justify-center h-24 md:h-28 group cursor-pointer relative"
+            >
+              {/* Borde glow hover */}
+              <motion.div
+                className="absolute inset-0 rounded-lg border-2 border-cyan-500/0 group-hover:border-cyan-500/50 transition-all duration-300"
+                whileHover={{ 
+                  boxShadow: "0 0 25px rgba(34, 211, 238, 0.6)"
+                }}
+              ></motion.div>
+
+              {/* Logo */}
+              <motion.img
+                src={logo.src}
+                alt={logo.alt}
+                className="relative h-16 md:h-20 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-400"
+                whileHover={{ 
+                  scale: 1.15,
+                  filter: "drop-shadow(0 0 16px rgba(34, 211, 238, 0.8))"
+                }}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
+
+      {/* Segunda fila - movimiento derecha */}
+      <motion.div 
+        className="h-28 md:h-32 overflow-hidden"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <motion.div
+          className="flex gap-12 md:gap-16 items-center"
+          animate={{ x: [-2000, 0] }}
+          transition={{ 
+            duration: 40, 
+            repeat: Infinity, 
+            ease: "linear",
+            repeatType: "loop"
+          }}
+          whileHover={{ animationPlayState: "paused" }}
+        >
+          {[...clientLogos, ...clientLogos, ...clientLogos].map((logo, idx) => (
+            <motion.div
+              key={idx}
+              whileHover={{ 
+                scale: 1.2,
+                y: -12,
+                transition: { duration: 0.3 }
+              }}
+              className="flex-shrink-0 flex items-center justify-center h-24 md:h-28 group cursor-pointer relative"
+            >
+              {/* Borde glow hover */}
+              <motion.div
+                className="absolute inset-0 rounded-lg border-2 border-cyan-500/0 group-hover:border-cyan-500/50 transition-all duration-300"
+                whileHover={{ 
+                  boxShadow: "0 0 25px rgba(34, 211, 238, 0.6)"
+                }}
+              ></motion.div>
+
+              {/* Logo */}
+              <motion.img
+                src={logo.src}
+                alt={logo.alt}
+                className="relative h-16 md:h-20 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-400"
+                whileHover={{ 
+                  scale: 1.15,
+                  filter: "drop-shadow(0 0 16px rgba(34, 211, 238, 0.8))"
+                }}
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
+    </motion.div>
+
+    {/* Componentes finales */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
+      viewport={{ once: true }}
+      className="mt-8 space-y-4"
+    >
+      <VoiceflowChat />
+      <ScrollButton />
+    </motion.div>
+  </div>
 </div>
- <VoiceflowChat />
-          <ScrollButton />
-          
-        </div>
-      </div>
     </section>
   );
 };
