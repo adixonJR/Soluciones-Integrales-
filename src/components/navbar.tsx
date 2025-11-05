@@ -294,6 +294,14 @@ function Navbar() {
     </div>
   </div>
 </li>
+<li>
+          <Link
+            to="/Productos"
+            className="hover:text-cyan-400 transition-colors duration-200"
+          >
+            PRODUCTOS
+          </Link>
+        </li>
 
 
 
@@ -464,7 +472,12 @@ function Navbar() {
             </div>
           )}
         </li>
-
+        <li>
+          <Link to="/Productos" onClick={() => setMobileMenuOpen(false)}>
+            PRODUCTOS
+          </Link>
+        </li>
+    
         <li>
           <Link to="/contacto" onClick={() => setMobileMenuOpen(false)}>
             CONTACTO

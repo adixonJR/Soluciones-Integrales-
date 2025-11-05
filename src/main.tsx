@@ -31,7 +31,7 @@ import ConsultoriaEducativa from './pages/ConsultoriaEducativa';
 import SocialMedia from './pages/SocialMedia';
 import Merchandising from './pages/Merchandising';
 import GraficaPublicitaria from './pages/GraficaPublicitaria';
-
+import Productos from './pages/Productos';
 
 // Layout para que Navbar y Footer estén siempre
 const Layout = ({ children }: { children: React.ReactNode }) => (
@@ -273,6 +273,14 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           element={
             <Layout>
               <SocialMedia/>
+            </Layout>
+          }
+        />
+        <Route
+          path="/Productos"
+          element={
+            <Layout>
+              <Productos/>
             </Layout>
           }
         />
