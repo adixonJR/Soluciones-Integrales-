@@ -308,18 +308,27 @@ function Navbar() {
       </ul>
 
       {/* Redes sociales Desktop */}
-      <div className="hidden md:flex gap-3">
-        {[FaFacebookF, FaEnvelope, FaInstagram, FaYoutube, FaLinkedinIn, FaTiktok].map(
-          (Icon, idx) => (
-            <div
-              key={idx}
-              className="bg-gray-200 text-gray-800 rounded-full p-2 hover:bg-cyan-400 hover:text-white cursor-pointer transition-colors duration-200"
-            >
-              <Icon />
-            </div>
-          )
-        )}
-      </div>
+<div className="hidden md:flex gap-3">
+  {[
+    { icon: FaFacebookF, url: "https://www.facebook.com/solucionesintegralesJB/" },
+    { icon: FaEnvelope, url: "/contacto" },
+    { icon: FaInstagram, url: "https://www.instagram.com/solucionesintegralesjb/" },
+    { icon: FaYoutube, url: "https://www.youtube.com/channel/UCwZllsxQMp2LwUSIDmldUeQ" },
+    { icon: FaLinkedinIn, url: "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEnsF-ThdiG6wAAAZmCDWzwVJaTR1vjPPp6uv0JzfhdWh9HdUi2ruenocalO7aVtO01d1i-f6pdm2vsTla4cINdCtOMymMuBfBVhvrYXXNQFKhXmuFz-pD0IK6OTq1UICqMgpI=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fsoluciones-integrales-jb%2F%3ForiginalSubdomain%3Dpe" },
+    { icon: FaTiktok, url: "https://www.tiktok.com/@solucionesintegralesjb?lang=es" },
+  ].map(({ icon: Icon, url }, idx) => (
+    <a
+      key={idx}
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-gray-200 text-gray-800 rounded-full p-2 hover:bg-cyan-400 hover:text-white cursor-pointer transition-colors duration-200"
+    >
+      <Icon />
+    </a>
+  ))}
+</div>
+
 
       {/* Botón hamburguesa */}
       <button

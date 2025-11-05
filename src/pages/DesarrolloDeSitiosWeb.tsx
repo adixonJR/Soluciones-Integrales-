@@ -49,10 +49,10 @@ const DesarrolloWebBanner: React.FC = () => {
   return (
     <div className="font-sans">
       {/* ====================== BANNER PRINCIPAL ====================== */}
-      <header className="relative w-full h-64 md:h-80 bg-black text-white flex flex-col items-center justify-center overflow-hidden">
+      <header className="relative w-full h-64 md:h-80 flex flex-col items-center justify-center overflow-hidden">
         {/* Imagen de fondo */}
         <img
-          src="https://i.postimg.cc/90dGrGQD/fondoN.jpg"
+          src="https://i.postimg.cc/BQCfHxq9/Imagen-de-Whats-App-2025-10-23-a-las-12-26-05-bc027f73.jpg"
           alt="Fondo de ladrillos oscuros"
           className="absolute inset-0 w-full h-full object-cover z-0"
         />

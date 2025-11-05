@@ -133,61 +133,68 @@ const caracteristicas = [
 const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
   return (
   <section className={"w-full " + (className || "")}>
-  <div className="relative w-screen h-[600px] overflow-hidden flex items-center justify-center bg-gray-900">
-    <img
-      src="https://solucionesintegralesjb.com/wp-content/uploads/2024/06/Frame-916-1.png"
-      alt="Quiénes somos"
-      className="w-full h-auto object-contain -translate-y-[-100px]"
-    />
+  <div className="relative w-full h-[600px] sm:h-[500px] md:h-[600px] overflow-hidden flex items-center justify-center bg-gray-900">
+  <img
+    src="https://solucionesintegralesjb.com/wp-content/uploads/2024/06/Frame-916-1.png"
+    alt="Quiénes somos"
+    className="absolute w-full h-full object-cover object-center"
+  />
 
-    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+  {/* Capa oscura encima de la imagen */}
+  <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-    <div className="absolute inset-0 flex flex-col justify-center items-end pr-12">
-      <div className="bg-black bg-opacity-40 px-12 py-8 rounded-lg border-2 border-gray-300 text-justify w-[450px]">
-        <h2 className="text-4xl font-semibold text-white mb-3">
-          ¿Quiénes Somos?
-        </h2>
-        <p className="text-white text-base mb-6">
-          Quiénes Somos y Hacia Dónde Vamos
-        </p>
-        <a
-          href="https://solucionesintegralesjb.com/#services"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="cta cta-large">
-            <span className="span">Descubre<br/>nuestros servicios</span>
-            <span className="second">
-              <svg
-                width="50px"
-                height="20px"
-                viewBox="0 0 66 43"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g id="arrow" fill="none" fillRule="evenodd">
-                  <path
-                    className="one"
-                    d="M40.15 3.89L43.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L44.67 42.86a.5.5 0 01-.7 0L40.15 39.1a.5.5 0 01.01-.71L56.99 21.86a.5.5 0 000-.71L40.15 3.9z"
-                    fill="#fff"
-                  />
-                  <path
-                    className="two"
-                    d="M20.15 3.89L23.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L24.67 42.86a.5.5 0 01-.7 0L20.15 39.1a.5.5 0 01.01-.71L36.99 21.86a.5.5 0 000-.71L20.15 3.9z"
-                    fill="#fff"
-                  />
-                  <path
-                    className="three"
-                    d="M0.15 3.89L3.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L4.67 42.86a.5.5 0 01-.7 0L0.15 39.1a.5.5 0 01.01-.71L16.99 21.86a.5.5 0 000-.71L0.15 3.9z"
-                    fill="#fff"
-                  />
-                </g>
-              </svg>
-            </span>
-          </button>
-        </a>
-      </div>
+  {/* Contenido centrado en móvil y alineado a la derecha en pantallas grandes */}
+  <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end px-4 sm:px-8 md:pr-12 text-center md:text-right">
+    <div className="bg-black bg-opacity-40 px-6 sm:px-8 md:px-12 py-8 rounded-lg border-2 border-gray-300 text-justify max-w-[90%] sm:max-w-md md:w-[450px]">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-3">
+        ¿Quiénes Somos?
+      </h2>
+      <p className="text-white text-sm sm:text-base mb-6">
+        Quiénes Somos y Hacia Dónde Vamos
+      </p>
+      <a
+        href="https://solucionesintegralesjb.com/#services"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button className="cta cta-large">
+          <span className="span">
+            Descubre
+            <br />
+            nuestros servicios
+          </span>
+          <span className="second">
+            <svg
+              width="50px"
+              height="20px"
+              viewBox="0 0 66 43"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="arrow" fill="none" fillRule="evenodd">
+                <path
+                  className="one"
+                  d="M40.15 3.89L43.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L44.67 42.86a.5.5 0 01-.7 0L40.15 39.1a.5.5 0 01.01-.71L56.99 21.86a.5.5 0 000-.71L40.15 3.9z"
+                  fill="#fff"
+                />
+                <path
+                  className="two"
+                  d="M20.15 3.89L23.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L24.67 42.86a.5.5 0 01-.7 0L20.15 39.1a.5.5 0 01.01-.71L36.99 21.86a.5.5 0 000-.71L20.15 3.9z"
+                  fill="#fff"
+                />
+                <path
+                  className="three"
+                  d="M0.15 3.89L3.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L4.67 42.86a.5.5 0 01-.7 0L0.15 39.1a.5.5 0 01.01-.71L16.99 21.86a.5.5 0 000-.71L0.15 3.9z"
+                  fill="#fff"
+                />
+              </g>
+            </svg>
+          </span>
+        </button>
+      </a>
     </div>
   </div>
+</div>
+
 
       <div className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
         <div className="grid grid-cols-2 gap-4">
