@@ -30,42 +30,42 @@ const ComunidadActiva = () => {
               Comunidad Activa
             </h1>
 
-            {/* Botón de información */}
+            {/* Botón de información - NUEVO ESTILO ROJO */}
             <a
-      href="https://solucionesintegralesjb.com/comunidad2/#id-activa"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <button className="cta">
-        <span className="span">Información</span>
-        <span className="second">
-          <svg
-            width="50px"
-            height="20px"
-            viewBox="0 0 66 43"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g id="arrow" fill="none" fillRule="evenodd">
-              <path
-                className="one"
-                d="M40.15 3.89L43.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L44.67 42.86a.5.5 0 01-.7 0L40.15 39.1a.5.5 0 01.01-.71L56.99 21.86a.5.5 0 000-.71L40.15 3.9z"
-                fill="#fff"
-              />
-              <path
-                className="two"
-                d="M20.15 3.89L23.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L24.67 42.86a.5.5 0 01-.7 0L20.15 39.1a.5.5 0 01.01-.71L36.99 21.86a.5.5 0 000-.71L20.15 3.9z"
-                fill="#fff"
-              />
-              <path
-                className="three"
-                d="M0.15 3.89L3.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L4.67 42.86a.5.5 0 01-.7 0L0.15 39.1a.5.5 0 01.01-.71L16.99 21.86a.5.5 0 000-.71L0.15 3.9z"
-                fill="#fff"
-              />
-            </g>
-          </svg>
-        </span>
-      </button>
-    </a>
+              href="https://solucionesintegralesjb.com/comunidad2/#id-activa"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="cta-rojo">
+                <span className="span-rojo">Información</span>
+                <span className="second-rojo">
+                  <svg
+                    width="50px"
+                    height="20px"
+                    viewBox="0 0 66 43"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="arrow" fill="none" fillRule="evenodd">
+                      <path
+                        className="one"
+                        d="M40.15 3.89L43.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L44.67 42.86a.5.5 0 01-.7 0L40.15 39.1a.5.5 0 01.01-.71L56.99 21.86a.5.5 0 000-.71L40.15 3.9z"
+                        fill="#fff"
+                      />
+                      <path
+                        className="two"
+                        d="M20.15 3.89L23.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L24.67 42.86a.5.5 0 01-.7 0L20.15 39.1a.5.5 0 01.01-.71L36.99 21.86a.5.5 0 000-.71L20.15 3.9z"
+                        fill="#fff"
+                      />
+                      <path
+                        className="three"
+                        d="M0.15 3.89L3.97.14c.2-.19.51-.19.7 0l21.01 20.65c.4.39.4 1.02 0 1.41L4.67 42.86a.5.5 0 01-.7 0L0.15 39.1a.5.5 0 01.01-.71L16.99 21.86a.5.5 0 000-.71L0.15 3.9z"
+                        fill="#fff"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -235,6 +235,89 @@ const ComunidadActiva = () => {
 
 
       </div>
+
+      <style>{`
+        /* Estilos del botón rojo tipo "Nuestra Historia" */
+        .cta-rojo {
+          display: flex;
+          align-items: center;
+          padding: 12px 40px;
+          text-decoration: none;
+          font-size: 18px;
+          color: #ffffff;
+          background: #ff0000;
+          transition: 1s;
+          box-shadow: 6px 6px 0 black;
+          transform: skewX(-15deg);
+          border: none;
+          cursor: pointer;
+          font-weight: 600;
+        }
+
+        .cta-rojo:focus {
+          outline: none;
+        }
+
+        .cta-rojo:hover {
+          transition: 0.5s;
+          box-shadow: 10px 10px 0 #ffffff;
+        }
+
+        .span-rojo {
+          transform: skewX(15deg);
+          font-weight: 600;
+        }
+
+        .second-rojo {
+          width: 20px;
+          margin-left: 30px;
+          position: relative;
+          top: 12%;
+          transition: 0.5s;
+          margin-right: 0px;
+        }
+
+        .cta-rojo:hover .second-rojo {
+          transition: 0.5s;
+          margin-right: 45px;
+        }
+
+        .cta-rojo .one {
+          transition: 0.4s;
+          transform: translateX(-60%);
+        }
+
+        .cta-rojo .two {
+          transition: 0.5s;
+          transform: translateX(-30%);
+        }
+
+        .cta-rojo:hover .three {
+          animation: color_anim 1s infinite 0.2s;
+        }
+
+        .cta-rojo:hover .one {
+          transform: translateX(0%);
+          animation: color_anim 1s infinite 0.6s;
+        }
+
+        .cta-rojo:hover .two {
+          transform: translateX(0%);
+          animation: color_anim 1s infinite 0.4s;
+        }
+
+        @keyframes color_anim {
+          0% {
+            fill: #fff;
+          }
+          50% {
+            fill: #000;
+          }
+          100% {
+            fill: #fff;
+          }
+        }
+      `}</style>
     </div>
   );
 };

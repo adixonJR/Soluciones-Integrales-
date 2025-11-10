@@ -196,38 +196,38 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
 </div>
 
 
-      <div className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
-        <div className="grid grid-cols-2 gap-4">
-          <img
-            src={hero2}
-            alt="Imagen 1"
-            className="w-full h-72 object-cover rounded-lg shadow-md"
-          />
-          <img
-            src={hero3}
-            alt="Imagen 2"
-            className="w-full h-72 object-cover rounded-lg shadow-md"
-          />
-        </div>
+<div className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
+  <div className="grid grid-cols-2 gap-4">
+    <img
+      src={hero2}
+      alt="Imagen 1"
+      className="w-full h-72 object-cover rounded-lg shadow-md"
+    />
+    <img
+      src={hero3}
+      alt="Imagen 2"
+      className="w-full h-72 object-cover rounded-lg shadow-md"
+    />
+  </div>
 
-        <div className="space-y-4">
-          <p className="text-sm uppercase tracking-wider text-gray-500">
-            Innovación y tecnología para tu crecimiento
-          </p>
-          <h2 className="text-3xl font-bold">Quiénes Somos</h2>
-          <p className="text-gray-700 leading-relaxed">
-            Somos una empresa de tecnología especializada en automatizar procesos de 
-            negocio para mejorar la eficiencia y resultados en diversas áreas de 
-            producción. Nos enfocamos en la Gestión de Servicios de TI, ofreciendo 
-            soluciones basadas en ITSM e ITIL. 
-          </p>
-          <p className="text-gray-700 leading-relaxed">
-            Contamos con un equipo de profesionales que optimizan tanto el tiempo 
-            como los recursos económicos de nuestros clientes, garantizando un 
-            servicio de alta calidad.
-          </p>
-        </div>
-      </div>
+  <div className="space-y-4">
+    <p className="text-sm uppercase tracking-wider text-gray-500">
+      Innovación y tecnología para tu crecimiento
+    </p>
+    <h2 className="text-3xl font-bold text-cyan-500">Quiénes Somos</h2>
+    <p className="text-gray-700 leading-relaxed">
+      Somos una empresa de tecnología especializada en automatizar procesos de 
+      negocio para mejorar la eficiencia y resultados en diversas áreas de 
+      producción. Nos enfocamos en la Gestión de Servicios de TI, ofreciendo 
+      soluciones basadas en ITSM e ITIL. 
+    </p>
+    <p className="text-gray-700 leading-relaxed">
+      Contamos con un equipo de profesionales que optimizan tanto el tiempo 
+      como los recursos económicos de nuestros clientes, garantizando un 
+      servicio de alta calidad.
+    </p>
+  </div>
+</div>
 
       <div className="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-2 gap-8">
         <div className="custom-card">
