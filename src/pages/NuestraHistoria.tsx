@@ -109,7 +109,7 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ title, projects }) => {
 
   return (
     <section className="bg-gray-100 py-16 px-6 max-w-7xl mx-auto mt-20 rounded-xl shadow-lg">
-      <h2 className="text-center font-bold text-3xl mb-10 text-gray-800 uppercase tracking-wide">
+      <h2 className="text-center font-bold text-3xl mb-10 text-cyan-400 uppercase tracking-wide">
         {title}
       </h2>
       
@@ -314,7 +314,8 @@ const App = () => {
               initial={{ opacity: 0, y: -30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-cyan-400 text-lg font-semibold mb-2"
+              /*className="text-cyan-400 text-lg font-semibold mb-2"*/
+              className="text-gray-300 text-lg font-semibold mb-2"
             >
               Un viaje de innovación y crecimiento
             </motion.h3>
@@ -322,7 +323,7 @@ const App = () => {
               initial={{ opacity: 0, y: -30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="text-4xl font-bold mb-4"
+              className="text-4xl font-bold mb-4 text-cyan-400"
             >
               Nuestra Historia
             </motion.h2>
