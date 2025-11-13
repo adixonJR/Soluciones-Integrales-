@@ -146,7 +146,7 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
   {/* Contenido centrado en móvil y alineado a la derecha en pantallas grandes */}
   <div className="absolute inset-0 flex flex-col justify-center items-center md:items-end px-4 sm:px-8 md:pr-12 text-center md:text-right">
     <div className="bg-black bg-opacity-40 px-6 sm:px-8 md:px-12 py-8 rounded-lg border-2 border-gray-300 text-justify max-w-[90%] sm:max-w-md md:w-[450px]">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-3">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-cyan-400 mb-3">
         ¿Quiénes Somos?
       </h2>
       <p className="text-white text-sm sm:text-base mb-6">
@@ -196,38 +196,38 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
 </div>
 
 
-<div className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
-  <div className="grid grid-cols-2 gap-4">
-    <img
-      src={hero2}
-      alt="Imagen 1"
-      className="w-full h-72 object-cover rounded-lg shadow-md"
-    />
-    <img
-      src={hero3}
-      alt="Imagen 2"
-      className="w-full h-72 object-cover rounded-lg shadow-md"
-    />
-  </div>
+      <div className="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-2 gap-4">
+          <img
+            src={hero2}
+            alt="Imagen 1"
+            className="w-full h-72 object-cover rounded-lg shadow-md"
+          />
+          <img
+            src={hero3}
+            alt="Imagen 2"
+            className="w-full h-72 object-cover rounded-lg shadow-md"
+          />
+        </div>
 
-  <div className="space-y-4">
-    <p className="text-sm uppercase tracking-wider text-gray-500">
-      Innovación y tecnología para tu crecimiento
-    </p>
-    <h2 className="text-3xl font-bold text-cyan-500">Quiénes Somos</h2>
-    <p className="text-gray-700 leading-relaxed">
-      Somos una empresa de tecnología especializada en automatizar procesos de 
-      negocio para mejorar la eficiencia y resultados en diversas áreas de 
-      producción. Nos enfocamos en la Gestión de Servicios de TI, ofreciendo 
-      soluciones basadas en ITSM e ITIL. 
-    </p>
-    <p className="text-gray-700 leading-relaxed">
-      Contamos con un equipo de profesionales que optimizan tanto el tiempo 
-      como los recursos económicos de nuestros clientes, garantizando un 
-      servicio de alta calidad.
-    </p>
-  </div>
-</div>
+        <div className="space-y-4">
+          <p className="text-sm uppercase tracking-wider text-gray-500">
+            Innovación y tecnología para tu crecimiento
+          </p>
+          <h2 className="text-3xl font-bold text-cyan-400">Quiénes Somos</h2>
+          <p className="text-gray-700 leading-relaxed">
+            Somos una empresa de tecnología especializada en automatizar procesos de 
+            negocio para mejorar la eficiencia y resultados en diversas áreas de 
+            producción. Nos enfocamos en la Gestión de Servicios de TI, ofreciendo 
+            soluciones basadas en ITSM e ITIL. 
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Contamos con un equipo de profesionales que optimizan tanto el tiempo 
+            como los recursos económicos de nuestros clientes, garantizando un 
+            servicio de alta calidad.
+          </p>
+        </div>
+      </div>
 
       <div className="mx-auto max-w-6xl px-4 py-16 grid md:grid-cols-2 gap-8">
         <div className="custom-card">
@@ -313,7 +313,7 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Nuestros Valores</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-cyan-400">Nuestros Valores</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {valores.map((valor, index) => (
             <div key={index} className="group w-full h-64 [perspective:1000px]">
@@ -343,7 +343,7 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
         </div>
         <div className="space-y-4">
           <p className="text-sm uppercase tracking-wider text-gray-500">Quienes somos</p>
-          <h2 className="text-3xl font-bold">Somos tus aliados Digitales.</h2>
+          <h2 className="text-3xl font-bold text-cyan-400">Somos tus aliados Digitales.</h2>
           <p>
             Somos una empresa dedicada a ofrecer servicios digitales personalizados, desde el desarrollo de software y sitios web con diseño gráfico. entre mas servicios. Transformamos sus ideas en soluciones que impulsan su negocio hacia el éxito corporativo con Soluciones Integrales.
           </p>
@@ -351,7 +351,7 @@ const SolucionesIntegralesJBSection: React.FC<Props> = ({ className }) => {
       </div>
 
       <section className="mx-auto max-w-6xl px-4 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">
+        <h2 className="text-3xl font-bold text-center mb-12 text-cyan-400">
           Características de Nuestros Servicios:
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
