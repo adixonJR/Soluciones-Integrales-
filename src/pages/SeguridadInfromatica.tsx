@@ -63,7 +63,7 @@ const SeguridadInformatica = () => {
                 </span>
               </h2>
 
-              <p className="text-[#34495e] text-base leading-relaxed mb-5">
+              <p className="text-[#34495e] text-base leading-relaxed mb-5 text-justify">
                 Protege tu empresa de amenazas digitales con soluciones
                 avanzadas y personalizadas. Mi compromiso es garantizar la
                 integridad, disponibilidad y confidencialidad de tus datos,
@@ -78,25 +78,25 @@ const SeguridadInformatica = () => {
                 transition={{ duration: 1, delay: 0.4 }}
                 viewport={{ once: true }}
               >
-                <li>
+                <li className="text-justify">
                   <strong>Análisis de vulnerabilidades:</strong> identifico y
                   elimino puntos débiles en tus sistemas.
                 </li>
-                <li>
+                <li className="text-justify">
                   <strong>Implementación de medidas de seguridad:</strong> diseño
                   soluciones adaptadas a tus necesidades.
                 </li>
-                <li>
+                <li className="text-justify">
                   <strong>Respaldo y recuperación:</strong> garantizo la
                   protección y recuperación de tu información crítica.
                 </li>
-                <li>
+                <li className="text-justify">
                   <strong>Capacitación en ciberseguridad:</strong> preparo a tu
                   equipo para enfrentar amenazas digitales.
                 </li>
               </motion.ul>
 
-              <p className="text-[#34495e] text-base leading-relaxed mb-6">
+              <p className="text-[#34495e] text-base leading-relaxed mb-6 text-justify">
                 Mi enfoque es cercano y profesional, trabajando contigo para
                 implementar estrategias de seguridad que mantengan tu negocio
                 protegido en todo momento.
