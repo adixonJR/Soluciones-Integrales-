@@ -58,7 +58,7 @@ const InstalacionesElectricas: React.FC = () => {
           
           {/* Texto */}
           <div className="md:w-1/2 text-gray-800">
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">   
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">   
               Diseño y Ejecución de Instalaciones Eléctricas
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -109,7 +109,7 @@ const InstalacionesElectricas: React.FC = () => {
 
           {/* Texto a la derecha */}
           <div className="md:w-1/2 text-white">
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Soluciones Personalizadas y Eficientes
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -135,7 +135,7 @@ const InstalacionesElectricas: React.FC = () => {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12">
           {/* Texto */}
           <div className="md:w-1/2 text-gray-800">
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Mantenimiento Preventivo y Correctivo
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -186,7 +186,7 @@ const InstalacionesElectricas: React.FC = () => {
 
           {/* Texto a la derecha */}
           <div className="md:w-1/2 text-gray-800">
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Cumplimiento Normativo y Seguridad
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -243,7 +243,7 @@ const InstalacionesElectricas: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.25 }}
               viewport={{ once: true }}
-              className="text-base text-slate-600 mt-4 max-w-2xl mx-auto"
+              className="text-base text-slate-600 mt-4 max-w-2xl mx-auto text-justify"
             >
               Descubre cómo nuestros servicios de instalaciones eléctricas han beneficiado a empresas
             </motion.p>
@@ -306,7 +306,7 @@ const InstalacionesElectricas: React.FC = () => {
                   </div>
 
                   {/* Texto del testimonio */}
-                  <p className="text-slate-700 text-base leading-relaxed mb-8 flex-grow font-medium">
+                  <p className="text-slate-700 text-base leading-relaxed mb-8 flex-grow font-medium text-justify">
                     {testimonio.opinion}
                   </p>
 
