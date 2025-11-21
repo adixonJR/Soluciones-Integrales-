@@ -58,7 +58,7 @@ const Soporte: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Asistencia Técnica Integral
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -118,7 +118,7 @@ const Soporte: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Monitoreo y Mantenimiento Proactivo
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -150,7 +150,7 @@ const Soporte: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Soporte Remoto y On-Site
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -205,7 +205,7 @@ const Soporte: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Consultoría y Asesoramiento Tecnológico
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
