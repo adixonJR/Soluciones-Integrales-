@@ -94,7 +94,7 @@ const DesarrolloWebBanner: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="text-3xl md:text-4xl font-bold text-blue-600 mb-6 text-center"
+        className="text-3xl md:text-4xl font-bold text-sky-400 mb-6 text-center"
       >
         Desarrollo Web Personalizado
       </motion.h2>
@@ -167,7 +167,7 @@ const DesarrolloWebBanner: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="text-3xl md:text-4xl font-bold text-blue-400 mb-6 text-center"
+        className="text-3xl md:text-4xl font-bold text-sky-400 mb-6 text-center"
       >
         Mantenimiento y Soporte
       </motion.h2>
@@ -227,7 +227,7 @@ const DesarrolloWebBanner: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="text-3xl md:text-4xl font-bold text-blue-600 mb-6 text-center"
+        className="text-3xl md:text-4xl font-bold text-sky-400 mb-6 text-center"
       >
         Diseño UX/UI
       </motion.h2>
@@ -306,7 +306,7 @@ const DesarrolloWebBanner: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true, amount: 0.3 }}
-        className="text-3xl md:text-4xl font-bold text-blue-600 mb-6 text-center"
+        className="text-3xl md:text-4xl font-bold text-sky-400 mb-6 text-center"
       >
         Integración de Funcionalidades
       </motion.h2>
