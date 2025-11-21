@@ -85,7 +85,7 @@ const DesarrolloWebBanner: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="text-lg md:text-base leading-relaxed mb-6"
+              className="text-lg md:text-base leading-relaxed mb-6 text-justify"
             >
               Diseñamos sitios web únicos y funcionales, perfectamente alineados
               con las necesidades específicas de tu negocio. Nuestro equipo se
@@ -158,7 +158,7 @@ const DesarrolloWebBanner: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="text-lg md:text-base leading-relaxed mb-6"
+              className="text-lg md:text-base leading-relaxed mb-6 text-justify"
             >
               Ofrecemos mantenimiento continuo y soporte técnico para que tu
               sitio web esté siempre actualizado y seguro. Nos encargamos de
@@ -174,7 +174,7 @@ const DesarrolloWebBanner: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="text-lg md:text-base leading-relaxed mb-8"
+              className="text-lg md:text-base leading-relaxed mb-8 text-justify"
             >
               Nuestro enfoque proactivo previene problemas antes de que
               ocurran, asegurando un funcionamiento fluido y una experiencia
@@ -216,7 +216,7 @@ const DesarrolloWebBanner: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="text-lg md:text-base leading-relaxed mb-6"
+              className="text-lg md:text-base leading-relaxed mb-6 text-justify"
             >
               Desarrollamos interfaces intuitivas y visualmente atractivas que
               optimizan la experiencia del usuario. Nuestro enfoque en diseño
@@ -232,7 +232,7 @@ const DesarrolloWebBanner: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="text-lg md:text-base leading-relaxed"
+              className="text-lg md:text-base leading-relaxed text-justify"
             >
               Prestamos especial atención a detalles como la velocidad de carga
               y la estructura de la información, creando un entorno digital que
@@ -295,7 +295,7 @@ const DesarrolloWebBanner: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="text-lg md:text-base leading-relaxed mb-6"
+              className="text-lg md:text-base leading-relaxed mb-6 text-justify"
             >
               Incorporamos las funcionalidades necesarias para optimizar los procesos
               de tu negocio. Desde formularios de contacto y chatbots hasta sistemas
@@ -310,7 +310,7 @@ const DesarrolloWebBanner: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="text-lg md:text-base leading-relaxed mb-8"
+              className="text-lg md:text-base leading-relaxed mb-8 text-justify"
             >
               Con nuestras soluciones, no solo simplificas la gestión, sino que también
               ofreces una experiencia más completa y satisfactoria a tus usuarios.
@@ -377,7 +377,7 @@ const DesarrolloWebBanner: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.25 }}
               viewport={{ once: true }}
-              className="text-base text-slate-600 mt-4 max-w-2xl mx-auto"
+              className="text-base text-slate-600 mt-4 max-w-2xl mx-auto text-justify"
             >
               Descubre cómo nuestros servicios de desarrollo web han transformado negocios
             </motion.p>
@@ -440,7 +440,7 @@ const DesarrolloWebBanner: React.FC = () => {
                   </div>
 
                   {/* Texto del testimonio */}
-                  <p className="text-slate-700 text-base leading-relaxed mb-8 flex-grow font-medium">
+                  <p className="text-slate-700 text-base leading-relaxed mb-8 flex-grow font-medium text-justify">
                     {testimonial.quote}
                   </p>
 
