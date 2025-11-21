@@ -70,7 +70,7 @@ const RedesEinfroestructura: React.FC = () => {
             variants={fadeInUp}
             transition={{ duration: 1 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Diseño e Implementación de Redes
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -143,7 +143,7 @@ const RedesEinfroestructura: React.FC = () => {
             variants={fadeInUp}
             transition={{ duration: 1 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Optimización y Mantenimiento de Redes
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -172,7 +172,7 @@ const RedesEinfroestructura: React.FC = () => {
             variants={fadeInUp}
             transition={{ duration: 1 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Seguridad en Redes
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -220,7 +220,7 @@ const RedesEinfroestructura: React.FC = () => {
             variants={fadeInUp}
             transition={{ duration: 1 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Consultoría en Infraestructura
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
