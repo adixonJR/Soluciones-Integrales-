@@ -59,7 +59,7 @@ const TecnologiaEnSeguridad: React.FC = () => {
           <div className="protection-content">
             <div className="protection-text-container">
               <div className="protection-text">
-                <h2 className="protection-title">Protección Total para tu Hogar y Negocio</h2>
+                <h2 className="protection-title" style={{ color: '#38bdf8' }}>Protección Total para tu Hogar y Negocio</h2>
                 <p className="protection-description">
                   En nuestro servicio de <strong>Tecnología en Seguridad</strong>, ofrecemos <strong>soluciones integrales</strong> para proteger lo que más te importa. Contamos con una amplia gama de productos de última generación, que incluyen:
                 </p>
@@ -98,7 +98,7 @@ const TecnologiaEnSeguridad: React.FC = () => {
             
             <div className="solutions-text-container">
               <div className="solutions-text">
-                <h2 className="solutions-title">Soluciones Personalizadas para Cada Cliente</h2>
+                <h2 className="solutions-title" style={{ color: '#38bdf8' }}>Soluciones Personalizadas para Cada Cliente</h2>
                 <p className="solutions-description">
                   Entendemos que cada cliente tiene necesidades de seguridad únicas. Por eso, ofrecemos soluciones personalizadas que se adaptan a tus requisitos específicos. Ya sea que necesites un sistema de vigilancia para tu hogar, una solución integral para tu negocio o seguridad para un evento especial, estamos aquí para diseñar y entregar la mejor opción para ti.  
                   Nuestro equipo de expertos trabajará contigo para evaluar tus necesidades y proporcionarte un sistema de seguridad que te brinde tranquilidad y protección efectiva.
@@ -117,7 +117,7 @@ const TecnologiaEnSeguridad: React.FC = () => {
         <div className="container">
           <div className="technology-content">
             <div className="technology-text">
-              <h2>Tecnología de Vanguardia en Seguridad</h2>
+              <h2 style={{ color: '#38bdf8' }}>Tecnología de Vanguardia en Seguridad</h2>
               <p className="technology-description">
                 Nos mantenemos a la vanguardia en tecnología de seguridad para ofrecerte las soluciones más avanzadas del mercado. Contamos con una amplia gama de productos de última generación, como las <strong>cámaras Hikvision ColorVu Bullet FULL HD</strong>, que proporcionan una vigilancia de alta calidad con características avanzadas, incluyendo:
               </p>
@@ -159,7 +159,7 @@ const TecnologiaEnSeguridad: React.FC = () => {
             </div>
             
             <div className="service-text">
-              <h2>Servicio y Soporte Técnico Impecables</h2>
+              <h2 style={{ color: '#38bdf8' }}>Servicio y Soporte Técnico Impecables</h2>
               <p className="service-description">
                 No solo vendemos equipos de seguridad; ofrecemos un servicio integral que cubre todas tus necesidades de protección. Desde cámaras de vigilancia de alta definición con visión nocturna hasta sistemas de monitoreo avanzados con alertas en tiempo real, nuestros productos están diseñados para ofrecer una cobertura total y una vigilancia constante.
               </p>
