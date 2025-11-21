@@ -58,13 +58,11 @@ const Merchandising = () => {
             viewport={{ once: true }}
           >
             <div className="text-center p-6 bg-[#f4f9ff] rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold mb-5 text-[#2c3e50]">
-                <span className="text-[#3498db]">
-                  Productos Personalizados de Calidad
-                </span>
+              <h2 className="text-2xl font-semibold mb-5 text-sky-400">
+                Productos Personalizados de Calidad
               </h2>
 
-              <p className="text-[#34495e] text-base leading-relaxed mb-5">
+              <p className="text-[#34495e] text-base leading-relaxed mb-5 text-justify">
                 En Soluciones Integrales JB, ofrecemos productos de merchandising personalizados que destacan la identidad de tu marca. 
                 Desde artículos promocionales como bolígrafos y llaveros hasta prendas de vestir y accesorios, 
                 nos aseguramos de que cada producto refleje tus valores y mensajes corporativos de manera efectiva. 
