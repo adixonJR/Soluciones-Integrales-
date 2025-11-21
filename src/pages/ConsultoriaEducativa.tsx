@@ -65,7 +65,7 @@ const ConsultoriaEducativa = () => {
               </motion.h2>
 
               <motion.p
-                className="text-[#34495e] text-base leading-relaxed mb-5"
+                className="text-[#34495e] text-base leading-relaxed mb-5 text-justify"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.7, delay: 0.2 }}
@@ -96,6 +96,7 @@ const ConsultoriaEducativa = () => {
                 ].map((item, i) => (
                   <motion.li
                     key={i}
+                    className="text-justify"
                     variants={{
                       hidden: { opacity: 0, x: -20 },
                       visible: { opacity: 1, x: 0 },
@@ -109,7 +110,7 @@ const ConsultoriaEducativa = () => {
               </motion.ul>
 
               <motion.p
-                className="text-[#34495e] text-base leading-relaxed mb-6"
+                className="text-[#34495e] text-base leading-relaxed mb-6 text-justify"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.7, delay: 0.3 }}
