@@ -77,7 +77,7 @@ const FacturacionElectronica: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Automatiza tu Proceso de Facturación
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -137,7 +137,7 @@ const FacturacionElectronica: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Integración Fácil y Rápida
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -167,7 +167,7 @@ const FacturacionElectronica: React.FC = () => {
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
     >
-      <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6"> Acceso y Control desde Cualquier Lugar </h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6"> Acceso y Control desde Cualquier Lugar </h2>
 
       <p className="text-lg md:text-xl leading-relaxed text-gray-300 mb-6">
         Con nuestro software, puedes acceder a tus facturas electrónicas y gestionar tus operaciones 
@@ -230,7 +230,7 @@ const FacturacionElectronica: React.FC = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Cumplimiento Fiscal Garantizado
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
