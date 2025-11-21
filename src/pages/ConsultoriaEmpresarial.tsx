@@ -48,7 +48,7 @@ const ConsultoriaEmpresarial = () => {
             viewport={{ once: true }}
           >
             <img
-              src="https://solucionesintegralesjb.com/wp-content/uploads/2024/12/empresarial.jpg"
+              src="https://i.postimg.cc/XJqNzY5H/empresarial.jpg"
               alt="Consultoría Empresarial"
               className="w-full max-w-[3000px] h-auto rounded-lg shadow-lg"
             />
@@ -73,7 +73,7 @@ const ConsultoriaEmpresarial = () => {
               </motion.h2>
 
               <motion.p
-                className="text-[#34495e] text-base leading-relaxed mb-5"
+                className="text-[#34495e] text-base leading-relaxed mb-5 text-justify"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
@@ -91,26 +91,26 @@ const ConsultoriaEmpresarial = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.4 }}
               >
-                <li>
+                <li className="text-justify">
                   <strong>Análisis estratégico:</strong> para identificar y
                   aprovechar tus ventajas competitivas.
                 </li>
-                <li>
+                <li className="text-justify">
                   <strong>Optimización de procesos:</strong> hago que tus
                   operaciones sean más ágiles y eficientes.
                 </li>
-                <li>
+                <li className="text-justify">
                   <strong>Gestión del cambio:</strong> acompaño a tu equipo en
                   las transiciones necesarias para crecer.
                 </li>
-                <li>
+                <li className="text-justify">
                   <strong>Planificación financiera:</strong> maximizo el uso de
                   tus recursos para alcanzar tus objetivos.
                 </li>
               </motion.ul>
 
               <motion.p
-                className="text-[#34495e] text-base leading-relaxed mb-6"
+                className="text-[#34495e] text-base leading-relaxed mb-6 text-justify"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.6 }}
