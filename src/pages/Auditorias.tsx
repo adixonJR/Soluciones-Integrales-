@@ -61,7 +61,7 @@ const Auditorias = () => {
                 <span className="text-[#3498db]">Consultoría en Auditorías</span>
               </h2>
 
-              <p className="text-[#34495e] text-base leading-relaxed mb-5">
+              <p className="text-[#34495e] text-base leading-relaxed mb-5 text-justify">
                 Mi compromiso es ayudarte a garantizar la transparencia,
                 eficiencia y cumplimiento normativo en cada aspecto de tu
                 organización. Con amplia experiencia en auditorías, estoy aquí
@@ -69,25 +69,25 @@ const Auditorias = () => {
               </p>
 
               <ul className="text-[#34495e] text-base leading-7 list-disc pl-6 text-left inline-block mb-5">
-                <li>
+                <li className="text-justify">
                   <strong>Auditorías financieras:</strong> reviso tus registros
                   contables para asegurar exactitud y cumplimiento.
                 </li>
-                <li>
+                <li className="text-justify">
                   <strong>Auditorías internas:</strong> analizo tus procesos
                   para detectar áreas de mejora.
                 </li>
-                <li>
+                <li className="text-justify">
                   <strong>Auditorías de cumplimiento:</strong> verifico que tu
                   organización cumpla con las normativas aplicables.
                 </li>
-                <li>
+                <li className="text-justify">
                   <strong>Asesoría post-auditoría:</strong> te ofrezco soluciones
                   claras y viables para optimizar tu operación.
                 </li>
               </ul>
 
-              <p className="text-[#34495e] text-base leading-relaxed mb-6">
+              <p className="text-[#34495e] text-base leading-relaxed mb-6 text-justify">
                 Trabajo contigo de manera cercana y profesional, asegurándome de
                 que cada auditoría agregue valor a tu negocio y contribuya a tu
                 crecimiento.
