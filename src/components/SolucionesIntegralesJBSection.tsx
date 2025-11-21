@@ -64,13 +64,13 @@ interface Props {
 
 // ---- Data ----
 const heroSlides: HeroSlide[] = [
-    { image: "https://solucionesintegralesjb.com/wp-content/uploads/slider/cache/456a340008da7d76915187e50dcc7cf4/ed40b25e-eec1-4e3e-bf86-92ae710d6d06-e1727215670672.jpg", imageAlt: "Promoción de routers y conectividad", title: "Conectividad Superior", subtitle: "Routers de alta velocidad para tu hogar y oficina", href: "#" },
-    { image: "https://solucionesintegralesjb.com/wp-content/uploads/slider/cache/5f7d0fef1ec7a6d768636f30af4dcfb5/c3cc9f73-0e33-4fd0-aa2d-050c9b272e8c.jpg", title: "Soluciones Tecnológicas", subtitle: "Innovación y soporte a tu alcance", href: "#" },
-    { image: "https://solucionesintegralesjb.com/wp-content/uploads/slider/cache/4b9df303a3e55818808c971f39340ea6/d429c0fa-c3b2-4b6d-a65b-56c8ea26bcbc-1.jpg", imageAlt: "Banner de tecnología", title: "Tu Socio Estratégico", subtitle: "Impulsamos tu crecimiento digital", href: "#" },
-    { image: "https://solucionesintegralesjb.com/wp-content/uploads/slider/cache/382ed7f76699f6eae27f4e965558d97e/8671e011-0391-4bd6-a5b1-114495d3d898.jpg", imageAlt: "Fondo abstracto azul", title: "Diseño y Desarrollo", subtitle: "Creamos experiencias únicas para tus usuarios", href: "#" },
-    { image: "https://solucionesintegralesjb.com/wp-content/uploads/slider/cache/bc0e25010ca8388680ab2c9af3bd226c/cdba0529-3664-4dff-92fb-2bbfe5cb09f6.jpg", imageAlt: "Redes y seguridad", title: "Seguridad Garantizada", subtitle: "Protegemos lo que más importa", href: "#" },
-    { image: "https://solucionesintegralesjb.com/wp-content/uploads/slider/cache/794a0e0b79da6a5cf270643ec721eee8/Agregar-un-titulo.png", imageAlt: "Soporte técnico", title: "Soporte 24/7", subtitle: "Estamos aquí para ayudarte cuando nos necesites", href: "#" },
-    { image: "https://solucionesintegralesjb.com/wp-content/uploads/slider/cache/0c9dd85eb5a49fc3e81e2093f2a540c6/Agregar-un-titulo-1.png", imageAlt: "Integración de sistemas", title: "Integración Sin Esfuerzo", subtitle: "Conectamos tus sistemas para una operación fluida", href: "#" },
+    { image: "https://i.postimg.cc/FKZ5gVkc/ed40b25e-eec1-4e3e-bf86-92ae710d6d06-e1727215670672.jpg", imageAlt: "Promoción de routers y conectividad", title: "Conectividad Superior", subtitle: "Routers de alta velocidad para tu hogar y oficina", href: "#" },
+    { image: "https://i.postimg.cc/sgz3YX0F/c3cc9f73-0e33-4fd0-aa2d-050c9b272e8c.jpg", title: "Soluciones Tecnológicas", subtitle: "Innovación y soporte a tu alcance", href: "#" },
+    { image: "https://i.postimg.cc/nLP8PcTm/d429c0fa-c3b2-4b6d-a65b-56c8ea26bcbc-1.jpg", imageAlt: "Banner de tecnología", title: "Tu Socio Estratégico", subtitle: "Impulsamos tu crecimiento digital", href: "#" },
+    { image: "https://i.postimg.cc/rwVvytPC/8671e011-0391-4bd6-a5b1-114495d3d898.jpg", imageAlt: "Fondo abstracto azul", title: "Diseño y Desarrollo", subtitle: "Creamos experiencias únicas para tus usuarios", href: "#" },
+    { image: "https://i.postimg.cc/DzWpmQdn/cdba0529-3664-4dff-92fb-2bbfe5cb09f6.jpg", imageAlt: "Redes y seguridad", title: "Seguridad Garantizada", subtitle: "Protegemos lo que más importa", href: "#" },
+    { image: "https://i.postimg.cc/TPWQTdfy/Agregar-un-titulo.png", imageAlt: "Soporte técnico", title: "Soporte 24/7", subtitle: "Estamos aquí para ayudarte cuando nos necesites", href: "#" },
+    { image: "https://i.postimg.cc/QxxbHkh6/Agregar-un-titulo-1.png", imageAlt: "Integración de sistemas", title: "Integración Sin Esfuerzo", subtitle: "Conectamos tus sistemas para una operación fluida", href: "#" },
 ];
 
 const responsiveServices = {
