@@ -57,13 +57,11 @@ const SocialMedia = () => {
             viewport={{ once: true }}
           >
             <div className="text-center p-6 bg-[#f4f9ff] rounded-lg shadow-md">
-              <h2 className="text-2xl font-semibold mb-5 text-[#2c3e50]">
-                <span className="text-[#3498db]">
-                  Potencia Tu Presencia en Redes Sociales
-                </span>
+              <h2 className="text-2xl font-semibold mb-5 text-sky-400">
+                Potencia Tu Presencia en Redes Sociales
               </h2>
 
-              <p className="text-[#34495e] text-base leading-relaxed mb-5">
+              <p className="text-[#34495e] text-base leading-relaxed mb-5 text-justify">
                 Potencia tu presencia en redes sociales con nuestro servicio de
                 gestión eficaz. Creamos y publicamos contenido estratégico en
                 plataformas clave como Facebook, Instagram y LinkedIn,
