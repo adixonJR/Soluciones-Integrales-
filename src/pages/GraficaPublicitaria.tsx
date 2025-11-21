@@ -59,7 +59,7 @@ const Graficapublicitaria: React.FC = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Diseños Impactantes y Personalizados
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -126,7 +126,7 @@ const Graficapublicitaria: React.FC = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Identidad Visual Coherente
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -193,7 +193,7 @@ const Graficapublicitaria: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.25 }}
               viewport={{ once: true }}
-              className="text-base text-slate-600 mt-4 max-w-2xl mx-auto"
+              className="text-base text-slate-600 mt-4 max-w-2xl mx-auto text-justify"
             >
               Descubre cómo nuestros servicios de gráfica publicitaria han transformado marcas
             </motion.p>
@@ -256,7 +256,7 @@ const Graficapublicitaria: React.FC = () => {
                   </div>
 
                   {/* Texto del testimonio */}
-                  <p className="text-slate-700 text-base leading-relaxed mb-8 flex-grow font-medium">
+                  <p className="text-slate-700 text-base leading-relaxed mb-8 flex-grow font-medium text-justify">
                     {testimonio.opinion}
                   </p>
 
