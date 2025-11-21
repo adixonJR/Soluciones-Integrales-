@@ -58,7 +58,7 @@ const PosicionamientoSEO: React.FC = () => {
             viewport={{ once: true, amount: 0.3 }}
             className="md:w-1/2 text-gray-800"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">   
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">   
               Optimización SEO Fundamental
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -110,7 +110,7 @@ const PosicionamientoSEO: React.FC = () => {
             viewport={{ once: true, amount: 0.3 }}
             className="md:w-1/2 text-white"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Mejora de la Estructura del Sitio
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -142,7 +142,7 @@ const PosicionamientoSEO: React.FC = () => {
             viewport={{ once: true, amount: 0.3 }}
             className="md:w-1/2 text-gray-800"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Contenido Optimizado
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -194,7 +194,7 @@ const PosicionamientoSEO: React.FC = () => {
             viewport={{ once: true, amount: 0.3 }}
             className="md:w-1/2 text-gray-800"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-blue-600 mb-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-sky-400 mb-6">
               Reportes y Seguimiento de Resultados
             </h2>
             <p className="mb-4 leading-relaxed text-justify">
@@ -256,7 +256,7 @@ const PosicionamientoSEO: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.25 }}
               viewport={{ once: true }}
-              className="text-base text-slate-600 mt-4 max-w-2xl mx-auto"
+              className="text-base text-slate-600 mt-4 max-w-2xl mx-auto text-justify"
             >
               Descubre cómo nuestros servicios de SEO han posicionado negocios en los buscadores
             </motion.p>
@@ -319,7 +319,7 @@ const PosicionamientoSEO: React.FC = () => {
                   </div>
 
                   {/* Texto del testimonio */}
-                  <p className="text-slate-700 text-base leading-relaxed mb-8 flex-grow font-medium">
+                  <p className="text-slate-700 text-base leading-relaxed mb-8 flex-grow font-medium text-justify">
                     {testimonio.opinion}
                   </p>
 
