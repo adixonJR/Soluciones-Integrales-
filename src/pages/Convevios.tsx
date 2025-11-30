@@ -152,7 +152,7 @@ const Convenios = () => {
       {/* Banner principal */}
       <div className="relative w-screen h-screen bg-gray-900 overflow-hidden">
   <img
-    src="https://solucionesintegralesjb.com/wp-content/uploads/2024/10/job-g9afc21b12_1920-1600x1000-1.jpg"
+    src="https://i.postimg.cc/X7HyydWB/job-g9afc21b12-1920-1600x1000-1.jpg"
     alt="Fondo de la historia"
     className="absolute inset-0 w-full h-full object-cover"
   />
