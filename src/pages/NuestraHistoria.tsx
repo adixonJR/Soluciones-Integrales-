@@ -109,7 +109,7 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({ title, projects }) => {
 
   return (
     <section className="bg-gray-100 py-16 px-6 max-w-7xl mx-auto mt-20 rounded-xl shadow-lg">
-      <h2 className="text-center font-bold text-3xl mb-10 text-cyan-400 uppercase tracking-wide">
+      <h2 className="text-center font-bold text-3xl mb-10 text-gray-800 uppercase tracking-wide">
         {title}
       </h2>
       
@@ -215,7 +215,7 @@ const App = () => {
 
       <div className="relative w-screen h-screen bg-gray-900 overflow-hidden">
         <img
-          src="https://solucionesintegralesjb.com/wp-content/uploads/2024/10/nhhh.png"
+          src="https://i.postimg.cc/HL0K6p6C/nhhh.png"
           alt="Fondo de la historia"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -314,8 +314,7 @@ const App = () => {
               initial={{ opacity: 0, y: -30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              /*className="text-cyan-400 text-lg font-semibold mb-2"*/
-              className="text-gray-300 text-lg font-semibold mb-2"
+              className="text-cyan-400 text-lg font-semibold mb-2"
             >
               Un viaje de innovación y crecimiento
             </motion.h3>
@@ -323,7 +322,7 @@ const App = () => {
               initial={{ opacity: 0, y: -30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              className="text-4xl font-bold mb-4 text-cyan-400"
+              className="text-4xl font-bold mb-4"
             >
               Nuestra Historia
             </motion.h2>
